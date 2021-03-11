@@ -28,7 +28,7 @@ use futures::prelude::*;
 use futures::future::poll_fn;
 use libp2p_core::{PeerId, Transport, StreamMuxer, identity, upgrade, transport, muxing, multiaddr::multiaddr, Multiaddr};
 use libp2p_mplex as mplex;
-use libp2p_plaintext::PlainText2Config;
+use plaintext::PlainText2Config;
 use std::time::Duration;
 
 type BenchTransport = transport::Boxed<(PeerId, muxing::StreamMuxerBox)>;

@@ -37,8 +37,8 @@
 //! > **Note**: The ping protocol does not keep otherwise idle connections alive
 //! > by default, see [`PingConfig::with_keep_alive`] for changing this behaviour.
 //!
-//! [`Swarm`]: libp2p_swarm::Swarm
-//! [`Transport`]: libp2p_core::Transport
+//! [`Swarm`]: tetsy_libp2p_swarm::Swarm
+//! [`Transport`]: tetsy_libp2p_core::Transport
 
 pub mod protocol;
 pub mod handler;

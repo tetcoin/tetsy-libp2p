@@ -33,7 +33,7 @@ use libp2p_core::{identity, upgrade, PeerId};
 use libp2p_identify::{Identify, IdentifyEvent, IdentifyInfo};
 use libp2p_kad::{GetClosestPeersOk, Kademlia, KademliaEvent, QueryResult};
 use libp2p_ping::{Ping, PingConfig, PingEvent};
-use libp2p_plaintext::PlainText2Config;
+use plaintext::PlainText2Config;
 use libp2p_relay::{Relay, RelayConfig};
 use libp2p_swarm::protocols_handler::{
     KeepAlive, ProtocolsHandler, ProtocolsHandlerEvent, ProtocolsHandlerUpgrErr, SubstreamProtocol,
@@ -1197,7 +1197,7 @@ impl<T: Transport> Transport for Firewall<T> {
 fn build_swarm(reachability: Reachability, relay_mode: RelayMode) -> Swarm<CombinedBehaviour> {
     let local_key = identity::Keypair::generate_ed25519();
     let local_public_key = local_key.public();
-    let plaintext = PlainText2Config {
+    let plain = PlainText2Config {
         local_public_key: local_public_key.clone(),
     };
     let local_peer_id = local_public_key.clone().into_peer_id();
@@ -1219,7 +1219,7 @@ fn build_swarm(reachability: Reachability, relay_mode: RelayMode) -> Swarm<Combi
 
     let transport = transport
         .upgrade(upgrade::Version::V1)
-        .authenticate(plaintext)
+        .authenticate(plain)
         .multiplex(libp2p_yamux::YamuxConfig::default())
         .boxed();
 
@@ -1244,7 +1244,7 @@ fn build_swarm(reachability: Reachability, relay_mode: RelayMode) -> Swarm<Combi
 fn build_keep_alive_swarm() -> Swarm<CombinedKeepAliveBehaviour> {
     let local_key = identity::Keypair::generate_ed25519();
     let local_public_key = local_key.public();
-    let plaintext = PlainText2Config {
+    let plain = PlainText2Config {
         local_public_key: local_public_key.clone(),
     };
     let local_peer_id = local_public_key.clone().into_peer_id();
@@ -1256,7 +1256,7 @@ fn build_keep_alive_swarm() -> Swarm<CombinedKeepAliveBehaviour> {
 
     let transport = transport
         .upgrade(upgrade::Version::V1)
-        .authenticate(plaintext)
+        .authenticate(plain)
         .multiplex(libp2p_yamux::YamuxConfig::default())
         .boxed();
 
@@ -1271,7 +1271,7 @@ fn build_keep_alive_swarm() -> Swarm<CombinedKeepAliveBehaviour> {
 fn build_keep_alive_only_swarm() -> Swarm<KeepAliveBehaviour> {
     let local_key = identity::Keypair::generate_ed25519();
     let local_public_key = local_key.public();
-    let plaintext = PlainText2Config {
+    let plain = PlainText2Config {
         local_public_key: local_public_key.clone(),
     };
     let local_peer_id = local_public_key.clone().into_peer_id();
@@ -1280,7 +1280,7 @@ fn build_keep_alive_only_swarm() -> Swarm<KeepAliveBehaviour> {
 
     let transport = transport
         .upgrade(upgrade::Version::V1)
-        .authenticate(plaintext)
+        .authenticate(plain)
         .multiplex(libp2p_yamux::YamuxConfig::default())
         .boxed();
 

@@ -18,10 +18,10 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for external transports.
+//! Implementation of the tetsy-libp2p `Transport` trait for external transports.
 //!
 //! This `Transport` is used in the context of WASM to allow delegating the transport mechanism
-//! to the code that uses rust-libp2p, as opposed to inside of rust-libp2p itself.
+//! to the code that uses tetsy-libp2p, as opposed to inside of tetsy-libp2p itself.
 //!
 //! > **Note**: This only allows transports that produce a raw stream with the remote. You
 //! >           couldn't, for example, pass an implementation QUIC.

@@ -1,13 +1,15 @@
 [package]
 name = "tetsy-libp2p-relay"
-edition = "2018"
-description = "Communications relaying for libp2p"
 version = "0.1.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Communications relaying for tetsy-libp2p"
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-relay"
 
 [dependencies]
 asynchronous-codec = "0.6"

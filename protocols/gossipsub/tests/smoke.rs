@@ -36,7 +36,7 @@ use libp2p_gossipsub::{
     Gossipsub, GossipsubConfigBuilder, GossipsubEvent, IdentTopic as Topic, MessageAuthenticity,
     ValidationMode,
 };
-use libp2p_plaintext::PlainText2Config;
+use plaintext::PlainText2Config;
 use libp2p_swarm::Swarm;
 use libp2p_yamux as yamux;
 

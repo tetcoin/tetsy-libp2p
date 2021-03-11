@@ -5,9 +5,9 @@ authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support
 description = "Core traits and structs of tetsy-libp2p"
 license = "MIT"
 edition = "2018"
-keywords = ["tetcoin", "tetcore", "peer-to-peer", "tetsy-libp2p", "networking"]
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
-homepage = "https://github.com/openvapory/tetsy-vapory"
+homepage = "https://core.tetcoin.org"
 repository = "https://github.com/tetcoin/tetsy-libp2p"
 documentation = "https://docs.rs/tetsy-libp2p-core"
 

@@ -18,18 +18,18 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! # Multistream-select Protocol Negotiation
+//! # Tetsy Multistream-select Protocol Negotiation
 //!
-//! This crate implements the `multistream-select` protocol, which is the protocol
-//! used by libp2p to negotiate which application-layer protocol to use with the
+//! This crate implements the `tetsy-multistream-select` protocol, which is the protocol
+//! used by tetsy-libp2p to negotiate which application-layer protocol to use with the
 //! remote on a connection or substream.
 //!
-//! > **Note**: This crate is used primarily by core components of *libp2p* and it
+//! > **Note**: This crate is used primarily by core components of *tetsy-libp2p* and it
 //! > is usually not used directly on its own.
 //!
 //! ## Roles
 //!
-//! Two peers using the multistream-select negotiation protocol on an I/O stream
+//! Two peers using the tetsy-multistream-select negotiation protocol on an I/O stream
 //! are distinguished by their role as a _dialer_ (or _initiator_) or as a _listener_
 //! (or _responder_). Thereby the dialer plays the active part, driving the protocol,
 //! whereas the listener reacts to the messages received.
@@ -72,7 +72,7 @@
 //!
 //! ```no_run
 //! use async_std::net::TcpStream;
-//! use multistream_select::{dialer_select_proto, Version};
+//! use tetsy_multistream_select::{dialer_select_proto, Version};
 //! use futures::prelude::*;
 //!
 //! async_std::task::block_on(async move {

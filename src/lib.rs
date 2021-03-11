@@ -209,10 +209,10 @@ pub use libp2p_noise as noise;
 #[cfg_attr(docsrs, doc(cfg(feature = "ping")))]
 #[doc(inline)]
 pub use libp2p_ping as ping;
-#[cfg(feature = "plaintext")]
-#[cfg_attr(docsrs, doc(cfg(feature = "plaintext")))]
+#[cfg(feature = "plain")]
+#[cfg_attr(docsrs, doc(cfg(feature = "plain")))]
 #[doc(inline)]
-pub use libp2p_plaintext as plaintext;
+pub use plaintext as plain;
 #[doc(inline)]
 pub use libp2p_swarm as swarm;
 #[cfg(any(feature = "tcp-async-io", feature = "tcp-tokio"))]
@@ -245,8 +245,8 @@ pub use libp2p_pnet as pnet;
 #[cfg_attr(docsrs, doc(cfg(feature = "relay")))]
 #[doc(inline)]
 pub use libp2p_relay as relay;
-#[cfg(feature = "request-response")]
-#[cfg_attr(docsrs, doc(cfg(feature = "request-response")))]
+#[cfg(feature = "req-res")]
+#[cfg_attr(docsrs, doc(cfg(feature = "req-res")))]
 #[doc(inline)]
 pub use libp2p_request_response as request_response;
 

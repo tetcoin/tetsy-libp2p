@@ -21,7 +21,7 @@
 //! High level manager of the network.
 //!
 //! A [`Swarm`] contains the state of the network as a whole. The entire
-//! behaviour of a libp2p network can be controlled through the `Swarm`.
+//! behaviour of a tetsy-libp2p network can be controlled through the `Swarm`.
 //! The `Swarm` struct contains all active and pending connections to
 //! remotes and manages the state of all the substreams that have been
 //! opened, and all the upgrades that were built upon these substreams.

@@ -1,13 +1,15 @@
 [package]
 name = "tetsy-libp2p-gossipsub"
-edition = "2018"
-description = "Gossipsub protocol for libp2p"
+description = "Gossipsub protocol for tetsy-libp2p"
 version = "0.29.0"
-authors = ["Age Manning <Age@AgeManning.com>"]
+authors = ["Age Manning <Age@AgeManning.com>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-gossipsub"
 
 [dependencies]
 tetsy-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }

@@ -24,19 +24,19 @@
 //! ## Example
 //!
 //! ```rust
-//! # use libp2p_core::transport::memory::MemoryTransport;
-//! # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
-//! # use libp2p_swarm::Swarm;
-//! # use libp2p_core::{identity, Multiaddr, multiaddr::Protocol, PeerId, upgrade, Transport};
-//! # use libp2p_yamux::YamuxConfig;
-//! # use libp2p_plaintext::PlainText2Config;
+//! # use tetsy_libp2p_core::transport::memory::MemoryTransport;
+//! # use ltetsy_ibp2p_relay::{RelayConfig, new_transport_and_behaviour};
+//! # use tetsy_libp2p_swarm::Swarm;
+//! # use tetsy_libp2p_core::{identity, Multiaddr, multiaddr::Protocol, PeerId, upgrade, Transport};
+//! # use libp2p_remux::YamuxConfig;
+//! # use plaintext::PlainText2Config;
 //! # use std::convert::TryInto;
 //! # use std::str::FromStr;
 //! #
 //! # let local_key = identity::Keypair::generate_ed25519();
 //! # let local_public_key = local_key.public();
 //! # let local_peer_id = local_public_key.clone().into_peer_id();
-//! # let plaintext = PlainText2Config {
+//! # let plain = PlainText2Config {
 //! #     local_public_key: local_public_key.clone(),
 //! # };
 //! #
@@ -47,7 +47,7 @@
 //!
 //! let transport = relay_transport
 //!     .upgrade(upgrade::Version::V1)
-//!     .authenticate(plaintext)
+//!     .authenticate(plain)
 //!     .multiplex(YamuxConfig::default())
 //!     .boxed();
 //!

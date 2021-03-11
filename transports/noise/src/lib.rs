@@ -18,12 +18,12 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! [Noise protocol framework][noise] support for libp2p.
+//! [Noise protocol framework][noise] support for tetsy-libp2p.
 //!
 //! > **Note**: This crate is still experimental and subject to major breaking changes
 //! >           both on the API and the wire protocol.
 //!
-//! This crate provides `libp2p_core::InboundUpgrade` and `libp2p_core::OutboundUpgrade`
+//! This crate provides `tetsy_libp2p_core::InboundUpgrade` and `tetsy_libp2p_core::OutboundUpgrade`
 //! implementations for various noise handshake patterns (currently `IK`, `IX`, and `XX`)
 //! over a particular choice of Diffie–Hellman key agreement (currently only X25519).
 //!
@@ -39,9 +39,9 @@
 //! Example:
 //!
 //! ```
-//! use libp2p_core::{identity, Transport, upgrade};
-//! use libp2p_tcp::TcpConfig;
-//! use libp2p_noise::{Keypair, X25519Spec, NoiseConfig};
+//! use tetsy_libp2p_core::{identity, Transport, upgrade};
+//! use tetsy_libp2p_tcp::TcpConfig;
+//! use tetsy_libp2p_noise::{Keypair, X25519Spec, NoiseConfig};
 //!
 //! # fn main() {
 //! let id_keys = identity::Keypair::generate_ed25519();

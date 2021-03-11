@@ -202,4 +202,4 @@ jobs:
         key: cargo-build-target-${{ hashFiles('Cargo.toml') }}
 
     - name: Run ipfs-kad example
-      run: RUST_LOG=libp2p_swarm=debug,libp2p_kad=trace,libp2p_tcp=debug cargo run --example ipfs-kad
+      run: RUST_LOG=tetsy_libp2p_swarm=debug,tetsy_libp2p_kad=trace,tetsy_libp2p_tcp=debug cargo run --example ipfs-kad

@@ -378,7 +378,7 @@ must not be skipped!
 - Added the `Swarm::next` and `Swarm::next_event` functions and the `SwarmEvent` enum.
 - Changed `ProtocolsHandler::poll` to no longer return an error. Instead, `ProtocolsHandlerEvent` has a new `Close` variant which corresponds to what an error represented before.
 - Changed all the traits that have a `poll` function (i.e. `NetworkBehaviour`, `ProtocolsHandler`, `NodeHandler`) to have an additional `&mut Context` parameter, to reflect the changes in the `Future` trait.
-- Revamped the API of `libp2p_websockets::framed`.
+- Revamped the API of `tetsy_libp2p_websockets::framed`.
 - Added protocol string to `Error::UnknownProtocolString`.
 
 ## Version 0.13.2 (2020-01-02)

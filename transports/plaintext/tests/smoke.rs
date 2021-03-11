@@ -26,7 +26,7 @@ use libp2p_core::{
     transport::{Transport, ListenerEvent},
     upgrade,
 };
-use libp2p_plaintext::PlainText2Config;
+use plaintext::PlainText2Config;
 use log::debug;
 use quickcheck::QuickCheck;
 
