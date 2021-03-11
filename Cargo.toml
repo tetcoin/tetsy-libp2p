@@ -80,7 +80,7 @@ libp2p-swarm-derive = { version = "0.22.0", path = "swarm-derive" }
 tetsy-libp2p-uds = { version = "0.27.0", path = "transports/uds", optional = true }
 wasm-ext = { version = "0.27.0", path = "transports/wasm-ext", default-features = false, optional = true }
 libp2p-remux = { version = "0.30.1", path = "muxers/remux", optional = true }
-multiaddr = { package = "parity-multiaddr", version = "0.11.1", path = "misc/multiaddr" }
+multiaddr = { package = "tetsy-multiaddr", version = "0.11.1", path = "misc/multiaddr" }
 parking_lot = "0.11.0"
 pin-project = "1.0.0"
 smallvec = "1.0"

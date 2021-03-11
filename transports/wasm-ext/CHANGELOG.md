@@ -12,7 +12,7 @@
 
 # 0.24.0 [2020-11-09]
 
-- Fix the WebSocket implementation parsing `x-parity-ws` multiaddresses as `x-parity-wss`.
+- Fix the WebSocket implementation parsing `x-tetsy-ws` multiaddresses as `x-tetsy-wss`.
 - Update dependencies.
 
 # 0.23.0 [2020-10-16]

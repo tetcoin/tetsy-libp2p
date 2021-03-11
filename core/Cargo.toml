@@ -1,13 +1,15 @@
 [package]
-name = "libp2p-core"
-edition = "2018"
-description = "Core traits and structs of libp2p"
+name = "tetsy-libp2p-core"
 version = "0.27.2"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Core traits and structs of tetsy-libp2p"
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "peer-to-peer", "tetsy-libp2p", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://github.com/openvapory/tetsy-vapory"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-core"
 
 [dependencies]
 asn1_der = "0.6.1"
@@ -20,7 +22,7 @@ futures-timer = "3"
 lazy_static = "1.2"
 libsecp256k1 = { version = "0.3.1", optional = true }
 log = "0.4"
-multiaddr = { package = "parity-multiaddr", version = "0.11", path = "../misc/multiaddr" }
+multiaddr = { package = "tetsy-multiaddr", version = "0.11", path = "../misc/multiaddr" }
 multihash = { version = "0.13", default-features = false, features = ["std", "multihash-impl", "identity", "sha2"] }
 multistream-select = { version = "0.10", path = "../misc/multistream-select" }
 parking_lot = "0.11.0"

@@ -27,7 +27,7 @@
 - [`libp2p-pnet` CHANGELOG](transports/pnet/CHANGELOG.md)
 - [`libp2p-tcp` CHANGELOG](transports/tcp/CHANGELOG.md)
 - [`libp2p-uds` CHANGELOG](transports/uds/CHANGELOG.md)
-- [`libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
+- [`wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
 - [`libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
 
 ## Multiplexers
@@ -37,7 +37,7 @@
 
 ## Utilities
 
-- [`parity-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
+- [`tetsy-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
 - [`multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
 
 # `libp2p` facade crate
@@ -118,7 +118,7 @@
 
 - Update `libp2p-core`, `libp2p-floodsub`, `libp2p-gossipsub`, `libp2p-mplex`,
   `libp2p-noise`, `libp2p-plaintext`, `libp2p-pnet`, `libp2p-request-response`,
-  `libp2p-swarm`, `libp2p-tcp`, `libp2p-websocket` and `parity-multiaddr`.
+  `libp2p-swarm`, `libp2p-tcp`, `libp2p-websocket` and `tetsy-multiaddr`.
 
 ## Version 0.28.1 [2020-09-10]
 
@@ -219,7 +219,7 @@ must not be skipped!
 - `libp2p-core`: Make the number of events buffered to/from tasks configurable.
   [PR 1574](https://github.com/libp2p/rust-libp2p/pull/1574)
 
-- `libp2p-dns`, `parity-multiaddr`: Added support for the `/dns` multiaddr
+- `libp2p-dns`, `tetsy-multiaddr`: Added support for the `/dns` multiaddr
   protocol. Additionally, the `multiaddr::from_url` function will now use
   `/dns` instead of `/dns4`.
   [PR 1575](https://github.com/libp2p/rust-libp2p/pull/1575)
@@ -279,7 +279,7 @@ must not be skipped!
 - `libp2p-kad`: Return peers independent of record existence.
   [PR 1544](https://github.com/libp2p/rust-libp2p/pull/1544)
 
-- `libp2p-wasm-ext`: Fix "parsed is null" errors being thrown.
+- `wasm-ext`: Fix "parsed is null" errors being thrown.
   [PR 1535](https://github.com/libp2p/rust-libp2p/pull/1535)
 
 ## Version 0.17.0 (2020-04-02)
@@ -332,7 +332,7 @@ must not be skipped!
 ## Version 0.16.2 (2020-02-28)
 
 - Fixed yamux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
-- Added a `websocket_transport()` function in `libp2p-wasm-ext`, behind a Cargo feature.
+- Added a `websocket_transport()` function in `wasm-ext`, behind a Cargo feature.
 - Fixed ambiguity in `IntoProtocolsHandler::select` vs `ProtocolsHandler::select` in the `NetworkBehaviour` custom derive.
 
 ## Version 0.16.1 (2020-02-18)
@@ -362,7 +362,7 @@ must not be skipped!
 - Added `SwarmBuilder::executor` to allow configuring which tasks executor to use.
 - Added `TokioTcpConfig` in `libp2p-tcp` and `TokioUdsConfig` in `libp2p-uds` behind `tokio` features. These structs use `tokio` and require a `tokio` runtime executor to be configured via `SwarmBuilder::executor`.
 - Changed the `OutboundUpgrade` and `InboundUpgrade` traits to no longer be passed a `Negotiated<C>` but just a `C`. The `Negotiated` is now in the trait bounds requirements of `ProtocolsHandler`.
-- Fixed `libp2p-wasm-ext` returning `Err(WouldBlock)` rather than `Pending`.
+- Fixed `wasm-ext` returning `Err(WouldBlock)` rather than `Pending`.
 - Fixed `libp2p-dns` not segregating DNS4 and DNS6.
 - Removed some unnecessary `Unpin` requirements on futures.
 - Changed `Mdns::new` to no longer be `async`.
@@ -445,7 +445,7 @@ must not be skipped!
 - Initial prototype for record storage in libp2p-kad.
 - Rewrote the implementation of WebSockets. It now properly supports WebSockets Secure (WSS).
 - Removed `BrowserWsConfig`. Please use `libp2p::wasm_ext::ExtTransport` instead.
-- Added a `Path` parameter to `multiaddr::Protocol::WS` and `WSS`. The string representation when a path is present is respectively `x-parity-ws/<path>` and `x-parity-wss/<path>` where `<path>` is percent-encoded.
+- Added a `Path` parameter to `multiaddr::Protocol::WS` and `WSS`. The string representation when a path is present is respectively `x-tetsy-ws/<path>` and `x-tetsy-wss/<path>` where `<path>` is percent-encoded.
 - Fixed an issue with `libp2p-tcp` where the wrong listened address was returned, if the actual address was loopback.
 - Added `core::upgrade::OptionalUpgrade`.
 - Added some utility functions in `core::identity::secp256k1`.
@@ -467,7 +467,7 @@ must not be skipped!
 - Fixed `Kademlia::add_providing` taking a `PeerId` instead of a `Multihash`.
 - Fixed various bugs in the implementation of `Kademlia`.
 - Added `OneSubstreamMuxer`.
-- Added the `libp2p-wasm-ext` crate.
+- Added the `wasm-ext` crate.
 - Added `multiaddr::from_url`.
 - Added `OptionalTransport`.
 
