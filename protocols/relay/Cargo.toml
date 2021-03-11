@@ -1,5 +1,5 @@
 [package]
-name = "libp2p-relay"
+name = "tetsy-libp2p-relay"
 edition = "2018"
 description = "Communications relaying for libp2p"
 version = "0.1.0"
