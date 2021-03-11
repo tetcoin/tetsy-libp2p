@@ -1,0 +1,22 @@
+[package]
+name = "swarm-derive"
+version = "0.22.0"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Procedural macros of tetsy-libp2p-core"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/swarm-derive"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "1.0.8", default-features = false, features = ["clone-impls", "derive", "parsing", "printing", "proc-macro"] }
+quote = "1.0"
+
+[dev-dependencies]
+libp2p = { path = "../" }

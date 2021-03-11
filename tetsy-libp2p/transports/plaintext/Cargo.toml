@@ -1,0 +1,31 @@
+[package]
+name = "plaintext"
+version = "0.27.1"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Plaintext encryption dummy protocol for tetsy-libp2p"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/plaintext"
+
+[dependencies]
+bytes = "1"
+futures = "0.3.1"
+asynchronous-codec = "0.6"
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+log = "0.4.8"
+prost = "0.7"
+unsigned-varint = { version = "0.7", features = ["asynchronous_codec"] }
+void = "1.0.2"
+
+[dev-dependencies]
+env_logger = "0.8.1"
+quickcheck = "0.9.0"
+rand = "0.7"
+
+[build-dependencies]
+prost-build = "0.7"
+

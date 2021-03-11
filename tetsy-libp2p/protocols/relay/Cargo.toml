@@ -1,0 +1,40 @@
+[package]
+name = "tetsy-libp2p-relay"
+version = "0.1.0"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Communications relaying for tetsy-libp2p"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-relay"
+
+[dependencies]
+asynchronous-codec = "0.6"
+bytes = "1"
+futures = "0.3.1"
+futures-timer = "3"
+tetsy-libp2p-core = { version = "0.27", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.28", path = "../../swarm" }
+log = "0.4"
+pin-project = "1"
+prost = "0.7"
+rand = "0.7"
+smallvec = "0.6.9"
+unsigned-varint = { version = "0.7", features = ["asynchronous_codec"] }
+void = "1"
+wasm-timer = "0.2"
+
+[build-dependencies]
+prost-build = "0.7"
+
+[dev-dependencies]
+env_logger = "0.7.1"
+libp2p = { path = "../.." }
+tetsy-libp2p-kad = { path = "../kad" }
+tetsy-libp2p-ping = { path = "../ping" }
+tetsy-libp2p-identify = { path = "../identify" }
+plaintext = { path = "../../transports/plaintext" }
+libp2p-yamux = { path = "../../muxers/yamux" }

@@ -1,0 +1,30 @@
+[package]
+name = "tetsy-libp2p-identify"
+version = "0.28.0"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Nodes identifcation protocol for tetsy-libp2p"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-identify"
+
+[dependencies]
+futures = "0.3.1"
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }
+log = "0.4.1"
+prost = "0.7"
+smallvec = "1.0"
+wasm-timer = "0.2"
+
+[dev-dependencies]
+async-std = "1.6.2"
+tetsy-libp2p-mplex = { path = "../../muxers/mplex" }
+tetsy-libp2p-noise = { path = "../../transports/noise" }
+tetsy-libp2p-tcp = { path = "../../transports/tcp" }
+
+[build-dependencies]
+prost-build = "0.7"

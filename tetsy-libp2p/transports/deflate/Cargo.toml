@@ -1,0 +1,23 @@
+[package]
+name = "tetsy-libp2p-deflate"
+version = "0.27.1"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Deflate encryption protocol for tetsy-libp2p"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-deflate"
+
+[dependencies]
+futures = "0.3.1"
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+flate2 = "1.0"
+
+[dev-dependencies]
+async-std = "1.6.2"
+tetsy-libp2p-tcp = { path = "../../transports/tcp" }
+quickcheck = "0.9"
+rand = "0.7"

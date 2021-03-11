@@ -1,0 +1,23 @@
+[package]
+name = "tetsy-libp2p-pnet"
+version = "0.20.0"
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
+description = "Private swarm support for tetsy-libp2p"
+license = "MIT"
+edition = "2018"
+keywords = ["tetcoin", "tetcore", "tetsy-libp2p", "peer-to-peer", "networking"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+documentation = "https://docs.rs/tetsy-libp2p-pnet"
+
+[dependencies]
+futures = "0.3.1"
+log = "0.4.8"
+salsa20 = "0.7"
+sha3 = "0.9"
+rand = "0.7"
+pin-project = "1.0.2"
+
+[dev-dependencies]
+quickcheck = "0.9.0"
