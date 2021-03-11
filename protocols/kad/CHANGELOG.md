@@ -13,7 +13,7 @@
 - Add `Kademlia::put_record_to` for storing a record at specific nodes,
   e.g. for write-back caching after a successful read with quorum > 1.
 
-- Update `libp2p-swarm`.
+- Update `tetsy-libp2p-swarm`.
 
 # 0.28.1 [2021-02-15]
 
@@ -30,11 +30,11 @@
 
 # 0.27.0 [2020-12-17]
 
-- Update `libp2p-core` and `libp2p-swarm`.
+- Update `tetsy-libp2p-core` and `tetsy-libp2p-swarm`.
 
 # 0.26.0 [2020-11-25]
 
-- Update `libp2p-core` and `libp2p-swarm`.
+- Update `tetsy-libp2p-core` and `tetsy-libp2p-swarm`.
 
 - Have two `ProviderRecord`s be equal iff their `key` and `provider` fields are
   equal. [PR 1850](https://github.com/libp2p/rust-libp2p/pull/1850/).
@@ -54,7 +54,7 @@
 
 # 0.24.0 [2020-10-16]
 
-- Update `libp2p-core` and `libp2p-swarm`.
+- Update `tetsy-libp2p-core` and `tetsy-libp2p-swarm`.
 
 - Update `sha2` dependency.
 
@@ -65,7 +65,7 @@
 
 - Add `Distance::log2` ([PR 1719](https://github.com/libp2p/rust-libp2p/pull/1719)).
 
-- Update `libp2p-swarm` and `libp2p-core`.
+- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
 
 # 0.22.1 [2020-08-19]
 
@@ -77,7 +77,7 @@
 - Store addresses in provider records.
   See [PR 1708](https://github.com/libp2p/rust-libp2p/pull/1708).
 
-- Update `libp2p-core` and `libp2p-swarm` dependencies.
+- Update `tetsy-libp2p-core` and `tetsy-libp2p-swarm` dependencies.
 
 - Add `KBucketRef::range` exposing the minimum inclusive and maximum inclusive
   `Distance` for the bucket

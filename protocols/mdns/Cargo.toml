@@ -1,5 +1,5 @@
 [package]
-name = "libp2p-mdns"
+name = "tetsy-libp2p-mdns"
 edition = "2018"
 version = "0.29.0"
 description = "Implementation of the libp2p mDNS discovery method"
@@ -16,8 +16,8 @@ dns-parser = "0.8.0"
 futures = "0.3.13"
 if-watch = "0.2.0"
 lazy_static = "1.4.0"
-libp2p-core = { version = "0.27.0", path = "../../core" }
-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }
 log = "0.4.14"
 rand = "0.8.3"
 smallvec = "1.6.1"

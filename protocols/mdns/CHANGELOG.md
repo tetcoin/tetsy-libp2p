@@ -13,7 +13,7 @@
   An `MdnsConfig` must now be given to `Mdns::new()`.
   [PR 1977](https://github.com/libp2p/rust-libp2p/pull/1977).
 
-- Update `libp2p-swarm`.
+- Update `tetsy-libp2p-swarm`.
 
 # 0.28.1 [2021-02-15]
 
@@ -25,7 +25,7 @@
 
 # 0.27.0 [2020-12-17]
 
-- Update `libp2p-swarm` and `libp2p-core`.
+- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
 
 # 0.26.0 [2020-12-08]
 
@@ -46,7 +46,7 @@
 
 # 0.25.0 [2020-11-25]
 
-- Update `libp2p-swarm` and `libp2p-core`.
+- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
 
 # 0.24.0 [2020-11-09]
 
@@ -54,19 +54,19 @@
 
 # 0.23.0 [2020-10-16]
 
-- Update `libp2p-swarm` and `libp2p-core`.
+- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
 
 - Double receive buffer to 4KiB. [PR 1779](https://github.com/libp2p/rust-libp2p/pull/1779/files).
 
 # 0.22.0 [2020-09-09]
 
-- Update `libp2p-swarm` and `libp2p-core`.
+- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
 
 # 0.21.0 [2020-08-18]
 
-- Bump `libp2p-core` and `libp2p-swarm` dependencies.
+- Bump `tetsy-libp2p-core` and `tetsy-libp2p-swarm` dependencies.
 
-- Allow libp2p-mdns to use either async-std or tokio to drive required UDP
+- Allow tetsy-libp2p-mdns to use either async-std or tokio to drive required UDP
   socket ([PR 1699](https://github.com/libp2p/rust-libp2p/pull/1699)).
 
 # 0.20.0 [2020-07-01]

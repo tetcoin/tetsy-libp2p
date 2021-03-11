@@ -2,7 +2,7 @@
 
 - Remove the option for a substream-specific multistream select protocol override.
   The override at this granularity is no longer deemed useful, in particular because
-  it can usually not be configured for existing protocols like `libp2p-kad` and others.
+  it can usually not be configured for existing protocols like `tetsy-libp2p-kad` and others.
   There is a `Swarm`-scoped configuration for this version available since
   [1858](https://github.com/libp2p/rust-libp2p/pull/1858).
 
@@ -25,7 +25,7 @@
 
 # 0.26.0 [2020-12-17]
 
-- Update `libp2p-core`.
+- Update `tetsy-libp2p-core`.
 
 - Remove `NotifyHandler::All` thus removing the requirement for events send from
   a `NetworkBehaviour` to a `ProtocolsHandler` to be `Clone`.
@@ -45,7 +45,7 @@
 - Changed parameters for connection limits from `usize` to `u32`.
   Connection limits are now configured via `SwarmBuilder::connection_limits()`.
 
-- Update `libp2p-core`.
+- Update `tetsy-libp2p-core`.
 
 - Expose configurable scores for external addresses, as well as
   the ability to remove them and to add addresses that are
@@ -79,7 +79,7 @@
 
 # 0.22.0 [2020-09-09]
 
-- Bump `libp2p-core` dependency.
+- Bump `tetsy-libp2p-core` dependency.
 
 - Adds `ProtocolsHandler::InboundOpenInfo` type which mirrors the existing
   `OutboundOpenInfo` type. A value of this type is passed as an extra argument
@@ -107,7 +107,7 @@ error.
 if the peer is banned, thereby also invoking the `NetworkBehaviour::inject_dial_failure`
 callback.
 
-- Update the `libp2p-core` dependency to `0.21`, fixing [1584](https://github.com/libp2p/rust-libp2p/issues/1584).
+- Update the `tetsy-libp2p-core` dependency to `0.21`, fixing [1584](https://github.com/libp2p/rust-libp2p/issues/1584).
 
 - Fix connections being kept alive by `OneShotHandler` when not handling any
   requests [PR 1698](https://github.com/libp2p/rust-libp2p/pull/1698).
@@ -125,7 +125,7 @@ former identity using the same addresses.
 
 # 0.20.0 [2020-07-01]
 
-- Updated the `libp2p-core` dependency.
+- Updated the `tetsy-libp2p-core` dependency.
 
 - Add `ProtocolsHandler::inject_listen_upgrade_error`, the inbound
 analogue of `ProtocolsHandler::inject_dial_upgrade_error`, with an

@@ -301,7 +301,7 @@ pub fn build_tcp_ws_noise_mplex_yamux(keypair: identity::Keypair)
 
     let noise_keys = noise::Keypair::<noise::X25519Spec>::new()
         .into_authentic(&keypair)
-        .expect("Signing libp2p-noise static DH keypair failed.");
+        .expect("Signing tetsy-libp2p-noise static DH keypair failed.");
 
     Ok(transport
         .upgrade(core::upgrade::Version::V1)
@@ -332,7 +332,7 @@ pub fn build_tcp_ws_pnet_noise_mplex_yamux(keypair: identity::Keypair, psk: PreS
 
     let noise_keys = noise::Keypair::<noise::X25519Spec>::new()
         .into_authentic(&keypair)
-        .expect("Signing libp2p-noise static DH keypair failed.");
+        .expect("Signing tetsy-libp2p-noise static DH keypair failed.");
 
     Ok(transport
         .and_then(move |socket, _| PnetConfig::new(psk).handshake(socket))

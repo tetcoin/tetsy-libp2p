@@ -1,5 +1,5 @@
 [package]
-name = "libp2p-floodsub"
+name = "tetsy-libp2p-floodsub"
 edition = "2018"
 description = "Floodsub protocol for libp2p"
 version = "0.28.0"
@@ -13,8 +13,8 @@ categories = ["network-programming", "asynchronous"]
 cuckoofilter = "0.5.0"
 fnv = "1.0"
 futures = "0.3.1"
-libp2p-core = { version = "0.27.0", path = "../../core" }
-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.28.0", path = "../../swarm" }
 log = "0.4"
 prost = "0.7"
 rand = "0.7"

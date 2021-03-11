@@ -24,7 +24,7 @@
 //!
 //! This crate provides a `TcpConfig` and `TokioTcpConfig`, depending on
 //! the enabled features, which implement the `Transport` trait for use as a
-//! transport with `libp2p-core` or `libp2p-swarm`.
+//! transport with `tetsy-libp2p-core` or `tetsy-libp2p-swarm`.
 
 mod provider;
 

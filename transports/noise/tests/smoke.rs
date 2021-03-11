@@ -31,7 +31,7 @@ use std::{convert::TryInto, io, net::TcpStream};
 
 #[allow(dead_code)]
 fn core_upgrade_compat() {
-    // Tests API compaibility with the libp2p-core upgrade API,
+    // Tests API compaibility with the tetsy-libp2p-core upgrade API,
     // i.e. if it compiles, the "test" is considered a success.
     let id_keys = identity::Keypair::generate_ed25519();
     let dh_keys = Keypair::<X25519>::new().into_authentic(&id_keys).unwrap();

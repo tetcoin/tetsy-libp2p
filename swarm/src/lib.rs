@@ -1017,7 +1017,7 @@ where TBehaviour: NetworkBehaviour,
         // If no executor has been explicitly configured, try to set up a thread pool.
         let network_cfg = self.network_config.or_else_with_executor(|| {
             match ThreadPoolBuilder::new()
-                .name_prefix("libp2p-swarm-task-")
+                .name_prefix("tetsy-libp2p-swarm-task-")
                 .create()
             {
                 Ok(tp) => {
