@@ -1,7 +1,5 @@
 # Central repository for work on tetsy-libp2p
 
-<a href="http://libp2p.io/"><img src="https://img.shields.io/badge/project-tetsy-libp2p-yellow.svg?style=flat-square" /></a>
-<a href="http://webchat.freenode.net/?channels=%23libp2p"><img src="https://img.shields.io/badge/freenode-%23tetsy-libp2p-yellow.svg?style=flat-square" /></a>
 [![dependency status](https://deps.rs/repo/github/tetcoin/tetsy-libp2p/status.svg?style=flat-square)](https://deps.rs/repo/github/tetcoin/tetsy-libp2p)
 
 This repository is the central place for Rust development of the [libp2p](https://libp2p.io) spec for tetcore.
