@@ -224,8 +224,8 @@ pub use libp2p_tcp as tcp;
 #[cfg_attr(docsrs, doc(cfg(feature = "uds")))]
 #[doc(inline)]
 pub use libp2p_uds as uds;
-#[cfg(feature = "wasm-ext")]
-#[cfg_attr(docsrs, doc(cfg(feature = "wasm-ext")))]
+#[cfg(feature = "tetsy-wasm-ext")]
+#[cfg_attr(docsrs, doc(cfg(feature = "tetsy-wasm-ext")))]
 #[doc(inline)]
 pub use libp2p_wasm_ext as wasm_ext;
 #[cfg(feature = "websocket")]
