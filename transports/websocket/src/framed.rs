@@ -29,7 +29,7 @@ use libp2p_core::{
     transport::{ListenerEvent, TransportError}
 };
 use log::{debug, trace};
-use soketto::{connection, extension::deflate::Deflate, handshake};
+use soket::{connection, extension::deflate::Deflate, handshake};
 use std::{convert::TryInto, fmt, io, mem, pin::Pin, task::Context, task::Poll};
 use url::Url;
 
@@ -509,13 +509,13 @@ where
         });
         let stream = stream::unfold((Vec::new(), receiver), |(mut data, mut receiver)| async {
             match receiver.receive(&mut data).await {
-                Ok(soketto::Incoming::Data(soketto::Data::Text(_))) => {
+                Ok(soket::Incoming::Data(soket::Data::Text(_))) => {
                     Some((Ok(IncomingData::Text(mem::take(&mut data))), (data, receiver)))
                 }
-                Ok(soketto::Incoming::Data(soketto::Data::Binary(_))) => {
+                Ok(soket::Incoming::Data(soket::Data::Binary(_))) => {
                     Some((Ok(IncomingData::Binary(mem::take(&mut data))), (data, receiver)))
                 }
-                Ok(soketto::Incoming::Pong(pong)) => {
+                Ok(soket::Incoming::Pong(pong)) => {
                     Some((Ok(IncomingData::Pong(Vec::from(pong))), (data, receiver)))
                 }
                 Err(connection::Error::Closed) => None,
