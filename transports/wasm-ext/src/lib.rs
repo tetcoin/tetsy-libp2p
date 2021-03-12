@@ -508,7 +508,7 @@ impl From<JsValue> for JsErr {
     }
 }
 
-impl From<libp2p_core::multiaddr::Error> for JsErr {
+impl From<tetsy_libp2p_core::multiaddr::Error> for JsErr {
     fn from(err: tetsy_libp2p_core::multiaddr::Error) -> JsErr {
         JsValue::from_str(&err.to_string()).into()
     }

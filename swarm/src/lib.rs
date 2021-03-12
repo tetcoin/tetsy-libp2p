@@ -289,7 +289,7 @@ where
     pending_event: Option<(PeerId, PendingNotifyHandler, TInEvent)>,
 
     /// The configured override for substream protocol upgrades, if any.
-    substream_upgrade_protocol_override: Option<libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour, TInEvent, TOutEvent, THandler> Deref for
@@ -909,7 +909,7 @@ pub struct SwarmBuilder<TBehaviour> {
     transport: transport::Boxed<(PeerId, StreamMuxerBox)>,
     behaviour: TBehaviour,
     network_config: NetworkConfig,
-    substream_upgrade_protocol_override: Option<libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour> SwarmBuilder<TBehaviour>
