@@ -25,7 +25,7 @@ use log::{debug, trace};
 use futures::{prelude::*, ready, stream::Fuse};
 use futures::task::{AtomicWaker, ArcWake, waker_ref, WakerRef};
 use asynchronous_codec::Framed;
-use nohash_hasher::{IntMap, IntSet};
+use nohash::{IntMap, IntSet};
 use parking_lot::Mutex;
 use smallvec::SmallVec;
 use std::collections::VecDeque;

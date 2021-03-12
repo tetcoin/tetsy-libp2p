@@ -67,7 +67,7 @@ impl Hash for LocalStreamId {
     }
 }
 
-impl nohash_hasher::IsEnabled for LocalStreamId {}
+impl nohash::IsEnabled for LocalStreamId {}
 
 /// A unique identifier used by the remote node for a substream.
 ///
