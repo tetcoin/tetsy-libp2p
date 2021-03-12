@@ -227,7 +227,7 @@ pub use tetsy_libp2p_uds as uds;
 #[cfg(feature = "wasm-x")]
 #[cfg_attr(docsrs, doc(cfg(feature = "wasm-x")))]
 #[doc(inline)]
-pub use tetsy_libp2p_wasm_ext as wasm_ext;
+pub use wasm_ext as wasm_ext;
 #[cfg(feature = "websocket")]
 #[cfg_attr(docsrs, doc(cfg(feature = "websocket")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
@@ -262,7 +262,7 @@ pub use self::core::{
     transport::TransportError,
     upgrade::{InboundUpgrade, InboundUpgradeExt, OutboundUpgrade, OutboundUpgradeExt}
 };
-pub use tetsy_libp2p_swarm_derive::NetworkBehaviour;
+pub use swarm_derive::NetworkBehaviour;
 pub use self::multiaddr::{Multiaddr, multiaddr as build_multiaddr};
 pub use self::simple::SimpleProtocol;
 pub use self::swarm::Swarm;
