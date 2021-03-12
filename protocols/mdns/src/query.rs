@@ -20,7 +20,7 @@
 
 use crate::{dns, META_QUERY_SERVICE, SERVICE_NAME};
 use dns_parser::{Packet, RData};
-use libp2p_core::{
+use tetsy_libp2p_core::{
     multiaddr::{Multiaddr, Protocol},
     PeerId,
 };

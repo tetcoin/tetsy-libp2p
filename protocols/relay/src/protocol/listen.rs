@@ -25,8 +25,8 @@ use crate::protocol::{Peer, PeerParseError, MAX_ACCEPTED_MESSAGE_LEN, PROTOCOL_N
 use asynchronous_codec::Framed;
 use futures::channel::oneshot;
 use futures::{future::BoxFuture, prelude::*};
-use libp2p_core::upgrade;
-use libp2p_swarm::NegotiatedSubstream;
+use tetsy_libp2p_core::upgrade;
+use tetsy_libp2p_swarm::NegotiatedSubstream;
 use prost::Message;
 
 use std::io::Cursor;

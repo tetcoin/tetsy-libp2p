@@ -25,10 +25,10 @@ use crate::transport::TransportToBehaviourMsg;
 use crate::RequestId;
 use futures::channel::{mpsc, oneshot};
 use futures::prelude::*;
-use libp2p_core::connection::{ConnectedPoint, ConnectionId, ListenerId};
-use libp2p_core::multiaddr::Multiaddr;
-use libp2p_core::PeerId;
-use libp2p_swarm::{
+use tetsy_libp2p_core::connection::{ConnectedPoint, ConnectionId, ListenerId};
+use tetsy_libp2p_core::multiaddr::Multiaddr;
+use tetsy_libp2p_core::PeerId;
+use tetsy_libp2p_swarm::{
     DialPeerCondition, NetworkBehaviour, NetworkBehaviourAction, NotifyHandler, PollParameters,
 };
 use std::collections::{hash_map::Entry, HashMap, HashSet, VecDeque};

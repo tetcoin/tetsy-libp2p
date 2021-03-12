@@ -98,10 +98,10 @@ mod transport;
 pub use behaviour::{Relay, RelayConfig};
 pub use transport::{RelayError, RelayTransport};
 
-use libp2p_core::Transport;
+use tetsy_libp2p_core::Transport;
 
 /// Create both a [`RelayTransport`] wrapping the provided [`Transport`]
-/// as well as a [`Relay`] [`NetworkBehaviour`](libp2p_swarm::NetworkBehaviour).
+/// as well as a [`Relay`] [`NetworkBehaviour`](tetsy_libp2p_swarm::NetworkBehaviour).
 ///
 /// Interconnects the returned [`RelayTransport`] and [`Relay`].
 pub fn new_transport_and_behaviour<T: Transport + Clone>(

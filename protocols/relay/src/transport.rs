@@ -26,10 +26,10 @@ use futures::channel::oneshot;
 use futures::future::{BoxFuture, Future, FutureExt};
 use futures::sink::SinkExt;
 use futures::stream::{Stream, StreamExt};
-use libp2p_core::either::{EitherError, EitherFuture, EitherOutput};
-use libp2p_core::multiaddr::{Multiaddr, Protocol};
-use libp2p_core::transport::{ListenerEvent, TransportError};
-use libp2p_core::{PeerId, Transport};
+use tetsy_libp2p_core::either::{EitherError, EitherFuture, EitherOutput};
+use tetsy_libp2p_core::multiaddr::{Multiaddr, Protocol};
+use tetsy_libp2p_core::transport::{ListenerEvent, TransportError};
+use tetsy_libp2p_core::{PeerId, Transport};
 use pin_project::pin_project;
 use std::pin::Pin;
 use std::task::{Context, Poll};
@@ -41,9 +41,9 @@ use std::task::{Context, Poll};
 /// 1. Use inner wrapped transport as before.
 ///
 ///    ```
-///    # use libp2p_core::{Multiaddr, multiaddr::{Protocol}, Transport};
-///    # use libp2p_core::transport::memory::MemoryTransport;
-///    # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
+///    # use tetsy_libp2p_core::{Multiaddr, multiaddr::{Protocol}, Transport};
+///    # use tetsy_libp2p_core::transport::memory::MemoryTransport;
+///    # use tetsy_libp2p_relay::{RelayConfig, new_transport_and_behaviour};
 ///    # let inner_transport = MemoryTransport::default();
 ///    # let (relay_transport, relay_behaviour) = new_transport_and_behaviour(
 ///    #     RelayConfig::default(),
@@ -55,9 +55,9 @@ use std::task::{Context, Poll};
 /// 2. Establish relayed connections by dialing `/p2p-circuit` addresses.
 ///
 ///    ```
-///    # use libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
-///    # use libp2p_core::transport::memory::MemoryTransport;
-///    # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
+///    # use tetsy_libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
+///    # use tetsy_libp2p_core::transport::memory::MemoryTransport;
+///    # use tetsy_libp2p_relay::{RelayConfig, new_transport_and_behaviour};
 ///    # let inner_transport = MemoryTransport::default();
 ///    # let (relay_transport, relay_behaviour) = new_transport_and_behaviour(
 ///    #     RelayConfig::default(),
@@ -75,9 +75,9 @@ use std::task::{Context, Poll};
 /// 3. Listen for incoming relayed connections via specific relay.
 ///
 ///    ```
-///    # use libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
-///    # use libp2p_core::transport::memory::MemoryTransport;
-///    # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
+///    # use tetsy_libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
+///    # use tetsy_libp2p_core::transport::memory::MemoryTransport;
+///    # use tetsy_libp2p_relay::{RelayConfig, new_transport_and_behaviour};
 ///    # let inner_transport = MemoryTransport::default();
 ///    # let (relay_transport, relay_behaviour) = new_transport_and_behaviour(
 ///    #     RelayConfig::default(),
@@ -96,9 +96,9 @@ use std::task::{Context, Poll};
 ///    not explicitly listening via, are dropped.
 ///
 ///    ```
-///    # use libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
-///    # use libp2p_core::transport::memory::MemoryTransport;
-///    # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
+///    # use tetsy_libp2p_core::{Multiaddr, multiaddr::{Protocol}, PeerId, Transport};
+///    # use tetsy_libp2p_core::transport::memory::MemoryTransport;
+///    # use tetsy_libp2p_relay::{RelayConfig, new_transport_and_behaviour};
 ///    # let inner_transport = MemoryTransport::default();
 ///    # let (relay_transport, relay_behaviour) = new_transport_and_behaviour(
 ///    #     RelayConfig::default(),
@@ -120,8 +120,8 @@ impl<T: Clone> RelayTransport<T> {
     /// [`RelayTransport`].
     ///
     ///```
-    /// # use libp2p_core::transport::dummy::DummyTransport;
-    /// # use libp2p_relay::{RelayConfig, new_transport_and_behaviour};
+    /// # use tetsy_libp2p_core::transport::dummy::DummyTransport;
+    /// # use tetsy_libp2p_relay::{RelayConfig, new_transport_and_behaviour};
     ///
     /// let inner_transport = DummyTransport::<()>::new();
     /// let (relay_transport, relay_behaviour) = new_transport_and_behaviour(
@@ -537,7 +537,7 @@ impl std::fmt::Display for RelayError {
 impl std::error::Error for RelayError {}
 
 /// Message from the [`RelayTransport`] to the [`Relay`](crate::Relay)
-/// [`NetworkBehaviour`](libp2p_swarm::NetworkBehaviour).
+/// [`NetworkBehaviour`](tetsy_libp2p_swarm::NetworkBehaviour).
 pub enum TransportToBehaviourMsg {
     /// Dial destination node via relay node.
     DialReq {

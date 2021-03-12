@@ -27,7 +27,7 @@ use bytes::{BytesMut, Bytes};
 use futures::channel::oneshot;
 use futures::future::BoxFuture;
 use futures::prelude::*;
-use libp2p_swarm::NegotiatedSubstream;
+use tetsy_libp2p_swarm::NegotiatedSubstream;
 use prost::Message;
 use std::time::Duration;
 use unsigned_varint::codec::UviBytes;

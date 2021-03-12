@@ -24,10 +24,10 @@ use async_io::{Async, Timer};
 use futures::prelude::*;
 use if_watch::{IfEvent, IfWatcher};
 use lazy_static::lazy_static;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     address_translation, connection::ConnectionId, multiaddr::Protocol, Multiaddr, PeerId,
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     protocols_handler::DummyProtocolsHandler, NetworkBehaviour, NetworkBehaviourAction,
     PollParameters, ProtocolsHandler,
 };

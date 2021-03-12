@@ -45,7 +45,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         ..Default::default()
     };
     let (relay_wrapped_transport, relay_behaviour) =
-        libp2p_relay::new_transport_and_behaviour(relay_config, tcp_transport);
+        tetsy_libp2p_relay::new_transport_and_behaviour(relay_config, tcp_transport);
 
     let plain = plaintext::PlainText2Config {
         local_public_key: local_key.public(),
@@ -54,7 +54,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let transport = relay_wrapped_transport
         .upgrade(upgrade::Version::V1)
         .authenticate(plain)
-        .multiplex(libp2p_yamux::YamuxConfig::default())
+        .multiplex(libp2p_remux::YamuxConfig::default())
         .boxed();
 
     let mut swarm = Swarm::new(transport, relay_behaviour, local_peer_id);

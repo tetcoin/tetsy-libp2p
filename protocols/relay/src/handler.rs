@@ -25,10 +25,10 @@ use futures::channel::oneshot::{self, Canceled};
 use futures::future::BoxFuture;
 use futures::prelude::*;
 use futures::stream::FuturesUnordered;
-use libp2p_core::connection::ConnectionId;
-use libp2p_core::either::{EitherError, EitherOutput};
-use libp2p_core::{upgrade, ConnectedPoint, Multiaddr, PeerId};
-use libp2p_swarm::{
+use tetsy_libp2p_core::connection::ConnectionId;
+use tetsy_libp2p_core::either::{EitherError, EitherOutput};
+use tetsy_libp2p_core::{upgrade, ConnectedPoint, Multiaddr, PeerId};
+use tetsy_libp2p_swarm::{
     IntoProtocolsHandler, KeepAlive, NegotiatedSubstream, ProtocolsHandler, ProtocolsHandlerEvent,
     ProtocolsHandlerUpgrErr, SubstreamProtocol,
 };

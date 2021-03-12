@@ -46,8 +46,8 @@ pub mod handler;
 pub use handler::{PingConfig, PingResult, PingSuccess, PingFailure};
 use handler::PingHandler;
 
-use libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
-use libp2p_swarm::{NetworkBehaviour, NetworkBehaviourAction, PollParameters};
+use tetsy_libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
+use tetsy_libp2p_swarm::{NetworkBehaviour, NetworkBehaviourAction, PollParameters};
 use std::{collections::VecDeque, task::Context, task::Poll};
 use void::Void;
 
