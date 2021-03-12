@@ -49,11 +49,11 @@
 use async_std::{io, task};
 use env_logger::{Builder, Env};
 use futures::prelude::*;
-use libp2p::gossipsub::MessageId;
-use libp2p::gossipsub::{
+use tetsy_libp2p::gossipsub::MessageId;
+use tetsy_libp2p::gossipsub::{
     GossipsubEvent, GossipsubMessage, IdentTopic as Topic, MessageAuthenticity, ValidationMode,
 };
-use libp2p::{gossipsub, identity, PeerId};
+use tetsy_libp2p::{gossipsub, identity, PeerId};
 use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 use std::time::Duration;

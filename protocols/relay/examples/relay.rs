@@ -20,12 +20,12 @@
 
 use futures::executor::block_on;
 use futures::stream::StreamExt;
-use libp2p::core::upgrade;
-use libp2p::plaintext;
-use libp2p::relay::RelayConfig;
-use libp2p::tcp::TcpConfig;
-use libp2p::Transport;
-use libp2p::{identity, PeerId, Swarm};
+use tetsy_libp2p::core::upgrade;
+use tetsy_libp2p::plaintext;
+use tetsy_libp2p::relay::RelayConfig;
+use tetsy_libp2p::tcp::TcpConfig;
+use tetsy_libp2p::Transport;
+use tetsy_libp2p::{identity, PeerId, Swarm};
 use std::error::Error;
 use std::task::{Context, Poll};
 use std::time::Duration;

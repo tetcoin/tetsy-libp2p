@@ -40,7 +40,7 @@
 
 use async_std::task;
 use futures::{future, prelude::*};
-use libp2p::{identity, PeerId, ping::{Ping, PingConfig}, Swarm};
+use tetsy_libp2p::{identity, PeerId, ping::{Ping, PingConfig}, Swarm};
 use std::{error::Error, task::{Context, Poll}};
 
 fn main() -> Result<(), Box<dyn Error>> {

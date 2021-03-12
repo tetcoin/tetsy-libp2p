@@ -51,7 +51,7 @@
 
 use async_std::{io, task};
 use futures::{future, prelude::*};
-use libp2p::{
+use tetsy_libp2p::{
     Multiaddr,
     PeerId,
     Swarm,

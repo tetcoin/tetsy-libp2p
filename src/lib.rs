@@ -47,7 +47,7 @@
 //! Example (Dialing a TCP/IP multi-address):
 //!
 //! ```rust
-//! use libp2p::{Multiaddr, Transport, tcp::TcpConfig};
+//! use tetsy_libp2p::{Multiaddr, Transport, tcp::TcpConfig};
 //! let tcp = TcpConfig::new();
 //! let addr: Multiaddr = "/ip4/98.97.96.95/tcp/20500".parse().expect("invalid multiaddr");
 //! let _conn = tcp.dial(addr);
@@ -86,7 +86,7 @@
 //!
 //! ```rust
 //! # #[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), feature = "noise", feature = "remux"))] {
-//! use libp2p::{Transport, core::upgrade, tcp::TcpConfig, noise, identity::Keypair, remux};
+//! use tetsy_libp2p::{Transport, core::upgrade, tcp::TcpConfig, noise, identity::Keypair, remux};
 //! let tcp = TcpConfig::new();
 //! let id_keys = Keypair::generate_ed25519();
 //! let noise_keys = noise::Keypair::<noise::X25519Spec>::new().into_authentic(&id_keys).unwrap();

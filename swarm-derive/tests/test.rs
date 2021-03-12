@@ -234,7 +234,7 @@ fn where_clause() {
 
 #[test]
 fn nested_derives_with_import() {
-    use libp2p::swarm::NetworkBehaviourEventProcess;
+    use tetsy_libp2p::swarm::NetworkBehaviourEventProcess;
 
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
