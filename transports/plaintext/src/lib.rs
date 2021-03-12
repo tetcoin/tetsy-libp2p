@@ -24,7 +24,7 @@ use bytes::Bytes;
 use futures::future::{self, Ready};
 use futures::prelude::*;
 use futures::future::BoxFuture;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     identity,
     InboundUpgrade,
     OutboundUpgrade,
@@ -51,16 +51,16 @@ mod structs_proto {
 /// > Builder pattern one can still do an upgrade *manually*:
 ///
 /// ```
-/// # use libp2p_core::transport::{ Transport, memory::MemoryTransport };
-/// # use libp2p_plaintext::PlainText1Config;
+/// # use tetsy_libp2p_core::transport::{ Transport, memory::MemoryTransport };
+/// # use tetsy_libp2p_plaintext::PlainText1Config;
 /// #
 /// MemoryTransport::default()
 ///   .and_then(move |io, endpoint| {
-///     libp2p_core::upgrade::apply(
+///     tetsy_libp2p_core::upgrade::apply(
 ///       io,
 ///       PlainText1Config{},
 ///       endpoint,
-///       libp2p_core::transport::upgrade::Version::V1,
+///       tetsy_libp2p_core::transport::upgrade::Version::V1,
 ///     )
 ///   })
 ///   .map(|plaintext, _endpoint| {

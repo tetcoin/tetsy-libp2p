@@ -20,11 +20,11 @@
 
 use async_io::Async;
 use futures::{future::{self, Either}, prelude::*};
-use libp2p_core::identity;
-use libp2p_core::upgrade::{self, Negotiated, apply_inbound, apply_outbound};
-use libp2p_core::transport::{Transport, ListenerEvent};
-use libp2p_noise::{Keypair, X25519, X25519Spec, NoiseConfig, RemoteIdentity, NoiseError, NoiseOutput};
-use libp2p_tcp::TcpConfig;
+use tetsy_libp2p_core::identity;
+use tetsy_libp2p_core::upgrade::{self, Negotiated, apply_inbound, apply_outbound};
+use tetsy_libp2p_core::transport::{Transport, ListenerEvent};
+use tetsy_libp2p_noise::{Keypair, X25519, X25519Spec, NoiseConfig, RemoteIdentity, NoiseError, NoiseOutput};
+use tetsy_libp2p_tcp::TcpConfig;
 use log::info;
 use quickcheck::QuickCheck;
 use std::{convert::TryInto, io, net::TcpStream};

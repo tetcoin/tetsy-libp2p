@@ -21,7 +21,7 @@
 //! Integration tests for the `RequestResponse` network behaviour.
 
 use async_trait::async_trait;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     Multiaddr,
     PeerId,
     identity,
@@ -29,10 +29,10 @@ use libp2p_core::{
     transport::{self, Transport},
     upgrade::{self, read_one, write_one}
 };
-use libp2p_noise::{NoiseConfig, X25519Spec, Keypair};
-use libp2p_request_response::*;
-use libp2p_swarm::{Swarm, SwarmEvent};
-use libp2p_tcp::TcpConfig;
+use tetsy_libp2p_noise::{NoiseConfig, X25519Spec, Keypair};
+use request_response::*;
+use tetsy_libp2p_swarm::{Swarm, SwarmEvent};
+use tetsy_libp2p_tcp::TcpConfig;
 use futures::{prelude::*, channel::mpsc, executor::LocalPool, task::SpawnExt};
 use rand::{self, Rng};
 use std::{io, iter};

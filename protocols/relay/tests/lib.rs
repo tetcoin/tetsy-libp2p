@@ -24,21 +24,21 @@ use futures::stream::Stream;
 use futures::task::Spawn;
 use libp2p::kad::record::store::MemoryStore;
 use libp2p::NetworkBehaviour;
-use libp2p_core::connection::{ConnectedPoint, ConnectionId};
-use libp2p_core::either::EitherTransport;
-use libp2p_core::multiaddr::{Multiaddr, Protocol};
-use libp2p_core::transport::{MemoryTransport, Transport, TransportError};
-use libp2p_core::upgrade::{DeniedUpgrade, InboundUpgrade, OutboundUpgrade};
-use libp2p_core::{identity, upgrade, PeerId};
-use libp2p_identify::{Identify, IdentifyEvent, IdentifyInfo};
-use libp2p_kad::{GetClosestPeersOk, Kademlia, KademliaEvent, QueryResult};
-use libp2p_ping::{Ping, PingConfig, PingEvent};
+use tetsy_libp2p_core::connection::{ConnectedPoint, ConnectionId};
+use tetsy_libp2p_core::either::EitherTransport;
+use tetsy_libp2p_core::multiaddr::{Multiaddr, Protocol};
+use tetsy_libp2p_core::transport::{MemoryTransport, Transport, TransportError};
+use tetsy_libp2p_core::upgrade::{DeniedUpgrade, InboundUpgrade, OutboundUpgrade};
+use tetsy_libp2p_core::{identity, upgrade, PeerId};
+use tetsy_libp2p_identify::{Identify, IdentifyEvent, IdentifyInfo};
+use tetsy_libp2p_kad::{GetClosestPeersOk, Kademlia, KademliaEvent, QueryResult};
+use tetsy_libp2p_ping::{Ping, PingConfig, PingEvent};
 use plaintext::PlainText2Config;
-use libp2p_relay::{Relay, RelayConfig};
-use libp2p_swarm::protocols_handler::{
+use tetsy_libp2p_relay::{Relay, RelayConfig};
+use tetsy_libp2p_swarm::protocols_handler::{
     KeepAlive, ProtocolsHandler, ProtocolsHandlerEvent, ProtocolsHandlerUpgrErr, SubstreamProtocol,
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     AddressRecord, NegotiatedSubstream, NetworkBehaviour, NetworkBehaviourAction,
     NetworkBehaviourEventProcess, PollParameters, Swarm, SwarmEvent,
 };
@@ -1209,7 +1209,7 @@ fn build_swarm(reachability: Reachability, relay_mode: RelayMode) -> Swarm<Combi
         Reachability::Routable => EitherTransport::Right(transport),
     };
 
-    let (transport, relay_behaviour) = libp2p_relay::new_transport_and_behaviour(
+    let (transport, relay_behaviour) = tetsy_libp2p_relay::new_transport_and_behaviour(
         RelayConfig {
             actively_connect_to_dst_nodes: relay_mode.into(),
             ..Default::default()
@@ -1252,7 +1252,7 @@ fn build_keep_alive_swarm() -> Swarm<CombinedKeepAliveBehaviour> {
     let transport = MemoryTransport::default();
 
     let (transport, relay_behaviour) =
-        libp2p_relay::new_transport_and_behaviour(RelayConfig::default(), transport);
+        tetsy_libp2p_relay::new_transport_and_behaviour(RelayConfig::default(), transport);
 
     let transport = transport
         .upgrade(upgrade::Version::V1)
@@ -1300,7 +1300,7 @@ impl Default for KeepAliveBehaviour {
     }
 }
 
-impl libp2p_swarm::NetworkBehaviour for KeepAliveBehaviour {
+impl tetsy_libp2p_swarm::NetworkBehaviour for KeepAliveBehaviour {
     type ProtocolsHandler = KeepAliveProtocolsHandler;
     type OutEvent = void::Void;
 

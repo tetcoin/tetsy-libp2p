@@ -67,7 +67,7 @@ pub use protocol::{Protocol, ProtocolParams, IX, IK, XX};
 pub use protocol::{x25519::X25519, x25519_spec::X25519Spec};
 
 use futures::prelude::*;
-use libp2p_core::{identity, PeerId, UpgradeInfo, InboundUpgrade, OutboundUpgrade};
+use tetsy_libp2p_core::{identity, PeerId, UpgradeInfo, InboundUpgrade, OutboundUpgrade};
 use std::pin::Pin;
 use zeroize::Zeroize;
 

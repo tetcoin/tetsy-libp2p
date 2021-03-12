@@ -93,7 +93,7 @@ use futures::{
     executor::ThreadPoolBuilder,
     stream::FusedStream,
 };
-use libp2p_core::{
+use tetsy_libp2p_core::{
     Executor,
     Transport,
     Multiaddr,
@@ -999,7 +999,7 @@ where TBehaviour: NetworkBehaviour,
     /// > **Note**: If configured, specific upgrade protocols for
     /// > individual [`SubstreamProtocol`]s emitted by the `NetworkBehaviour`
     /// > are ignored.
-    pub fn substream_upgrade_protocol_override(mut self, v: libp2p_core::upgrade::Version) -> Self {
+    pub fn substream_upgrade_protocol_override(mut self, v: tetsy_libp2p_core::upgrade::Version) -> Self {
         self.substream_upgrade_protocol_override = Some(v);
         self
     }
@@ -1119,13 +1119,13 @@ mod tests {
     use crate::protocols_handler::DummyProtocolsHandler;
     use crate::test::{MockBehaviour, CallTraceBehaviour};
     use futures::{future, executor};
-    use libp2p_core::{
+    use tetsy_libp2p_core::{
         identity,
         upgrade,
         multiaddr,
         transport
     };
-    use libp2p_noise as noise;
+    use tetsy_libp2p_noise as noise;
     use super::*;
 
     fn new_test_swarm<T, O>(handler_proto: T) -> Swarm<CallTraceBehaviour<MockBehaviour<T, O>>>

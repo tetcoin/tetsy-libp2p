@@ -155,84 +155,84 @@
 #![doc(html_favicon_url = "https://libp2p.io/img/favicon.png")]
 
 #[cfg(feature = "pnet")]
-use libp2p_pnet::{PnetConfig, PreSharedKey};
+use tetsy_libp2p_pnet::{PnetConfig, PreSharedKey};
 
 pub use bytes;
 pub use futures;
 #[doc(inline)]
 pub use multiaddr;
 #[doc(inline)]
-pub use libp2p_core::multihash;
+pub use tetsy_libp2p_core::multihash;
 
 #[doc(inline)]
-pub use libp2p_core as core;
+pub use tetsy_libp2p_core as core;
 #[cfg(feature = "deflate")]
 #[cfg_attr(docsrs, doc(cfg(feature = "deflate")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
-pub use libp2p_deflate as deflate;
+pub use tetsy_libp2p_deflate as deflate;
 #[cfg(feature = "dns")]
 #[cfg_attr(docsrs, doc(cfg(feature = "dns")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
-pub use libp2p_dns as dns;
+pub use tetsy_libp2p_dns as dns;
 #[cfg(feature = "identify")]
 #[cfg_attr(docsrs, doc(cfg(feature = "identify")))]
 #[doc(inline)]
-pub use libp2p_identify as identify;
+pub use tetsy_libp2p_identify as identify;
 #[cfg(feature = "kad")]
 #[cfg_attr(docsrs, doc(cfg(feature = "kad")))]
 #[doc(inline)]
-pub use libp2p_kad as kad;
+pub use tetsy_libp2p_kad as kad;
 #[cfg(feature = "floodsub")]
 #[cfg_attr(docsrs, doc(cfg(feature = "floodsub")))]
 #[doc(inline)]
-pub use libp2p_floodsub as floodsub;
+pub use tetsy_libp2p_floodsub as floodsub;
 #[cfg(feature = "gossipsub")]
 #[cfg_attr(docsrs, doc(cfg(feature = "gossipsub")))]
 #[doc(inline)]
-pub use libp2p_gossipsub as gossipsub;
+pub use tetsy_libp2p_gossipsub as gossipsub;
 #[cfg(feature = "mplex")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mplex")))]
 #[doc(inline)]
-pub use libp2p_mplex as mplex;
+pub use tetsy_libp2p_mplex as mplex;
 #[cfg(feature = "mdns")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mdns")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
-pub use libp2p_mdns as mdns;
+pub use tetsy_libp2p_mdns as mdns;
 #[cfg(feature = "noise")]
 #[cfg_attr(docsrs, doc(cfg(feature = "noise")))]
 #[doc(inline)]
-pub use libp2p_noise as noise;
+pub use tetsy_libp2p_noise as noise;
 #[cfg(feature = "ping")]
 #[cfg_attr(docsrs, doc(cfg(feature = "ping")))]
 #[doc(inline)]
-pub use libp2p_ping as ping;
+pub use tetsy_libp2p_ping as ping;
 #[cfg(feature = "plain")]
 #[cfg_attr(docsrs, doc(cfg(feature = "plain")))]
 #[doc(inline)]
 pub use plaintext as plain;
 #[doc(inline)]
-pub use libp2p_swarm as swarm;
+pub use tetsy_libp2p_swarm as swarm;
 #[cfg(any(feature = "tcp-async-io", feature = "tcp-tokio"))]
 #[cfg_attr(docsrs, doc(cfg(any(feature = "tcp-async-io", feature = "tcp-tokio"))))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
-pub use libp2p_tcp as tcp;
+pub use tetsy_libp2p_tcp as tcp;
 #[cfg(feature = "uds")]
 #[cfg_attr(docsrs, doc(cfg(feature = "uds")))]
 #[doc(inline)]
-pub use libp2p_uds as uds;
+pub use tetsy_libp2p_uds as uds;
 #[cfg(feature = "wasm-x")]
 #[cfg_attr(docsrs, doc(cfg(feature = "wasm-x")))]
 #[doc(inline)]
-pub use libp2p_wasm_ext as wasm_ext;
+pub use tetsy_libp2p_wasm_ext as wasm_ext;
 #[cfg(feature = "websocket")]
 #[cfg_attr(docsrs, doc(cfg(feature = "websocket")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
-pub use libp2p_websocket as websocket;
+pub use tetsy_libp2p_websocket as websocket;
 #[cfg(feature = "remux")]
 #[cfg_attr(docsrs, doc(cfg(feature = "remux")))]
 #[doc(inline)]
@@ -240,15 +240,15 @@ pub use libp2p_remux as remux;
 #[cfg(feature = "pnet")]
 #[cfg_attr(docsrs, doc(cfg(feature = "pnet")))]
 #[doc(inline)]
-pub use libp2p_pnet as pnet;
+pub use tetsy_libp2p_pnet as pnet;
 #[cfg(feature = "relay")]
 #[cfg_attr(docsrs, doc(cfg(feature = "relay")))]
 #[doc(inline)]
-pub use libp2p_relay as relay;
+pub use tetsy_libp2p_relay as relay;
 #[cfg(feature = "req-res")]
 #[cfg_attr(docsrs, doc(cfg(feature = "req-res")))]
 #[doc(inline)]
-pub use libp2p_request_response as request_response;
+pub use request_response as request_response;
 
 mod transport_ext;
 
@@ -262,7 +262,7 @@ pub use self::core::{
     transport::TransportError,
     upgrade::{InboundUpgrade, InboundUpgradeExt, OutboundUpgrade, OutboundUpgradeExt}
 };
-pub use libp2p_swarm_derive::NetworkBehaviour;
+pub use tetsy_libp2p_swarm_derive::NetworkBehaviour;
 pub use self::multiaddr::{Multiaddr, multiaddr as build_multiaddr};
 pub use self::simple::SimpleProtocol;
 pub use self::swarm::Swarm;

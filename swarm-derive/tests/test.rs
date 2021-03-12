@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use libp2p_swarm_derive::*;
+use swarm_derive::*;
 
 /// Small utility to check that a type implements `NetworkBehaviour`.
 #[allow(dead_code)]
