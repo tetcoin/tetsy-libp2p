@@ -19,7 +19,7 @@
 // DEALINGS IN THE SOFTWARE.
 
 use swarm_derive::*;
-
+use tetsy_libp2p_core::either::EitherOutput;
 /// Small utility to check that a type implements `NetworkBehaviour`.
 #[allow(dead_code)]
 fn require_net_behaviour<T: tetsy_libp2p::swarm::NetworkBehaviour>() {}

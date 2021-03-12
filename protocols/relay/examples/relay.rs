@@ -21,7 +21,7 @@
 use futures::executor::block_on;
 use futures::stream::StreamExt;
 use tetsy_libp2p::core::upgrade;
-use tetsy_libp2p::plaintext;
+use plaintext;
 use tetsy_libp2p::relay::RelayConfig;
 use tetsy_libp2p::tcp::TcpConfig;
 use tetsy_libp2p::Transport;
