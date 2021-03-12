@@ -35,7 +35,7 @@ use async_std::{io, task};
 use futures::{future, prelude::*};
 use tetsy_libp2p::{
     core::{
-        either::EitherTransport, either::EitherOutput, muxing::StreamMuxerBox, transport, transport::upgrade::Version,
+        either::EitherTransport, muxing::StreamMuxerBox, transport, transport::upgrade::Version,
     },
     gossipsub::{self, Gossipsub, GossipsubConfigBuilder, GossipsubEvent, MessageAuthenticity},
     identify::{Identify, IdentifyEvent},
