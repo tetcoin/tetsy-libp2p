@@ -267,8 +267,8 @@ fn nested_derives_with_import() {
 #[test]
 fn event_process_false() {
     enum BehaviourOutEvent {
-        Ping(libp2p::ping::PingEvent),
-        Identify(libp2p::identify::IdentifyEvent)
+        Ping(tetsy_libp2p::ping::PingEvent),
+        Identify(tetsy_libp2p::identify::IdentifyEvent)
     }
 
     impl From<tetsy_libp2p::ping::PingEvent> for BehaviourOutEvent {

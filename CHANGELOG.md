@@ -312,7 +312,7 @@ must not be skipped!
   [PR 1528](https://github.com/libp2p/rust-libp2p/pull/1528)
 - `tetsy-libp2p-kad`: Allow customising the maximum packet size.
   [PR 1502](https://github.com/libp2p/rust-libp2p/pull/1502)
-- `tetsy-libp2p-kad`: Allow customising the (libp2p) connection keep-alive timeout.
+- `tetsy-libp2p-kad`: Allow customising the (tetsy_libp2p) connection keep-alive timeout.
   [PR 1477](https://github.com/libp2p/rust-libp2p/pull/1477)
 - `tetsy-libp2p-kad`: Avoid storing records that are expired upon receipt (optimisation).
   [PR 1496](https://github.com/libp2p/rust-libp2p/pull/1496)

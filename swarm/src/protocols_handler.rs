@@ -115,7 +115,7 @@ pub trait ProtocolsHandler: Send + 'static {
     /// The type of additional information passed to an `OutboundSubstreamRequest`.
     type OutboundOpenInfo: Send + 'static;
 
-    /// The [`InboundUpgrade`](libp2p_core::upgrade::InboundUpgrade) to apply on inbound
+    /// The [`InboundUpgrade`](tetsy_libp2p_core::upgrade::InboundUpgrade) to apply on inbound
     /// substreams to negotiate the desired protocols.
     ///
     /// > **Note**: The returned `InboundUpgrade` should always accept all the generally
