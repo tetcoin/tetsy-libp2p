@@ -342,7 +342,7 @@ must not be skipped!
 
 ## Version 0.16.0 (2020-02-13)
 
-- Removed the `Substream` associated type from the `ProtocolsHandler` trait. The type of the substream is now always `libp2p::swarm::NegotiatedSubstream`.
+- Removed the `Substream` associated type from the `ProtocolsHandler` trait. The type of the substream is now always `tetsy_libp2p::swarm::NegotiatedSubstream`.
 - As a consequence of the previous change, most of the implementations of the `NetworkBehaviour` trait provided by tetsy-libp2p (`Ping`, `Identify`, `Kademlia`, `Floodsub`, `Gossipsub`) have lost a generic parameter.
 - Removed the first generic parameter (the transport) from `Swarm` and `ExpandedSwarm`. The transport is now abstracted away in the internals of the swarm.
 - The `Send` and `'static` bounds are now enforced directly on the `ProtocolsHandler` trait and its associated `InboundUpgrade` and `OutboundUpgrade` implementations.
