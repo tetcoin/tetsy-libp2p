@@ -40,7 +40,7 @@ fn one_field() {
         ping: tetsy-libp2p::ping::Ping,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
@@ -60,12 +60,12 @@ fn two_fields() {
         identify: tetsy-libp2p::identify::Identify,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::identify::IdentifyEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::identify::IdentifyEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
@@ -83,22 +83,22 @@ fn three_fields() {
     struct Foo {
         ping: tetsy-libp2p::ping::Ping,
         identify: tetsy-libp2p::identify::Identify,
-        kad: tetsy-libp2p::kad::Kademlia<libp2p::kad::record::store::MemoryStore>,
+        kad: tetsy-libp2p::kad::Kademlia<tetsy_libp2p::kad::record::store::MemoryStore>,
         #[behaviour(ignore)]
         foo: String,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::identify::IdentifyEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::identify::IdentifyEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::kad::KademliaEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::kad::KademliaEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::kad::KademliaEvent) {
         }
     }
@@ -117,15 +117,15 @@ fn three_fields_non_last_ignored() {
         ping: tetsy-libp2p::ping::Ping,
         #[behaviour(ignore)]
         identify: String,
-        kad: tetsy-libp2p::kad::Kademlia<libp2p::kad::record::store::MemoryStore>,
+        kad: tetsy-libp2p::kad::Kademlia<tetsy_libp2p::kad::record::store::MemoryStore>,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::kad::KademliaEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::kad::KademliaEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::kad::KademliaEvent) {
         }
     }
@@ -146,18 +146,18 @@ fn custom_polling() {
         identify: tetsy-libp2p::identify::Identify,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::identify::IdentifyEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::identify::IdentifyEvent) {
         }
     }
 
     impl Foo {
-        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy-libp2p::swarm::PollParameters) -> std::task::Poll<libp2p::swarm::NetworkBehaviourAction<T, ()>> { std::task::Poll::Pending }
+        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy-libp2p::swarm::PollParameters) -> std::task::Poll<tetsy_libp2p::swarm::NetworkBehaviourAction<T, ()>> { std::task::Poll::Pending }
     }
 
     #[allow(dead_code)]
@@ -176,12 +176,12 @@ fn custom_event_no_polling() {
         identify: tetsy-libp2p::identify::Identify,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::identify::IdentifyEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::identify::IdentifyEvent) {
         }
     }
@@ -202,18 +202,18 @@ fn custom_event_and_polling() {
         identify: tetsy-libp2p::identify::Identify,
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<libp2p::identify::IdentifyEvent> for Foo {
+    impl tetsy-libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::identify::IdentifyEvent) {
         }
     }
 
     impl Foo {
-        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy-libp2p::swarm::PollParameters) -> std::task::Poll<libp2p::swarm::NetworkBehaviourAction<T, String>> { std::task::Poll::Pending }
+        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy-libp2p::swarm::PollParameters) -> std::task::Poll<tetsy_libp2p::swarm::NetworkBehaviourAction<T, String>> { std::task::Poll::Pending }
     }
 
     #[allow(dead_code)]
@@ -248,7 +248,7 @@ fn nested_derives_with_import() {
         foo: Foo,
     }
 
-    impl NetworkBehaviourEventProcess<libp2p::ping::PingEvent> for Foo {
+    impl NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
         fn inject_event(&mut self, _: tetsy-libp2p::ping::PingEvent) {
         }
     }
@@ -271,13 +271,13 @@ fn event_process_false() {
         Identify(libp2p::identify::IdentifyEvent)
     }
 
-    impl From<libp2p::ping::PingEvent> for BehaviourOutEvent {
+    impl From<tetsy_libp2p::ping::PingEvent> for BehaviourOutEvent {
         fn from(event: tetsy-libp2p::ping::PingEvent) -> Self {
             BehaviourOutEvent::Ping(event)
         }
     }
 
-    impl From<libp2p::identify::IdentifyEvent> for BehaviourOutEvent {
+    impl From<tetsy_libp2p::identify::IdentifyEvent> for BehaviourOutEvent {
         fn from(event: tetsy-libp2p::identify::IdentifyEvent) -> Self {
             BehaviourOutEvent::Identify(event)
         }
