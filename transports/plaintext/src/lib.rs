@@ -52,7 +52,7 @@ mod structs_proto {
 ///
 /// ```
 /// # use tetsy_libp2p_core::transport::{ Transport, memory::MemoryTransport };
-/// # use tetsy_libp2p_plaintext::PlainText1Config;
+/// # use plaintext::PlainText1Config;
 /// #
 /// MemoryTransport::default()
 ///   .and_then(move |io, endpoint| {
