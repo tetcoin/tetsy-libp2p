@@ -99,10 +99,10 @@ pub use self::protocol::ProtocolError;
 pub use self::dialer_select::{dialer_select_proto, DialerSelectFuture};
 pub use self::listener_select::{listener_select_proto, ListenerSelectFuture};
 
-/// Supported multistream-select versions.
+/// Supported tetsy-multistream-select versions.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Version {
-    /// Version 1 of the multistream-select protocol. See [1] and [2].
+    /// Version 1 of the tetsy-multistream-select protocol. See [1] and [2].
     ///
     /// [1]: https://github.com/libp2p/specs/blob/master/connections/README.md#protocol-negotiation
     /// [2]: https://github.com/multiformats/multistream-select
@@ -129,7 +129,7 @@ pub enum Version {
     /// > pitfall that is rarely encountered: When nesting multiple protocol negotiations, the
     /// > listener should either be known to support all of the dialer's optimistically chosen
     /// > protocols or there is must be no intermediate protocol without a payload and none of
-    /// > the protocol payloads must have the potential for being mistaken for a multistream-select
+    /// > the protocol payloads must have the potential for being mistaken for a tetsy-multistream-select
     /// > protocol message. This avoids rare edge-cases whereby the listener may not recognize
     /// > upgrade boundaries and erroneously process a request despite not supporting one of
     /// > the intermediate protocols that the dialer committed to. See [1] and [2].

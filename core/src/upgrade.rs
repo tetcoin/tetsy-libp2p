@@ -37,7 +37,7 @@
 //! An upgrade is performed in two steps:
 //!
 //! - A protocol negotiation step. The `UpgradeInfo::protocol_info` method is called to determine
-//!   which protocols are supported by the trait implementation. The `multistream-select` protocol
+//!   which protocols are supported by the trait implementation. The `tetsy-multistream-select` protocol
 //!   is used in order to agree on which protocol to use amongst the ones supported.
 //!
 //! - A handshake. After a successful negotiation, the `InboundUpgrade::upgrade_inbound` or

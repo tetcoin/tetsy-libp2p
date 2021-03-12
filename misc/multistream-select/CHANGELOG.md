@@ -22,7 +22,7 @@
 
 - Make the `V1Lazy` upgrade strategy more interoperable with `V1`. Specifically,
   the listener now behaves identically with `V1` and `V1Lazy`. Furthermore, the
-  multistream-select protocol header is now also identical, making `V1` and `V1Lazy`
+  tetsy-multistream-select protocol header is now also identical, making `V1` and `V1Lazy`
   indistinguishable on the wire. The remaining central effect of `V1Lazy` is that the dialer,
   if it only supports a single protocol in a negotiation, optimistically settles on that
   protocol without immediately flushing the negotiation data (i.e. protocol proposal)
