@@ -102,7 +102,7 @@ impl<C> OutboundUpgrade<C> for PlainText1Config {
 }
 
 /// `PlainText2Config` is an insecure connection handshake for testing purposes only, implementing
-/// the libp2p plaintext connection handshake specification.
+/// the tetsy-libp2p plaintext connection handshake specification.
 #[derive(Clone)]
 pub struct PlainText2Config {
     pub local_public_key: identity::PublicKey,

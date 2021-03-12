@@ -28,7 +28,7 @@
 //! over a particular choice of Diffie–Hellman key agreement (currently only X25519).
 //!
 //! > **Note**: Only the `XX` handshake pattern is currently guaranteed to provide
-//! >           interoperability with other libp2p implementations.
+//! >           interoperability with other tetsy-libp2p implementations.
 //!
 //! All upgrades produce as output a pair, consisting of the remote's static public key
 //! and a `NoiseOutput` which represents the established cryptographic session with the
@@ -389,12 +389,12 @@ pub struct LegacyConfig {
     /// Whether to continue sending legacy handshake payloads,
     /// i.e. length-prefixed protobuf payloads inside a length-prefixed
     /// noise frame. These payloads are not interoperable with other
-    /// libp2p implementations.
+    /// tetsy-libp2p implementations.
     pub send_legacy_handshake: bool,
     /// Whether to support receiving legacy handshake payloads,
     /// i.e. length-prefixed protobuf payloads inside a length-prefixed
     /// noise frame. These payloads are not interoperable with other
-    /// libp2p implementations.
+    /// tetsy-libp2p implementations.
     pub recv_legacy_handshake: bool,
 }
 

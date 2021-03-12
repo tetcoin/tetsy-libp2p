@@ -57,7 +57,7 @@ use wasm_timer::Instant;
 
 pub use crate::query::QueryStats;
 
-/// `Kademlia` is a `NetworkBehaviour` that implements the libp2p
+/// `Kademlia` is a `NetworkBehaviour` that implements the tetsy-libp2p
 /// Kademlia protocol.
 pub struct Kademlia<TStore> {
     /// The Kademlia routing table.
@@ -800,7 +800,7 @@ where
     /// implemented by [`Kademlia::put_record`], the provider API implements a
     /// pull-based model that may be used in addition or as an alternative.
     /// The means by which the actual value is obtained from a provider is out of scope
-    /// of the libp2p Kademlia provider API.
+    /// of the tetsy-libp2p Kademlia provider API.
     ///
     /// The results of the (repeated) provider announcements sent by this node are
     /// reported via [`KademliaEvent::QueryResult{QueryResult::StartProviding}`].
@@ -1061,7 +1061,7 @@ where
                         .skip(1) // Skip the bucket with the closest neighbour.
                         .map(|b| {
                             // Try to find a key that falls into the bucket. While such keys can
-                            // be generated fully deterministically, the current libp2p kademlia
+                            // be generated fully deterministically, the current tetsy-libp2p kademlia
                             // wire protocol requires transmission of the preimages of the actual
                             // keys in the DHT keyspace, hence for now this is just a "best effort"
                             // to find a key that hashes into a specific bucket. The probabilities
@@ -1459,7 +1459,7 @@ where
         // first place.
 
         if !record.is_expired(now) {
-            // The record is cloned because of the weird libp2p protocol
+            // The record is cloned because of the weird tetsy-libp2p protocol
             // requirement to send back the value in the response, although this
             // is a waste of resources.
             match self.store.put(record.clone()) {

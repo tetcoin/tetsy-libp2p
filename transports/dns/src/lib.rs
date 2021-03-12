@@ -42,7 +42,7 @@ use tetsy_libp2p_core::{
 use log::{error, debug, trace};
 use std::{error, fmt, io, net::ToSocketAddrs};
 
-/// Represents the configuration for a DNS transport capability of libp2p.
+/// Represents the configuration for a DNS transport capability of tetsy-libp2p.
 ///
 /// This struct implements the `Transport` trait and holds an underlying transport. Any call to
 /// `dial` with a multiaddr that contains `/dns/`, `/dns4/`, or `/dns6/` will be first be resolved,

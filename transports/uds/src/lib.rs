@@ -47,7 +47,7 @@ use std::{io, path::PathBuf};
 macro_rules! codegen {
     ($feature_name:expr, $uds_config:ident, $build_listener:expr, $unix_stream:ty, $($mut_or_not:tt)*) => {
 
-/// Represents the configuration for a Unix domain sockets transport capability for libp2p.
+/// Represents the configuration for a Unix domain sockets transport capability for tetsy-libp2p.
 #[cfg_attr(docsrs, doc(cfg(feature = $feature_name)))]
 #[derive(Debug, Clone)]
 pub struct $uds_config {

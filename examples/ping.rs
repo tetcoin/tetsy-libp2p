@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! A basic example demonstrating some core APIs and concepts of libp2p.
+//! A basic example demonstrating some core APIs and concepts of tetsy-libp2p.
 //!
 //! In the first terminal window, run:
 //!
@@ -52,7 +52,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("Local peer id: {:?}", peer_id);
 
     // Create a transport.
-    let transport = libp2p::build_development_transport(id_keys)?;
+    let transport = tetsy_libp2p::build_development_transport(id_keys)?;
 
     // Create a ping network behaviour.
     //

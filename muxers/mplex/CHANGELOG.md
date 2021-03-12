@@ -38,7 +38,7 @@
 
 - Be lenient with duplicate `Close` frames received. Version
   `0.23.0` started treating duplicate `Close` frames for a
-  substream as a protocol violation. As some libp2p implementations
+  substream as a protocol violation. As some tetsy-libp2p implementations
   seem to occasionally send such frames and it is a harmless
   redundancy, this releases reverts back to the pre-0.23 behaviour
   of ignoring duplicate `Close` frames.

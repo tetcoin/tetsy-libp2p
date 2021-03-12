@@ -44,9 +44,9 @@
 
 ## Version 0.36.0 [unreleased]
 
-- Update libp2p crates.
+- Update tetsy-libp2p crates.
 
-- Do not leak default features from libp2p crates.
+- Do not leak default features from tetsy-libp2p crates.
   [PR 1986](https://github.com/libp2p/rust-libp2p/pull/1986).
 
 - Add `tetsy-libp2p-relay` to `libp2p` facade crate.
@@ -192,7 +192,7 @@ must not be skipped!
 - New `tetsy-libp2p-request-response` crate
   ([PR 1596](https://github.com/libp2p/rust-libp2p/pull/1596)).
 
-- Updated libp2p dependencies.
+- Updated tetsy-libp2p dependencies.
 
 ## Version 0.19.1 (2020-05-25)
 
@@ -228,7 +228,7 @@ must not be skipped!
   tetsy-libp2p-noise-spec compliant signatures on static keys as well as the
   `/noise` protocol upgrade, hence providing a tetsy-libp2p-noise-spec compliant
   `XX` handshake. `IK` and `IX` are still supported with `X25519Spec`
-  though not guaranteed to be interoperable with other libp2p
+  though not guaranteed to be interoperable with other tetsy-libp2p
   implementations as these handshake patterns are not currently
   included in the tetsy-libp2p-noise-spec. The `X25519Spec` implementation
   will eventually replace the current `X25519` implementation, with
@@ -343,7 +343,7 @@ must not be skipped!
 ## Version 0.16.0 (2020-02-13)
 
 - Removed the `Substream` associated type from the `ProtocolsHandler` trait. The type of the substream is now always `libp2p::swarm::NegotiatedSubstream`.
-- As a consequence of the previous change, most of the implementations of the `NetworkBehaviour` trait provided by libp2p (`Ping`, `Identify`, `Kademlia`, `Floodsub`, `Gossipsub`) have lost a generic parameter.
+- As a consequence of the previous change, most of the implementations of the `NetworkBehaviour` trait provided by tetsy-libp2p (`Ping`, `Identify`, `Kademlia`, `Floodsub`, `Gossipsub`) have lost a generic parameter.
 - Removed the first generic parameter (the transport) from `Swarm` and `ExpandedSwarm`. The transport is now abstracted away in the internals of the swarm.
 - The `Send` and `'static` bounds are now enforced directly on the `ProtocolsHandler` trait and its associated `InboundUpgrade` and `OutboundUpgrade` implementations.
 - Modified `PeerId`s to compare equal across the identity and SHA256 hashes. As a consequence, the `Borrow` implementation of `PeerId` now always returns the bytes representation of a multihash with a SHA256 hash.

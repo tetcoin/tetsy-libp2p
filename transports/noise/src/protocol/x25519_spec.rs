@@ -101,7 +101,7 @@ impl<R> UpgradeInfo for NoiseConfig<IK, X25519Spec, R> {
 /// Noise protocols for X25519 with tetsy-libp2p-spec compliant signatures.
 ///
 /// **Note**: Only the XX handshake pattern is currently guaranteed to be
-/// interoperable with other libp2p implementations.
+/// interoperable with other tetsy-libp2p implementations.
 impl Protocol<X25519Spec> for X25519Spec {
     fn params_ik() -> ProtocolParams {
         X25519::params_ik()

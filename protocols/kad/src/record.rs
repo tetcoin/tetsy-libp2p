@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Records and record storage abstraction of the libp2p Kademlia DHT.
+//! Records and record storage abstraction of the tetsy-libp2p Kademlia DHT.
 
 pub mod store;
 

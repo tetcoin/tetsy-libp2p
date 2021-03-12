@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! A basic chat application with logs demonstrating libp2p and the gossipsub protocol.
+//! A basic chat application with logs demonstrating tetsy-libp2p and the gossipsub protocol.
 //!
 //! Using two terminal windows, start two instances. Type a message in either terminal and hit return: the
 //! message is sent and printed in the other terminal. Close with Ctrl-c.
@@ -71,7 +71,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("Local peer id: {:?}", local_peer_id);
 
     // Set up an encrypted TCP Transport over the Mplex and Remux protocols
-    let transport = libp2p::build_development_transport(local_key.clone())?;
+    let transport = tetsy-libp2p::build_development_transport(local_key.clone())?;
 
     // Create a Gossipsub topic
     let topic = Topic::new("test-net");
@@ -111,17 +111,17 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
 
         // build the swarm
-        libp2p::Swarm::new(transport, gossipsub, local_peer_id)
+        tetsy-libp2p::Swarm::new(transport, gossipsub, local_peer_id)
     };
 
     // Listen on all interfaces and whatever port the OS assigns
-    libp2p::Swarm::listen_on(&mut swarm, "/ip4/0.0.0.0/tcp/0".parse().unwrap()).unwrap();
+    tetsy-libp2p::Swarm::listen_on(&mut swarm, "/ip4/0.0.0.0/tcp/0".parse().unwrap()).unwrap();
 
     // Reach out to another node if specified
     if let Some(to_dial) = std::env::args().nth(1) {
         let dialing = to_dial.clone();
         match to_dial.parse() {
-            Ok(to_dial) => match libp2p::Swarm::dial_addr(&mut swarm, to_dial) {
+            Ok(to_dial) => match tetsy-libp2p::Swarm::dial_addr(&mut swarm, to_dial) {
                 Ok(_) => println!("Dialed {:?}", dialing),
                 Err(e) => println!("Dial {:?} failed: {:?}", dialing, e),
             },
@@ -165,7 +165,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         }
 
         if !listening {
-            for addr in libp2p::Swarm::listeners(&swarm) {
+            for addr in tetsy-libp2p::Swarm::listeners(&swarm) {
                 println!("Listening on {:?}", addr);
                 listening = true;
             }

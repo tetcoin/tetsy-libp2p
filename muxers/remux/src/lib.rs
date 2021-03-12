@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implements the Remux multiplexing protocol for libp2p, see also the
+//! Implements the Remux multiplexing protocol for tetsy-libp2p, see also the
 //! [specification](https://github.com/hashicorp/yamux/blob/master/spec.md).
 
 use futures::{future, prelude::*, ready, stream::{BoxStream, LocalBoxStream}};

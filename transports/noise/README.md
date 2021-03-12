@@ -10,7 +10,7 @@ implementations for various noise handshake patterns (currently `IK`, `IX`, and 
 over a particular choice of Diffie–Hellman key agreement (currently only X25519).
 
 > **Note**: Only the `XX` handshake pattern is currently guaranteed to provide
->           interoperability with other libp2p implementations.
+>           interoperability with other tetsy-libp2p implementations.
 
 All upgrades produce as output a pair, consisting of the remote's static public key
 and a `NoiseOutput` which represents the established cryptographic session with the

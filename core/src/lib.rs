@@ -72,7 +72,7 @@ use std::{future::Future, pin::Pin};
 /// > **Note**: While it may be tempting to implement this trait on types such as
 /// >           [`futures::stream::FuturesUnordered`], please note that passing an `Executor` is
 /// >           optional, and that `FuturesUnordered` (or a similar struct) will automatically
-/// >           be used as fallback by libp2p. The `Executor` trait should therefore only be
+/// >           be used as fallback by tetsy-libp2p. The `Executor` trait should therefore only be
 /// >           about running `Future`s in the background.
 pub trait Executor {
     /// Run the given future in the background until it ends.

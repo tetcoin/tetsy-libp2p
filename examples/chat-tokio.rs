@@ -18,8 +18,8 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! A basic chat application demonstrating libp2p with the mDNS and floodsub protocols
-//! using tokio for all asynchronous tasks and I/O. In order for all used libp2p
+//! A basic chat application demonstrating tetsy-libp2p with the mDNS and floodsub protocols
+//! using tokio for all asynchronous tasks and I/O. In order for all used tetsy-libp2p
 //! crates to use tokio, it enables tokio-specific features for some crates.
 //!
 //! The example is run per node as follows:

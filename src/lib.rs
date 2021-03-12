@@ -18,11 +18,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Libp2p is a peer-to-peer framework.
+//! Tetsy-Libp2p is a peer-to-peer framework.
 //!
-//! # Major libp2p concepts
+//! # Major tetsy-libp2p concepts
 //!
-//! Here is a list of all the major concepts of libp2p.
+//! Here is a list of all the major concepts of tetsy-libp2p.
 //!
 //! ## Multiaddr
 //!
@@ -64,8 +64,8 @@
 //! Example (Creating a development transport):
 //!
 //! ```rust
-//! let keypair = libp2p::identity::Keypair::generate_ed25519();
-//! let _transport = libp2p::build_development_transport(keypair);
+//! let keypair = tetsy-libp2p::identity::Keypair::generate_ed25519();
+//! let _transport = tetsy-libp2p::build_development_transport(keypair);
 //! // _transport.dial(...);
 //! ```
 //!
@@ -116,9 +116,9 @@
 //!
 //! See the documentation of the [`core`] module for more details about swarms.
 //!
-//! # Using libp2p
+//! # Using tetsy-libp2p
 //!
-//! The easiest way to get started with libp2p involves the following steps:
+//! The easiest way to get started with tetsy-libp2p involves the following steps:
 //!
 //!   1. Creating an identity [`Keypair`] for the local node, obtaining the local
 //!      [`PeerId`] from the [`PublicKey`].
@@ -236,7 +236,7 @@ pub use tetsy_libp2p_websocket as websocket;
 #[cfg(feature = "remux")]
 #[cfg_attr(docsrs, doc(cfg(feature = "remux")))]
 #[doc(inline)]
-pub use libp2p_remux as remux;
+pub use tetsy-libp2p_remux as remux;
 #[cfg(feature = "pnet")]
 #[cfg_attr(docsrs, doc(cfg(feature = "pnet")))]
 #[doc(inline)]
@@ -268,7 +268,7 @@ pub use self::simple::SimpleProtocol;
 pub use self::swarm::Swarm;
 pub use self::transport_ext::TransportExt;
 
-/// Builds a `Transport` that supports the most commonly-used protocols that libp2p supports.
+/// Builds a `Transport` that supports the most commonly-used protocols that tetsy-libp2p supports.
 ///
 /// > **Note**: This `Transport` is not suitable for production usage, as its implementation
 /// >           reserves the right to support additional protocols or remove deprecated protocols.

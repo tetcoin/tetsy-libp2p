@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for Websockets.
+//! Implementation of the tetsy-libp2p `Transport` trait for Websockets.
 
 pub mod error;
 pub mod framed;

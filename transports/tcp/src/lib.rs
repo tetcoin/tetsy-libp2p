@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for TCP/IP.
+//! Implementation of the tetsy-libp2p `Transport` trait for TCP/IP.
 //!
 //! # Usage
 //!
@@ -66,7 +66,7 @@ use std::{
 
 use provider::{Provider, IfEvent};
 
-/// The configuration for a TCP/IP transport capability for libp2p.
+/// The configuration for a TCP/IP transport capability for tetsy-libp2p.
 ///
 /// A [`GenTcpConfig`] implements the [`Transport`] interface and thus
 /// is consumed on [`Transport::listen_on`] and [`Transport::dial`].
