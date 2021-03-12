@@ -1140,7 +1140,7 @@ mod tests {
         let transport = transport::MemoryTransport::default()
             .upgrade(upgrade::Version::V1)
             .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-            .multiplex(libp2p_mplex::MplexConfig::new())
+            .multiplex(tetsy_libp2p_mplex::MplexConfig::new())
             .boxed();
         let behaviour = CallTraceBehaviour::new(MockBehaviour::new(handler_proto));
         SwarmBuilder::new(transport, behaviour, pubkey.into()).build()

@@ -89,7 +89,7 @@
 //! let transport = MemoryTransport::default()
 //!            .upgrade(libp2p_core::upgrade::Version::V1)
 //!            .authenticate(libp2p_noise::NoiseConfig::xx(noise_keys).into_authenticated())
-//!            .multiplex(libp2p_mplex::MplexConfig::new())
+//!            .multiplex(tetsy_libp2p_mplex::MplexConfig::new())
 //!            .boxed();
 //!
 //! // Create a Gossipsub topic
