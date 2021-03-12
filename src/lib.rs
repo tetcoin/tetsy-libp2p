@@ -236,7 +236,7 @@ pub use tetsy_libp2p_websocket as websocket;
 #[cfg(feature = "remux")]
 #[cfg_attr(docsrs, doc(cfg(feature = "remux")))]
 #[doc(inline)]
-pub use ibp2p_remux as remux;
+pub use libp2p_remux as remux;
 #[cfg(feature = "pnet")]
 #[cfg_attr(docsrs, doc(cfg(feature = "pnet")))]
 #[doc(inline)]
