@@ -63,6 +63,7 @@ use tetsy_libp2p::{
     mdns::{Mdns, MdnsConfig, MdnsEvent},
     swarm::NetworkBehaviourEventProcess
 };
+use tetsy_libp2p_core::either::EitherOutput;
 use std::{error::Error, task::{Context, Poll}};
 
 fn main() -> Result<(), Box<dyn Error>> {
