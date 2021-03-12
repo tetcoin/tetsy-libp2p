@@ -64,8 +64,8 @@
 //! Example (Creating a development transport):
 //!
 //! ```rust
-//! let keypair = tetsy-libp2p::identity::Keypair::generate_ed25519();
-//! let _transport = tetsy-libp2p::build_development_transport(keypair);
+//! let keypair = tetsy_libp2p::identity::Keypair::generate_ed25519();
+//! let _transport = tetsy_libp2p::build_development_transport(keypair);
 //! // _transport.dial(...);
 //! ```
 //!
