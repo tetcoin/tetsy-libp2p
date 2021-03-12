@@ -32,7 +32,7 @@ prost-build = "0.7"
 
 [dev-dependencies]
 env_logger = "0.7.1"
-libp2p = { path = "../.." }
+tetsy-libp2p = { path = "../.." }
 tetsy-libp2p-kad = { path = "../kad" }
 tetsy-libp2p-ping = { path = "../ping" }
 tetsy-libp2p-identify = { path = "../identify" }
