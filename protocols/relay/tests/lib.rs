@@ -1220,7 +1220,7 @@ fn build_swarm(reachability: Reachability, relay_mode: RelayMode) -> Swarm<Combi
     let transport = transport
         .upgrade(upgrade::Version::V1)
         .authenticate(plain)
-        .multiplex(libp2p_yamux::YamuxConfig::default())
+        .multiplex(libp2p_remux::RemuxConfig::default())
         .boxed();
 
     let combined_behaviour = CombinedBehaviour {
@@ -1257,7 +1257,7 @@ fn build_keep_alive_swarm() -> Swarm<CombinedKeepAliveBehaviour> {
     let transport = transport
         .upgrade(upgrade::Version::V1)
         .authenticate(plain)
-        .multiplex(libp2p_yamux::YamuxConfig::default())
+        .multiplex(libp2p_remux::RemuxConfig::default())
         .boxed();
 
     let combined_behaviour = CombinedKeepAliveBehaviour {
@@ -1281,7 +1281,7 @@ fn build_keep_alive_only_swarm() -> Swarm<KeepAliveBehaviour> {
     let transport = transport
         .upgrade(upgrade::Version::V1)
         .authenticate(plain)
-        .multiplex(libp2p_yamux::YamuxConfig::default())
+        .multiplex(libp2p_remux::RemuxConfig::default())
         .boxed();
 
     Swarm::new(transport, KeepAliveBehaviour::default(), local_peer_id)

@@ -28,7 +28,7 @@
 //! # use ltetsy_ibp2p_relay::{RelayConfig, new_transport_and_behaviour};
 //! # use tetsy_libp2p_swarm::Swarm;
 //! # use tetsy_libp2p_core::{identity, Multiaddr, multiaddr::Protocol, PeerId, upgrade, Transport};
-//! # use libp2p_remux::YamuxConfig;
+//! # use libp2p_remux::RemuxConfig;
 //! # use plaintext::PlainText2Config;
 //! # use std::convert::TryInto;
 //! # use std::str::FromStr;
@@ -48,7 +48,7 @@
 //! let transport = relay_transport
 //!     .upgrade(upgrade::Version::V1)
 //!     .authenticate(plain)
-//!     .multiplex(YamuxConfig::default())
+//!     .multiplex(RemuxConfig::default())
 //!     .boxed();
 //!
 //! let mut swarm = Swarm::new(transport, relay_behaviour, local_peer_id);

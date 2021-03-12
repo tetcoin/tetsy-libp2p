@@ -37,4 +37,4 @@ tetsy-libp2p-kad = { path = "../kad" }
 tetsy-libp2p-ping = { path = "../ping" }
 tetsy-libp2p-identify = { path = "../identify" }
 plaintext = { path = "../../transports/plaintext" }
-libp2p-yamux = { path = "../../muxers/yamux" }
+libp2p-remux = { path = "../../muxers/remux" }

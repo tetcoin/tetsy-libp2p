@@ -34,7 +34,7 @@ regex = "1.4.0"
 async-std = "1.6.3"
 env_logger = "0.8.1"
 plaintext = { path = "../../transports/plaintext" }
-libp2p-remux = { path = "../../muxers/yamux" }
+libp2p-remux = { path = "../../muxers/remux" }
 tetsy-libp2p-mplex = { path = "../../muxers/mplex" }
 tetsy-libp2p-noise = { path = "../../transports/noise" }
 quickcheck = "0.9.2"

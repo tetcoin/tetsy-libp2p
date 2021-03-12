@@ -38,7 +38,7 @@ use tetsy_libp2p_gossipsub::{
 };
 use plaintext::PlainText2Config;
 use tetsy_libp2p_swarm::Swarm;
-use libp2p_remux as yamux;
+use libp2p_remux as remux;
 
 struct Graph {
     pub nodes: Vec<(Multiaddr, Swarm<Gossipsub>)>,
@@ -147,7 +147,7 @@ fn build_node() -> (Multiaddr, Swarm<Gossipsub>) {
         .authenticate(PlainText2Config {
             local_public_key: public_key.clone(),
         })
-        .multiplex(yamux::YamuxConfig::default())
+        .multiplex(remux::RemuxConfig::default())
         .boxed();
 
     let peer_id = public_key.clone().into_peer_id();

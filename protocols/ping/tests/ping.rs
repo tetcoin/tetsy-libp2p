@@ -33,7 +33,7 @@ use tetsy_libp2p_noise as noise;
 use tetsy_libp2p_ping::*;
 use tetsy_libp2p_swarm::{Swarm, SwarmEvent};
 use tetsy_libp2p_tcp::TcpConfig;
-use libp2p_remux as yamux;
+use libp2p_remux as remux;
 use futures::{prelude::*, channel::mpsc};
 use quickcheck::*;
 use rand::prelude::*;
@@ -196,8 +196,8 @@ fn mk_transport(muxer: MuxerChoice) -> (
         .upgrade(upgrade::Version::V1)
         .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
         .multiplex(match muxer {
-            MuxerChoice::Yamux =>
-                upgrade::EitherUpgrade::A(yamux::YamuxConfig::default()),
+            MuxerChoice::Remux =>
+                upgrade::EitherUpgrade::A(remux::RemuxConfig::default()),
             MuxerChoice::Mplex =>
                 upgrade::EitherUpgrade::B(mplex::MplexConfig::default()),
         })
@@ -207,11 +207,11 @@ fn mk_transport(muxer: MuxerChoice) -> (
 #[derive(Debug, Copy, Clone)]
 enum MuxerChoice {
     Mplex,
-    Yamux,
+    Remux,
 }
 
 impl Arbitrary for MuxerChoice {
     fn arbitrary<G: Gen>(g: &mut G) -> MuxerChoice {
-        *[MuxerChoice::Mplex, MuxerChoice::Yamux].choose(g).unwrap()
+        *[MuxerChoice::Mplex, MuxerChoice::Remux].choose(g).unwrap()
     }
 }
