@@ -42,7 +42,7 @@ use tetsy_libp2p_swarm::{
     AddressRecord, NegotiatedSubstream, NetworkBehaviour, NetworkBehaviourAction,
     NetworkBehaviourEventProcess, PollParameters, Swarm, SwarmEvent,
 };
-use tetsy_libp2p_core::either::EitherOutput;
+
 use std::iter;
 use std::task::{Context, Poll};
 use std::time::Duration;
