@@ -9,28 +9,28 @@ repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tet-libp2p-wasm-ext"
+documentation = "https://docs.rs/tet-libp2p"
 
 
 [features]
 default = [
     "deflate",
     "dns",
-    "floodsub",
+    "flood",
     "identify",
     "kad",
-    "gossipsub",
+    "gossip",
     "mdns",
-    "mplex",
+    "mpx",
     "noise",
     "ping",
-    "plaintext",
+    "plain",
     "pnet",
-    "request-response",
+    "req-res",
     "secp256k1",
     "tcp-async-io",
     "uds",
-    "wasm-ext",
+    "wasm-x",
     "websocket",
     "remux",
 ]
