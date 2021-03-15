@@ -15,7 +15,7 @@ documentation = "https://docs.rs/tet-libp2p-wasm-ext"
 futures = "0.3.1"
 js-sys = "0.3.19"
 tet-libp2p-core = { version = "0.27.0", path = "../../core" }
-tet-send-wrapper = "0.1.0"
+tetsy-send-wrapper = "0.1.0"
 wasm-bindgen = "0.2.42"
 wasm-bindgen-futures = "0.4.4"
 
