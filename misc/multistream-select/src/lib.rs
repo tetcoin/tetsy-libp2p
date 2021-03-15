@@ -18,9 +18,9 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! # Multistream-select Protocol Negotiation
+//! # Tet-tet-multistream-select Protocol Negotiation
 //!
-//! This crate implements the `multistream-select` protocol, which is the protocol
+//! This crate implements the `tet-multistream-select` protocol, which is the protocol
 //! used by libp2p to negotiate which application-layer protocol to use with the
 //! remote on a connection or substream.
 //!
@@ -29,7 +29,7 @@
 //!
 //! ## Roles
 //!
-//! Two peers using the multistream-select negotiation protocol on an I/O stream
+//! Two peers using the tet-multistream-select negotiation protocol on an I/O stream
 //! are distinguished by their role as a _dialer_ (or _initiator_) or as a _listener_
 //! (or _responder_). Thereby the dialer plays the active part, driving the protocol,
 //! whereas the listener reacts to the messages received.
@@ -72,7 +72,7 @@
 //!
 //! ```no_run
 //! use async_std::net::TcpStream;
-//! use multistream_select::{dialer_select_proto, Version};
+//! use tet_multistream_select::{dialer_select_proto, Version};
 //! use futures::prelude::*;
 //!
 //! async_std::task::block_on(async move {
@@ -99,13 +99,13 @@ pub use self::protocol::ProtocolError;
 pub use self::dialer_select::{dialer_select_proto, DialerSelectFuture};
 pub use self::listener_select::{listener_select_proto, ListenerSelectFuture};
 
-/// Supported multistream-select versions.
+/// Supported tet-multistream-select versions.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Version {
-    /// Version 1 of the multistream-select protocol. See [1] and [2].
+    /// Version 1 of the tet-multistream-select protocol. See [1] and [2].
     ///
     /// [1]: https://github.com/libp2p/specs/blob/master/connections/README.md#protocol-negotiation
-    /// [2]: https://github.com/multiformats/multistream-select
+    /// [2]: https://github.com/multiformats/tet-multistream-select
     V1,
     /// A "lazy" variant of version 1 that is identical on the wire but whereby
     /// the dialer delays flushing protocol negotiation data in order to combine
@@ -129,7 +129,7 @@ pub enum Version {
     /// > pitfall that is rarely encountered: When nesting multiple protocol negotiations, the
     /// > listener should either be known to support all of the dialer's optimistically chosen
     /// > protocols or there is must be no intermediate protocol without a payload and none of
-    /// > the protocol payloads must have the potential for being mistaken for a multistream-select
+    /// > the protocol payloads must have the potential for being mistaken for a tet-multistream-select
     /// > protocol message. This avoids rare edge-cases whereby the listener may not recognize
     /// > upgrade boundaries and erroneously process a request despite not supporting one of
     /// > the intermediate protocols that the dialer committed to. See [1] and [2].

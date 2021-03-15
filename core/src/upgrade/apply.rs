@@ -22,10 +22,10 @@ use crate::{ConnectedPoint, Negotiated};
 use crate::upgrade::{InboundUpgrade, OutboundUpgrade, UpgradeError, ProtocolName};
 use futures::{future::Either, prelude::*};
 use log::debug;
-use multistream_select::{self, DialerSelectFuture, ListenerSelectFuture};
+use tet_multistream_select::{self, DialerSelectFuture, ListenerSelectFuture};
 use std::{iter, mem, pin::Pin, task::Context, task::Poll};
 
-pub use multistream_select::Version;
+pub use tet_multistream_select::Version;
 
 /// Applies an upgrade to the inbound and outbound direction of a connection or substream.
 pub fn apply<C, U>(conn: C, up: U, cp: ConnectedPoint, v: Version)
@@ -48,7 +48,7 @@ where
     U: InboundUpgrade<Negotiated<C>>,
 {
     let iter = up.protocol_info().into_iter().map(NameWrap as fn(_) -> NameWrap<_>);
-    let future = multistream_select::listener_select_proto(conn, iter);
+    let future = tet_multistream_select::listener_select_proto(conn, iter);
     InboundUpgradeApply {
         inner: InboundUpgradeApplyState::Init { future, upgrade: up }
     }
@@ -61,7 +61,7 @@ where
     U: OutboundUpgrade<Negotiated<C>>
 {
     let iter = up.protocol_info().into_iter().map(NameWrap as fn(_) -> NameWrap<_>);
-    let future = multistream_select::dialer_select_proto(conn, iter, v);
+    let future = tet_multistream_select::dialer_select_proto(conn, iter, v);
     OutboundUpgradeApply {
         inner: OutboundUpgradeApplyState::Init { future, upgrade: up }
     }

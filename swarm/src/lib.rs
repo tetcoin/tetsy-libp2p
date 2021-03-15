@@ -993,7 +993,7 @@ where TBehaviour: NetworkBehaviour,
 
     /// Configures an override for the substream upgrade protocol to use.
     ///
-    /// The subtream upgrade protocol is the multistream-select protocol
+    /// The subtream upgrade protocol is the tet-multistream-select protocol
     /// used for protocol negotiation on substreams. Since a listener
     /// supports all existing versions, the choice of upgrade protocol
     /// only effects the "dialer", i.e. the peer opening a substream.

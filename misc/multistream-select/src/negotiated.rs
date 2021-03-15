@@ -169,7 +169,7 @@ enum State<R> {
         /// The underlying I/O stream.
         #[pin]
         io: MessageReader<R>,
-        /// The expected negotiation header/preamble (i.e. multistream-select version),
+        /// The expected negotiation header/preamble (i.e. tet-multistream-select version),
         /// if one is still expected to be received.
         header: Option<HeaderLine>,
         /// The expected application protocol (i.e. name and version).

@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Multistream-select protocol messages an I/O operations for
+//! Tet-tet-multistream-select protocol messages an I/O operations for
 //! constructing protocol negotiation flows.
 //!
 //! A protocol negotiation flow is constructed by using the
@@ -36,14 +36,14 @@ use unsigned_varint as uvi;
 /// The maximum number of supported protocols that can be processed.
 const MAX_PROTOCOLS: usize = 1000;
 
-/// The encoded form of a multistream-select 1.0.0 header message.
+/// The encoded form of a tet-multistream-select 1.0.0 header message.
 const MSG_MULTISTREAM_1_0: &[u8] = b"/multistream/1.0.0\n";
-/// The encoded form of a multistream-select 'na' message.
+/// The encoded form of a tet-multistream-select 'na' message.
 const MSG_PROTOCOL_NA: &[u8] = b"na\n";
-/// The encoded form of a multistream-select 'ls' message.
+/// The encoded form of a tet-multistream-select 'ls' message.
 const MSG_LS: &[u8] = b"ls\n";
 
-/// The multistream-select header lines preceeding negotiation.
+/// The tet-multistream-select header lines preceeding negotiation.
 ///
 /// Every [`Version`] has a corresponding header line.
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -95,13 +95,13 @@ impl fmt::Display for Protocol {
     }
 }
 
-/// A multistream-select protocol message.
+/// A tet-multistream-select protocol message.
 ///
-/// Multistream-select protocol messages are exchanged with the goal
+/// Tet-tet-multistream-select protocol messages are exchanged with the goal
 /// of agreeing on a application-layer protocol to use on an I/O stream.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Message {
-    /// A header message identifies the multistream-select protocol
+    /// A header message identifies the tet-multistream-select protocol
     /// that the sender wishes to speak.
     Header(HeaderLine),
     /// A protocol message identifies a protocol request or acknowledgement.

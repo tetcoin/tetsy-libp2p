@@ -13,7 +13,7 @@
 
 # 0.25.2 [2020-12-02]
 
-- Require `multistream-select-0.9.1`.
+- Require `tet-multistream-select-0.9.1`.
 
 # 0.25.1 [2020-11-25]
 
@@ -32,7 +32,7 @@
 
 - Update `multihash`.
 
-- Update `multistream-select`.
+- Update `tet-multistream-select`.
 
 # 0.24.0 [2020-11-09]
 

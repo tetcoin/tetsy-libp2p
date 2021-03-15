@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use multistream_select::NegotiationError;
+use tet_multistream_select::NegotiationError;
 use std::fmt;
 
 /// Error that can happen when upgrading a connection or substream to use a protocol.

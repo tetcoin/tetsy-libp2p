@@ -260,7 +260,7 @@ impl<TUpgrade, TInfo> SubstreamProtocol<TUpgrade, TInfo> {
         }
     }
 
-    /// Sets the multistream-select protocol (version) to use for negotiating
+    /// Sets the tet-multistream-select protocol (version) to use for negotiating
     /// protocols upgrades on outbound substreams.
     pub fn with_upgrade_protocol(mut self, version: upgrade::Version) -> Self {
         self.upgrade_protocol = version;

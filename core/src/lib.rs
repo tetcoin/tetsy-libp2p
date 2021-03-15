@@ -41,7 +41,7 @@ mod keys_proto {
 
 /// Multi-address re-export.
 pub use multiaddr;
-pub type Negotiated<T> = multistream_select::Negotiated<T>;
+pub type Negotiated<T> = tet_multistream_select::Negotiated<T>;
 
 mod peer_id;
 mod translation;

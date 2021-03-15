@@ -1,5 +1,5 @@
 [package]
-name = "multistream-select"
+name = "tet-multistream-select"
 description = "Multistream-select negotiation protocol for tet-libp2p"
 version = "0.10.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
@@ -9,7 +9,7 @@ repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/multistream-select"
+documentation = "https://docs.rs/tet-multistream-select"
 
 [dependencies]
 bytes = "1"
