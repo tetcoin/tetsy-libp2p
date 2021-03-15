@@ -195,7 +195,7 @@ pub use gossipsub as gossipsub;
 #[cfg(feature = "mpx")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mplex")))]
 #[doc(inline)]
-pub use tet_libp2p_mplex as mplex;
+pub use mplex as mplex;
 #[cfg(feature = "mdns")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mdns")))]
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
