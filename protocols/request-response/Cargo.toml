@@ -1,20 +1,22 @@
 [package]
-name = "libp2p-request-response"
+name = "tetsy-libp2p-request-response"
 edition = "2018"
-description = "Generic Request/Response Protocols"
+description = "Tetsy Generic Request/Response Protocols"
 version = "0.9.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+documentation = "https://docs.rs/request-response"
 
 [dependencies]
 async-trait = "0.1"
 bytes = "1"
 futures = "0.3.1"
-libp2p-core = { version = "0.27.0", path = "../../core" }
-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
 log = "0.4.11"
 lru = "0.6"
 minicbor = { version = "0.7", features = ["std", "derive"] }
@@ -25,7 +27,7 @@ wasm-timer = "0.2"
 
 [dev-dependencies]
 async-std = "1.6.2"
-libp2p-noise = { path = "../noise" }
-libp2p-tcp = { path = "../../transports/tcp" }
-libp2p-yamux = { path = "../../muxers/yamux" }
+tetsy-libp2p-noise = { path = "../noise" }
+tetsy-libp2p-tcp = { path = "../../transports/tcp" }
+tetsy-libp2p-yamux = { path = "../../muxers/yamux" }
 rand = "0.7"

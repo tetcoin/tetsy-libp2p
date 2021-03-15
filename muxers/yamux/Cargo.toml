@@ -1,17 +1,19 @@
 [package]
-name = "libp2p-yamux"
+name = "tetsy-libp2p-yamux"
 edition = "2018"
-description = "Yamux multiplexing protocol for libp2p"
+description = "Yamux multiplexing protocol for tetsy-libp2p"
 version = "0.30.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+documentation = "https://docs.rs/tetsy-libp2p-remux"
 
 [dependencies]
 futures = "0.3.1"
-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
 parking_lot = "0.11"
 thiserror = "1.0"
 yamux = "0.8.0"

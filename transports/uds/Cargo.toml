@@ -1,17 +1,19 @@
 [package]
-name = "libp2p-uds"
+name = "tetsy-libp2p-uds"
 edition = "2018"
-description = "Unix domain sockets transport for libp2p"
+description = "Unix domain sockets transport for tetsy-libp2p"
 version = "0.27.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+documentation = "https://docs.rs/tetsy-libp2p-uds"
 
 [target.'cfg(all(unix, not(target_os = "emscripten")))'.dependencies]
 async-std = { version = "1.6.2", optional = true }
-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.1"
 futures = "0.3.1"
 tokio = { version = "1.0.1", default-features = false, features = ["net"], optional = true }

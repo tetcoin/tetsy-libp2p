@@ -1,18 +1,20 @@
 [package]
-name = "libp2p-ping"
+name = "tetsy-libp2p-ping"
 edition = "2018"
-description = "Ping protocol for libp2p"
+description = "Ping protocol for tetsy-libp2p"
 version = "0.27.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+documentation = "https://docs.rs/tetsy-libp2p-ping"
 
 [dependencies]
 futures = "0.3.1"
-libp2p-core = { version = "0.27.0", path = "../../core" }
-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
 log = "0.4.1"
 rand = "0.7.2"
 void = "1.0"
@@ -20,8 +22,8 @@ wasm-timer = "0.2"
 
 [dev-dependencies]
 async-std = "1.6.2"
-libp2p-tcp = { path = "../../transports/tcp" }
-libp2p-noise = { path = "../../protocols/noise" }
-libp2p-yamux = { path = "../../muxers/yamux" }
-libp2p-mplex = { path = "../../muxers/mplex" }
+tetsy-libp2p-tcp = { path = "../../transports/tcp" }
+tetsy-libp2p-noise = { path = "../../protocols/noise" }
+tetsy-libp2p-yamux = { path = "../../muxers/yamux" }
+tetsy-libp2p-mplex = { path = "../../muxers/mplex" }
 quickcheck = "0.9.0"

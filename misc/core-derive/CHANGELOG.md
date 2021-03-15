@@ -1,11 +1,11 @@
 # 0.21.0 [2020-11-25]
 
-- Update for compatibility with `libp2p-swarm-0.25`.
+- Update for compatibility with `tetsy-libp2p-swarm-0.25`.
 
 # 0.20.2 [2020-07-28]
 
 - Generate fully-qualified method name for `poll` to avoid
-ambiguity. [PR 1681](https://github.com/libp2p/rust-libp2p/pull/1681).
+ambiguity. [PR 1681](https://github.com/tetcoin/tetsy-libp2p/pull/1681).
 
 # 0.20.1 [2020-07-08]
 

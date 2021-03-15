@@ -1,13 +1,16 @@
 [package]
 name = "libp2p"
 edition = "2018"
-description = "Peer-to-peer networking library"
+description = "Tetsy peer-to-peer networking library"
 version = "0.34.0"
-authors = ["Parity Technologies <admin@parity.io>"]
+authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/libp2p/rust-libp2p"
-keywords = ["peer-to-peer", "libp2p", "networking"]
-categories = ["network-programming", "asynchronous"]
+repository = "https://github.com/tetcoin/tetsy-libp2p"
+keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
+categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
+homepage = "https://core.tetcoin.org"
+documentation = "https://docs.rs/tetsy-libp2p-wasm-ext"
+
 
 [features]
 default = [
@@ -31,27 +34,27 @@ default = [
     "websocket",
     "yamux",
 ]
-deflate = ["libp2p-deflate"]
-dns = ["libp2p-dns"]
-floodsub = ["libp2p-floodsub"]
-identify = ["libp2p-identify"]
-kad = ["libp2p-kad"]
-gossipsub = ["libp2p-gossipsub"]
-mdns = ["libp2p-mdns"]
-mplex = ["libp2p-mplex"]
-noise = ["libp2p-noise"]
-ping = ["libp2p-ping"]
-plaintext = ["libp2p-plaintext"]
-pnet = ["libp2p-pnet"]
-request-response = ["libp2p-request-response"]
-tcp-async-io = ["libp2p-tcp", "libp2p-tcp/async-io"]
-tcp-tokio = ["libp2p-tcp", "libp2p-tcp/tokio"]
-uds = ["libp2p-uds"]
-wasm-ext = ["libp2p-wasm-ext"]
-wasm-ext-websocket = ["wasm-ext", "libp2p-wasm-ext/websocket"]
-websocket = ["libp2p-websocket"]
-yamux = ["libp2p-yamux"]
-secp256k1 = ["libp2p-core/secp256k1"]
+deflate = ["tetsy-libp2p-deflate"]
+dns = ["tetsy-libp2p-dns"]
+floodsub = ["tetsy-libp2p-floodsub"]
+identify = ["tetsy-libp2p-identify"]
+kad = ["tetsy-libp2p-kad"]
+gossipsub = ["tetsy-libp2p-gossipsub"]
+mdns = ["tetsy-libp2p-mdns"]
+mplex = ["tetsy-libp2p-mplex"]
+noise = ["tetsy-libp2p-noise"]
+ping = ["tetsy-libp2p-ping"]
+plaintext = ["tetsy-libp2p-plaintext"]
+pnet = ["tetsy-libp2p-pnet"]
+request-response = ["tetsy-libp2p-request-response"]
+tcp-async-io = ["tetsy-libp2p-tcp", "tetsy-libp2p-tcp/async-io"]
+tcp-tokio = ["tetsy-libp2p-tcp", "tetsy-libp2p-tcp/tokio"]
+uds = ["tetsy-libp2p-uds"]
+wasm-ext = ["tetsy-libp2p-wasm-ext"]
+wasm-ext-websocket = ["wasm-ext", "tetsy-libp2p-wasm-ext/websocket"]
+websocket = ["tetsy-libp2p-websocket"]
+yamux = ["tetsy-libp2p-yamux"]
+secp256k1 = ["tetsy-libp2p-core/secp256k1"]
 
 [package.metadata.docs.rs]
 all-features = true
@@ -61,34 +64,34 @@ atomic = "0.5.0"
 bytes = "1"
 futures = "0.3.1"
 lazy_static = "1.2"
-libp2p-core = { version = "0.27.0", path = "core" }
-libp2p-core-derive = { version = "0.21.0", path = "misc/core-derive" }
-libp2p-floodsub = { version = "0.27.0", path = "protocols/floodsub", optional = true }
-libp2p-gossipsub = { version = "0.27.0", path = "./protocols/gossipsub", optional = true }
-libp2p-identify = { version = "0.27.0", path = "protocols/identify", optional = true }
-libp2p-kad = { version = "0.28.0", path = "protocols/kad", optional = true }
-libp2p-mplex = { version = "0.27.0", path = "muxers/mplex", optional = true }
-libp2p-noise = { version = "0.29.0", path = "protocols/noise", optional = true }
-libp2p-ping = { version = "0.27.0", path = "protocols/ping", optional = true }
-libp2p-plaintext = { version = "0.27.0", path = "protocols/plaintext", optional = true }
-libp2p-pnet = { version = "0.20.0", path = "protocols/pnet", optional = true }
-libp2p-request-response = { version = "0.9.0", path = "protocols/request-response", optional = true }
-libp2p-swarm = { version = "0.27.0", path = "swarm" }
-libp2p-uds = { version = "0.27.0", path = "transports/uds", optional = true }
-libp2p-wasm-ext = { version = "0.27.0", path = "transports/wasm-ext", optional = true }
-libp2p-yamux = { version = "0.30.0", path = "muxers/yamux", optional = true }
-multiaddr = { package = "parity-multiaddr", version = "0.11.0", path = "misc/multiaddr" }
+tetsy-libp2p-core = { version = "0.27.0", path = "core" }
+tetsy-libp2p-core-derive = { version = "0.21.0", path = "misc/core-derive" }
+tetsy-libp2p-floodsub = { version = "0.27.0", path = "protocols/floodsub", optional = true }
+tetsy-libp2p-gossipsub = { version = "0.27.0", path = "./protocols/gossipsub", optional = true }
+tetsy-libp2p-identify = { version = "0.27.0", path = "protocols/identify", optional = true }
+tetsy-libp2p-kad = { version = "0.28.0", path = "protocols/kad", optional = true }
+tetsy-libp2p-mplex = { version = "0.27.0", path = "muxers/mplex", optional = true }
+tetsy-libp2p-noise = { version = "0.29.0", path = "protocols/noise", optional = true }
+tetsy-libp2p-ping = { version = "0.27.0", path = "protocols/ping", optional = true }
+tetsy-libp2p-plaintext = { version = "0.27.0", path = "protocols/plaintext", optional = true }
+tetsy-libp2p-pnet = { version = "0.20.0", path = "protocols/pnet", optional = true }
+tetsy-libp2p-request-response = { version = "0.9.0", path = "protocols/request-response", optional = true }
+tetsy-libp2p-swarm = { version = "0.27.0", path = "swarm" }
+tetsy-libp2p-uds = { version = "0.27.0", path = "transports/uds", optional = true }
+tetsy-libp2p-wasm-ext = { version = "0.27.0", path = "transports/wasm-ext", optional = true }
+tetsy-libp2p-yamux = { version = "0.30.0", path = "muxers/yamux", optional = true }
+multiaddr = { package = "tetsy-multiaddr", version = "0.11.0", path = "misc/multiaddr" }
 parking_lot = "0.11.0"
 pin-project = "1.0.0"
 smallvec = "1.0"
 wasm-timer = "0.2.4"
 
 [target.'cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))'.dependencies]
-libp2p-deflate = { version = "0.27.0", path = "protocols/deflate", optional = true }
-libp2p-dns = { version = "0.27.0", path = "transports/dns", optional = true }
-libp2p-mdns = { version = "0.28.0", path = "protocols/mdns", optional = true }
-libp2p-tcp = { version = "0.27.0", path = "transports/tcp", optional = true }
-libp2p-websocket = { version = "0.28.0", path = "transports/websocket", optional = true }
+tetsy-libp2p-deflate = { version = "0.27.0", path = "protocols/deflate", optional = true }
+tetsy-libp2p-dns = { version = "0.27.0", path = "transports/dns", optional = true }
+tetsy-libp2p-mdns = { version = "0.28.0", path = "protocols/mdns", optional = true }
+tetsy-libp2p-tcp = { version = "0.27.0", path = "transports/tcp", optional = true }
+tetsy-libp2p-websocket = { version = "0.28.0", path = "transports/websocket", optional = true }
 
 [dev-dependencies]
 async-std = { version = "1.6.2", features = ["attributes"] }

@@ -58,7 +58,7 @@ where
     let iter = protocols.into_iter();
     // NOTE: Temporarily disabled "parallel" negotiation in order to correct the
     // "ls" responses towards interoperability and (new) spec compliance.
-    // See https://github.com/libp2p/rust-libp2p/issues/1795.
+    // See https://github.com/tetcoin/tetsy-libp2p/issues/1795.
     Either::Left(dialer_select_proto_serial(inner, iter, version))
 
     // We choose between the "serial" and "parallel" strategies based on the number of protocols.

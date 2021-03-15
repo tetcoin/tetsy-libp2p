@@ -31,7 +31,7 @@ use futures::{
     future::poll_fn,
 };
 use futures_timer::Delay;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     connection::{ConnectedPoint, ConnectionId},
     PeerId,
     Transport,
@@ -41,9 +41,9 @@ use libp2p_core::{
     upgrade,
     multihash::{Code, Multihash, MultihashDigest},
 };
-use libp2p_noise as noise;
-use libp2p_swarm::Swarm;
-use libp2p_yamux as yamux;
+use tetsy_libp2p_noise as noise;
+use tetsy_libp2p_swarm::Swarm;
+use tetsy_libp2p_yamux as yamux;
 use quickcheck::*;
 use rand::{Rng, random, thread_rng, rngs::StdRng, SeedableRng};
 use std::{collections::{HashSet, HashMap}, time::Duration, num::NonZeroUsize, u64};
@@ -879,7 +879,7 @@ fn add_provider() {
 
 /// User code should be able to start queries beyond the internal
 /// query limit for background jobs. Originally this even produced an
-/// arithmetic overflow, see https://github.com/libp2p/rust-libp2p/issues/1290.
+/// arithmetic overflow, see https://github.com/tetcoin/tetsy-libp2p/issues/1290.
 #[test]
 fn exceed_jobs_max_queries() {
     let (_addr, mut swarm) = build_node();

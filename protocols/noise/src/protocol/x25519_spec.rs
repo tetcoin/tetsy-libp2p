@@ -18,13 +18,13 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! [libp2p-noise-spec] compliant Noise protocols based on X25519.
+//! [tetsy-libp2p-noise-spec] compliant Noise protocols based on X25519.
 //!
-//! [libp2p-noise-spec]: https://github.com/libp2p/specs/tree/master/noise
+//! [tetsy-libp2p-noise-spec]: https://github.com/libp2p/specs/tree/master/noise
 
 use crate::{NoiseConfig, NoiseError, Protocol, ProtocolParams};
-use libp2p_core::UpgradeInfo;
-use libp2p_core::identity;
+use tetsy_libp2p_core::UpgradeInfo;
+use tetsy_libp2p_core::identity;
 use rand::Rng;
 use x25519_dalek::{X25519_BASEPOINT_BYTES, x25519};
 use zeroize::Zeroize;
@@ -32,7 +32,7 @@ use zeroize::Zeroize;
 use super::{*, x25519::X25519};
 
 /// Prefix of static key signatures for domain separation.
-const STATIC_KEY_DOMAIN: &str = "noise-libp2p-static-key:";
+const STATIC_KEY_DOMAIN: &str = "noise-tetsy-libp2p-static-key:";
 
 /// A X25519 key.
 #[derive(Clone)]
@@ -98,7 +98,7 @@ impl<R> UpgradeInfo for NoiseConfig<IK, X25519Spec, R> {
     }
 }
 
-/// Noise protocols for X25519 with libp2p-spec compliant signatures.
+/// Noise protocols for X25519 with tetsy-libp2p-spec compliant signatures.
 ///
 /// **Note**: Only the XX handshake pattern is currently guaranteed to be
 /// interoperable with other libp2p implementations.

@@ -37,11 +37,11 @@ use prost::Message;
 use rand::{seq::SliceRandom, thread_rng};
 use wasm_timer::{Instant, Interval};
 
-use libp2p_core::{
+use tetsy_libp2p_core::{
     connection::ConnectionId, identity::Keypair, multiaddr::Protocol::Ip4,
     multiaddr::Protocol::Ip6, ConnectedPoint, Multiaddr, PeerId,
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     DialPeerCondition, NetworkBehaviour, NetworkBehaviourAction, NotifyHandler, PollParameters,
     ProtocolsHandler,
 };
@@ -2485,7 +2485,7 @@ where
                         .encode(&mut buf)
                         .expect("Buffer has sufficient capacity");
 
-                    // the signature is over the bytes "libp2p-pubsub:<protobuf-message>"
+                    // the signature is over the bytes "tetsy-libp2p-pubsub:<protobuf-message>"
                     let mut signature_bytes = SIGNING_PREFIX.to_vec();
                     signature_bytes.extend_from_slice(&buf);
                     Some(keypair.sign(&signature_bytes)?)

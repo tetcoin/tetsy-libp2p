@@ -21,7 +21,7 @@
 use crate::handler::{IdentifyHandler, IdentifyHandlerEvent};
 use crate::protocol::{IdentifyInfo, ReplySubstream};
 use futures::prelude::*;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     ConnectedPoint,
     Multiaddr,
     PeerId,
@@ -29,7 +29,7 @@ use libp2p_core::{
     connection::ConnectionId,
     upgrade::{ReadOneError, UpgradeError}
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     AddressScore,
     NegotiatedSubstream,
     NetworkBehaviour,
@@ -276,7 +276,7 @@ pub enum IdentifyEvent {
 mod tests {
     use crate::{Identify, IdentifyEvent};
     use futures::{prelude::*, pin_mut};
-    use libp2p_core::{
+    use tetsy_libp2p_core::{
         identity,
         PeerId,
         muxing::StreamMuxerBox,
@@ -284,10 +284,10 @@ mod tests {
         Transport,
         upgrade
     };
-    use libp2p_noise as noise;
-    use libp2p_tcp::TcpConfig;
-    use libp2p_swarm::{Swarm, SwarmEvent};
-    use libp2p_mplex::MplexConfig;
+    use tetsy_libp2p_noise as noise;
+    use tetsy_libp2p_tcp::TcpConfig;
+    use tetsy_libp2p_swarm::{Swarm, SwarmEvent};
+    use tetsy_libp2p_mplex::MplexConfig;
 
     fn transport() -> (identity::PublicKey, transport::Boxed<(PeerId, StreamMuxerBox)>) {
         let id_keys = identity::Keypair::generate_ed25519();

@@ -58,7 +58,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         let store = MemoryStore::new(local_peer_id.clone());
         let mut behaviour = Kademlia::with_config(local_peer_id.clone(), store, cfg);
 
-        // TODO: the /dnsaddr/ scheme is not supported (https://github.com/libp2p/rust-libp2p/issues/967)
+        // TODO: the /dnsaddr/ scheme is not supported (https://github.com/tetcoin/tetsy-libp2p/issues/967)
         /*behaviour.add_address(&"QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN".parse().unwrap(), "/dnsaddr/bootstrap.libp2p.io".parse().unwrap());
         behaviour.add_address(&"QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa".parse().unwrap(), "/dnsaddr/bootstrap.libp2p.io".parse().unwrap());
         behaviour.add_address(&"QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb".parse().unwrap(), "/dnsaddr/bootstrap.libp2p.io".parse().unwrap());

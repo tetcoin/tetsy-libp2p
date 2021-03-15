@@ -28,7 +28,7 @@ use crate::protocols_handler::{
     ProtocolsHandlerUpgrErr,
 };
 
-use libp2p_core::{
+use tetsy_libp2p_core::{
     ConnectedPoint,
     Multiaddr,
     PeerId,
