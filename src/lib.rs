@@ -184,7 +184,7 @@ pub use tet_libp2p_identify as identify;
 #[cfg_attr(docsrs, doc(cfg(feature = "kad")))]
 #[doc(inline)]
 pub use tet_libp2p_kad as kad;
-#[cfg(feature = "floodsub")]
+#[cfg(feature = "fs")]
 #[cfg_attr(docsrs, doc(cfg(feature = "floodsub")))]
 #[doc(inline)]
 pub use floodsub as floodsub;

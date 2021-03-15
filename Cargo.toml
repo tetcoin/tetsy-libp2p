@@ -36,7 +36,7 @@ default = [
 ]
 deflate = ["tet-libp2p-deflate"]
 dns = ["tet-libp2p-dns"]
-floodsub = ["floodsub"]
+fs = ["floodsub"]
 identify = ["tet-libp2p-identify"]
 kad = ["tet-libp2p-kad"]
 gossipsub = ["gossipsub"]
