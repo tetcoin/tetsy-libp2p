@@ -62,7 +62,7 @@ pub fn generate_agreement(algorithm: KeyAgreement)
             usages.push(&JsValue::from_str("deriveBits"));
 
             let promise = crypto.generate_key_with_object(&obj, true, usages.as_ref())?;
-            tet_wasm_bindgen_futures::JsFuture::from(promise).await?
+            wasm_bindgen_futures::JsFuture::from(promise).await?
         };
 
         // WebCrypto has generated a key-pair. Let's split this key pair into a private key and a
@@ -80,7 +80,7 @@ pub fn generate_agreement(algorithm: KeyAgreement)
         // Then we turn the public key into an `ArrayBuffer`.
         let public = {
             let promise = crypto.export_key("raw", &public.into())?;
-            tet_wasm_bindgen_futures::JsFuture::from(promise).await?
+            wasm_bindgen_futures::JsFuture::from(promise).await?
         };
 
         // And finally we convert this `ArrayBuffer` into a `Vec<u8>`.
@@ -120,7 +120,7 @@ pub fn agree(algorithm: KeyAgreement, key: AgreementPrivateKey, other_public_key
                     "raw", &js_sys::Object::from(other_public_key.buffer()),
                     &build_curve_obj(algorithm), false, &js_sys::Array::new()
                 )?;
-            tet_wasm_bindgen_futures::JsFuture::from(promise).await?
+            wasm_bindgen_futures::JsFuture::from(promise).await?
         };
 
         // We then derive the final private key.
@@ -133,7 +133,7 @@ pub fn agree(algorithm: KeyAgreement, key: AgreementPrivateKey, other_public_key
                     &web_sys::CryptoKey::from(private_key),
                     8 * out_size as u32
                 )?;
-            tet_wasm_bindgen_futures::JsFuture::from(promise).await?
+            wasm_bindgen_futures::JsFuture::from(promise).await?
         };
 
         let bytes = js_sys::Uint8Array::new(&bytes);

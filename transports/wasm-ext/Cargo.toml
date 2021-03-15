@@ -17,7 +17,7 @@ js-sys = "0.3.19"
 tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 tetsy-send-wrapper = "0.1.0"
 wasm-bindgen = "0.2.42"
-tet-wasm-bindgen-futures = "0.4.4"
+wasm-bindgen-futures = "0.4.4"
 
 [features]
 websocket = []
