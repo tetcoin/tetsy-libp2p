@@ -184,15 +184,15 @@ pub use tet_libp2p_identify as identify;
 #[cfg_attr(docsrs, doc(cfg(feature = "kad")))]
 #[doc(inline)]
 pub use tet_libp2p_kad as kad;
-#[cfg(feature = "fs")]
+#[cfg(feature = "flood")]
 #[cfg_attr(docsrs, doc(cfg(feature = "floodsub")))]
 #[doc(inline)]
 pub use floodsub as floodsub;
-#[cfg(feature = "gossipsub")]
+#[cfg(feature = "gossip")]
 #[cfg_attr(docsrs, doc(cfg(feature = "gossipsub")))]
 #[doc(inline)]
 pub use gossipsub as gossipsub;
-#[cfg(feature = "mplex")]
+#[cfg(feature = "mpx")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mplex")))]
 #[doc(inline)]
 pub use tet_libp2p_mplex as mplex;
@@ -209,7 +209,7 @@ pub use tet_libp2p_noise as noise;
 #[cfg_attr(docsrs, doc(cfg(feature = "ping")))]
 #[doc(inline)]
 pub use tet_libp2p_ping as ping;
-#[cfg(feature = "plaintext")]
+#[cfg(feature = "plain")]
 #[cfg_attr(docsrs, doc(cfg(feature = "plaintext")))]
 #[doc(inline)]
 pub use plaintext as plaintext;
@@ -224,7 +224,7 @@ pub use tet_libp2p_tcp as tcp;
 #[cfg_attr(docsrs, doc(cfg(feature = "uds")))]
 #[doc(inline)]
 pub use tet_libp2p_uds as uds;
-#[cfg(feature = "wasm-ext")]
+#[cfg(feature = "wasm-x")]
 #[cfg_attr(docsrs, doc(cfg(feature = "wasm-ext")))]
 #[doc(inline)]
 pub use tet_libp2p_wasm_ext as wasm_ext;
@@ -241,7 +241,7 @@ pub use tet_libp2p_remux as remux;
 #[cfg_attr(docsrs, doc(cfg(feature = "pnet")))]
 #[doc(inline)]
 pub use tet_libp2p_pnet as pnet;
-#[cfg(feature = "request-response")]
+#[cfg(feature = "req-res")]
 #[cfg_attr(docsrs, doc(cfg(feature = "request-response")))]
 #[doc(inline)]
 pub use request_response as request_response;
