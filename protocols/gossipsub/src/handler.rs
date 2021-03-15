@@ -25,11 +25,11 @@ use crate::types::{GossipsubRpc, PeerKind, RawGossipsubMessage};
 use futures::prelude::*;
 use futures::StreamExt;
 use asynchronous_codec::Framed;
-use tetsy_libp2p_core::upgrade::{InboundUpgrade, NegotiationError, OutboundUpgrade, UpgradeError};
-use tetsy_libp2p_swarm::protocols_handler::{
+use tet_libp2p_core::upgrade::{InboundUpgrade, NegotiationError, OutboundUpgrade, UpgradeError};
+use tet_libp2p_swarm::protocols_handler::{
     KeepAlive, ProtocolsHandler, ProtocolsHandlerEvent, ProtocolsHandlerUpgrErr, SubstreamProtocol,
 };
-use tetsy_libp2p_swarm::NegotiatedSubstream;
+use tet_libp2p_swarm::NegotiatedSubstream;
 use log::{error, trace, warn};
 use smallvec::SmallVec;
 use std::{

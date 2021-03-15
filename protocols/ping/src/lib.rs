@@ -37,8 +37,8 @@
 //! > **Note**: The ping protocol does not keep otherwise idle connections alive
 //! > by default, see [`PingConfig::with_keep_alive`] for changing this behaviour.
 //!
-//! [`Swarm`]: tetsy_libp2p_swarm::Swarm
-//! [`Transport`]: tetsy_libp2p_core::Transport
+//! [`Swarm`]: tet_libp2p_swarm::Swarm
+//! [`Transport`]: tet_libp2p_core::Transport
 
 pub mod protocol;
 pub mod handler;
@@ -46,8 +46,8 @@ pub mod handler;
 pub use handler::{PingConfig, PingResult, PingSuccess, PingFailure};
 use handler::PingHandler;
 
-use tetsy_libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
-use tetsy_libp2p_swarm::{NetworkBehaviour, NetworkBehaviourAction, PollParameters};
+use tet_libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
+use tet_libp2p_swarm::{NetworkBehaviour, NetworkBehaviourAction, PollParameters};
 use std::{collections::VecDeque, task::Context, task::Poll};
 use void::Void;
 

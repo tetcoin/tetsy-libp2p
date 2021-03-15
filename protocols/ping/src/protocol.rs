@@ -19,8 +19,8 @@
 // DEALINGS IN THE SOFTWARE.
 
 use futures::prelude::*;
-use tetsy_libp2p_core::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
-use tetsy_libp2p_swarm::NegotiatedSubstream;
+use tet_libp2p_core::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
+use tet_libp2p_swarm::NegotiatedSubstream;
 use rand::{distributions, prelude::*};
 use std::{io, iter, time::Duration};
 use void::Void;
@@ -116,7 +116,7 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use tetsy_libp2p_core::{
+    use tet_libp2p_core::{
         multiaddr::multiaddr,
         transport::{
             Transport,

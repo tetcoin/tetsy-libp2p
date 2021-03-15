@@ -23,8 +23,8 @@
 //! [tet-libp2p-noise-spec]: https://github.com/libp2p/specs/tree/master/noise
 
 use crate::{NoiseConfig, NoiseError, Protocol, ProtocolParams};
-use tetsy_libp2p_core::UpgradeInfo;
-use tetsy_libp2p_core::identity;
+use tet_libp2p_core::UpgradeInfo;
+use tet_libp2p_core::identity;
 use rand::Rng;
 use x25519_dalek::{X25519_BASEPOINT_BYTES, x25519};
 use zeroize::Zeroize;

@@ -41,7 +41,7 @@
 pub mod closest;
 pub mod fixed;
 
-use tetsy_libp2p_core::PeerId;
+use tet_libp2p_core::PeerId;
 use std::borrow::Cow;
 
 /// The state of a peer iterator.

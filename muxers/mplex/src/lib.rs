@@ -27,7 +27,7 @@ pub use config::{MplexConfig, MaxBufferBehaviour};
 use codec::LocalStreamId;
 use std::{cmp, iter, task::Context, task::Poll};
 use bytes::Bytes;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     StreamMuxer,
     muxing::StreamMuxerEvent,
     upgrade::{InboundUpgrade, OutboundUpgrade, UpgradeInfo},

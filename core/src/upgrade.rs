@@ -97,7 +97,7 @@ pub use self::{
 /// # Example
 ///
 /// ```
-/// use tetsy_libp2p_core::ProtocolName;
+/// use tet_libp2p_core::ProtocolName;
 ///
 /// enum MyProtocolName {
 ///     Version1,

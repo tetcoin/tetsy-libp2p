@@ -31,7 +31,7 @@ use futures::{
     future::poll_fn,
 };
 use futures_timer::Delay;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     connection::{ConnectedPoint, ConnectionId},
     PeerId,
     Transport,
@@ -41,9 +41,9 @@ use tetsy_libp2p_core::{
     upgrade,
     multihash::{Code, Multihash, MultihashDigest},
 };
-use tetsy_libp2p_noise as noise;
-use tetsy_libp2p_swarm::Swarm;
-use tetsy_libp2p_yamux as yamux;
+use tet_libp2p_noise as noise;
+use tet_libp2p_swarm::Swarm;
+use tet_libp2p_yamux as yamux;
 use quickcheck::*;
 use rand::{Rng, random, thread_rng, rngs::StdRng, SeedableRng};
 use std::{collections::{HashSet, HashMap}, time::Duration, num::NonZeroUsize, u64};

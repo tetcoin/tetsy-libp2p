@@ -31,10 +31,10 @@ use futures::{
     prelude::*,
     stream::FuturesUnordered
 };
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     upgrade::{UpgradeError, NegotiationError},
 };
-use tetsy_libp2p_swarm::{
+use tet_libp2p_swarm::{
     SubstreamProtocol,
     protocols_handler::{
         KeepAlive,

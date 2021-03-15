@@ -29,7 +29,7 @@ use crate::protocols_handler::{
     IntoProtocolsHandler
 };
 use either::Either;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     ConnectedPoint,
     PeerId,
     Multiaddr,

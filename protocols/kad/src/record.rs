@@ -23,7 +23,7 @@
 pub mod store;
 
 use bytes::Bytes;
-use tetsy_libp2p_core::{PeerId, Multiaddr, multihash::Multihash};
+use tet_libp2p_core::{PeerId, Multiaddr, multihash::Multihash};
 use std::borrow::Borrow;
 use std::hash::{Hash, Hasher};
 use wasm_timer::Instant;
@@ -158,7 +158,7 @@ impl ProviderRecord {
 mod tests {
     use super::*;
     use quickcheck::*;
-    use tetsy_libp2p_core::multihash::Code;
+    use tet_libp2p_core::multihash::Code;
     use rand::Rng;
     use std::time::Duration;
 

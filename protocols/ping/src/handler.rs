@@ -21,7 +21,7 @@
 use crate::protocol;
 use futures::prelude::*;
 use futures::future::BoxFuture;
-use tetsy_libp2p_swarm::{
+use tet_libp2p_swarm::{
     KeepAlive,
     NegotiatedSubstream,
     SubstreamProtocol,

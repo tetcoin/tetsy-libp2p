@@ -21,14 +21,14 @@
 use crate::service::{MdnsPacket, MdnsService, build_query_response, build_service_discovery_response};
 use async_io::Timer;
 use futures::prelude::*;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     Multiaddr,
     PeerId,
     address_translation,
     connection::ConnectionId,
     multiaddr::Protocol
 };
-use tetsy_libp2p_swarm::{
+use tet_libp2p_swarm::{
     NetworkBehaviour,
     NetworkBehaviourAction,
     PollParameters,

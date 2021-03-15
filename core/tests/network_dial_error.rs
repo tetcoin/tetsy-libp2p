@@ -21,8 +21,8 @@
 mod util;
 
 use futures::prelude::*;
-use tetsy_libp2p_core::multiaddr::multiaddr;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::multiaddr::multiaddr;
+use tet_libp2p_core::{
     PeerId,
     connection::PendingConnectionError,
     network::{NetworkEvent, NetworkConfig},

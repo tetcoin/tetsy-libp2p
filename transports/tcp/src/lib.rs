@@ -48,7 +48,7 @@ use futures::{
     ready,
 };
 use futures_timer::Delay;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     address_translation,
     multiaddr::{Multiaddr, Protocol},
     transport::{ListenerEvent, Transport, TransportError},
@@ -250,13 +250,13 @@ where
     /// the following example:
     ///
     /// ```no_run
-    /// # use tetsy_libp2p_core::transport::ListenerEvent;
-    /// # use tetsy_libp2p_core::{Multiaddr, Transport};
+    /// # use tet_libp2p_core::transport::ListenerEvent;
+    /// # use tet_libp2p_core::{Multiaddr, Transport};
     /// # use futures::stream::StreamExt;
     /// #[cfg(feature = "async-io")]
     /// #[async_std::main]
     /// async fn main() -> std::io::Result<()> {
-    /// use tetsy_libp2p_tcp::TcpConfig;
+    /// use tet_libp2p_tcp::TcpConfig;
     ///
     /// let listen_addr1: Multiaddr = "/ip4/127.0.0.1/tcp/9001".parse().unwrap();
     /// let listen_addr2: Multiaddr = "/ip4/127.0.0.1/tcp/9002".parse().unwrap();

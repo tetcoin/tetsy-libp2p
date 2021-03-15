@@ -29,7 +29,7 @@ use crate::protocols_handler::{
 
 use futures::prelude::*;
 use futures::stream::FuturesUnordered;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     Multiaddr,
     Connected,
     connection::{

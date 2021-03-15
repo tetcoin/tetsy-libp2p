@@ -20,7 +20,7 @@
 
 use crate::{AddressScore, AddressRecord};
 use crate::protocols_handler::{IntoProtocolsHandler, ProtocolsHandler};
-use tetsy_libp2p_core::{ConnectedPoint, Multiaddr, PeerId, connection::{ConnectionId, ListenerId}};
+use tet_libp2p_core::{ConnectedPoint, Multiaddr, PeerId, connection::{ConnectionId, ListenerId}};
 use std::{error, task::Context, task::Poll};
 
 /// A behaviour for the network. Allows customizing the swarm.

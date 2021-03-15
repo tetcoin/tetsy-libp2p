@@ -25,7 +25,7 @@ use crate::{
     IntoProtocolsHandler,
     PollParameters
 };
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     ConnectedPoint,
     PeerId,
     connection::{ConnectionId, ListenerId},

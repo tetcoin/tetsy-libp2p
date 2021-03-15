@@ -19,7 +19,7 @@
 // DEALINGS IN THE SOFTWARE.
 
 use futures::{prelude::*, ready};
-use tetsy_libp2p_core::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
+use tet_libp2p_core::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
 use std::{io, iter, pin::Pin, task::Context, task::Poll};
 
 #[derive(Debug, Copy, Clone)]

@@ -20,7 +20,7 @@
 
 use super::*;
 use crate::kbucket::{Key, KeyBytes};
-use tetsy_libp2p_core::PeerId;
+use tet_libp2p_core::PeerId;
 use std::{
     collections::HashMap,
     iter::{Cycle, Map, Peekable},
@@ -432,7 +432,7 @@ mod tests {
     use super::*;
 
     use crate::K_VALUE;
-    use tetsy_libp2p_core::multihash::{Code, Multihash};
+    use tet_libp2p_core::multihash::{Code, Multihash};
     use quickcheck::*;
     use rand::{Rng, seq::SliceRandom};
     use std::collections::HashSet;

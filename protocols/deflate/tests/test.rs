@@ -19,9 +19,9 @@
 // DEALINGS IN THE SOFTWARE.
 
 use futures::{future, prelude::*};
-use tetsy_libp2p_core::{transport::Transport, upgrade};
-use tetsy_libp2p_deflate::DeflateConfig;
-use tetsy_libp2p_tcp::TcpConfig;
+use tet_libp2p_core::{transport::Transport, upgrade};
+use tet_libp2p_deflate::DeflateConfig;
+use tet_libp2p_tcp::TcpConfig;
 use quickcheck::{QuickCheck, RngCore, TestResult};
 
 #[test]

@@ -510,7 +510,7 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use tetsy_libp2p_core::PeerId;
+    use tet_libp2p_core::PeerId;
     use quickcheck::*;
     use rand::Rng;
 

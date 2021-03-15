@@ -33,8 +33,8 @@
 //!
 
 use futures::{prelude::*, future::Ready};
-use tetsy_libp2p_core::{transport::ListenerEvent, transport::TransportError, Multiaddr, Transport};
-use tetsy_send_wrapper::SendWrapper;
+use tet_libp2p_core::{transport::ListenerEvent, transport::TransportError, Multiaddr, Transport};
+use tet_send_wrapper::SendWrapper;
 use std::{collections::VecDeque, error, fmt, io, mem, pin::Pin, task::Context, task::Poll};
 use wasm_bindgen::{JsCast, prelude::*};
 use wasm_bindgen_futures::JsFuture;
@@ -512,8 +512,8 @@ impl From<JsValue> for JsErr {
     }
 }
 
-impl From<tetsy_libp2p_core::multiaddr::Error> for JsErr {
-    fn from(err: tetsy_libp2p_core::multiaddr::Error) -> JsErr {
+impl From<tet_libp2p_core::multiaddr::Error> for JsErr {
+    fn from(err: tet_libp2p_core::multiaddr::Error) -> JsErr {
         JsValue::from_str(&err.to_string()).into()
     }
 }

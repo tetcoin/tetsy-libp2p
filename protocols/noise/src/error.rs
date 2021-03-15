@@ -18,11 +18,11 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use tetsy_libp2p_core::identity;
+use tet_libp2p_core::identity;
 use snow::error::Error as SnowError;
 use std::{error::Error, fmt, io};
 
-/// tetsy_libp2p_noise error type.
+/// tet_libp2p_noise error type.
 #[derive(Debug)]
 pub enum NoiseError {
     /// An I/O error has been encountered.

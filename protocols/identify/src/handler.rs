@@ -20,12 +20,12 @@
 
 use crate::protocol::{RemoteInfo, IdentifyProtocolConfig, ReplySubstream};
 use futures::prelude::*;
-use tetsy_libp2p_core::upgrade::{
+use tet_libp2p_core::upgrade::{
     InboundUpgrade,
     OutboundUpgrade,
     ReadOneError
 };
-use tetsy_libp2p_swarm::{
+use tet_libp2p_swarm::{
     NegotiatedSubstream,
     KeepAlive,
     SubstreamProtocol,

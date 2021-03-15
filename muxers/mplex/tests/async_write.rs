@@ -18,8 +18,8 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use tetsy_libp2p_core::{muxing, upgrade, Transport};
-use tetsy_libp2p_tcp::TcpConfig;
+use tet_libp2p_core::{muxing, upgrade, Transport};
+use tet_libp2p_tcp::TcpConfig;
 use futures::{prelude::*, channel::oneshot};
 use std::sync::Arc;
 
@@ -30,7 +30,7 @@ fn async_write() {
     let (tx, rx) = oneshot::channel();
 
     let bg_thread = async_std::task::spawn(async move {
-        let mplex = tetsy_libp2p_mplex::MplexConfig::new();
+        let mplex = tet_libp2p_mplex::MplexConfig::new();
 
         let transport = TcpConfig::new().and_then(move |c, e|
             upgrade::apply(c, mplex, e, upgrade::Version::V1));
@@ -61,7 +61,7 @@ fn async_write() {
     });
 
     async_std::task::block_on(async {
-        let mplex = tetsy_libp2p_mplex::MplexConfig::new();
+        let mplex = tet_libp2p_mplex::MplexConfig::new();
         let transport = TcpConfig::new().and_then(move |c, e|
             upgrade::apply(c, mplex, e, upgrade::Version::V1));
 

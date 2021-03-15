@@ -23,8 +23,8 @@ use crate::topic::Topic;
 use crate::FloodsubConfig;
 use cuckoofilter::{CuckooError, CuckooFilter};
 use fnv::FnvHashSet;
-use tetsy_libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
-use tetsy_libp2p_swarm::{
+use tet_libp2p_core::{Multiaddr, PeerId, connection::ConnectionId};
+use tet_libp2p_swarm::{
     NetworkBehaviour,
     NetworkBehaviourAction,
     PollParameters,

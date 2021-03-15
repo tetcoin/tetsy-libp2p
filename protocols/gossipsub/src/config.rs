@@ -21,7 +21,7 @@
 use std::borrow::Cow;
 use std::time::Duration;
 
-use tetsy_libp2p_core::PeerId;
+use tet_libp2p_core::PeerId;
 
 use crate::types::{FastMessageId, GossipsubMessage, MessageId, RawGossipsubMessage};
 

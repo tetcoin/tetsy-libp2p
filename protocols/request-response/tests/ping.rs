@@ -21,7 +21,7 @@
 //! Integration tests for the `RequestResponse` network behaviour.
 
 use async_trait::async_trait;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     Multiaddr,
     PeerId,
     identity,
@@ -29,10 +29,10 @@ use tetsy_libp2p_core::{
     transport::{self, Transport},
     upgrade::{self, read_one, write_one}
 };
-use tetsy_libp2p_noise::{NoiseConfig, X25519Spec, Keypair};
-use tetsy_libp2p_request_response::*;
-use tetsy_libp2p_swarm::{Swarm, SwarmEvent};
-use tetsy_libp2p_tcp::TcpConfig;
+use tet_libp2p_noise::{NoiseConfig, X25519Spec, Keypair};
+use tet_libp2p_request_response::*;
+use tet_libp2p_swarm::{Swarm, SwarmEvent};
+use tet_libp2p_tcp::TcpConfig;
 use futures::{prelude::*, channel::mpsc, executor::LocalPool, task::SpawnExt};
 use rand::{self, Rng};
 use std::{io, iter};
@@ -281,7 +281,7 @@ fn mk_transport() -> (PeerId, transport::Boxed<(PeerId, StreamMuxerBox)>) {
         .nodelay(true)
         .upgrade(upgrade::Version::V1)
         .authenticate(NoiseConfig::xx(noise_keys).into_authenticated())
-        .multiplex(tetsy_libp2p_yamux::YamuxConfig::default())
+        .multiplex(tet_libp2p_yamux::YamuxConfig::default())
         .boxed())
 }
 

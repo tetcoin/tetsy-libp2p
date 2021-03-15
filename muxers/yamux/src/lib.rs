@@ -22,8 +22,8 @@
 //! [specification](https://github.com/hashicorp/yamux/blob/master/spec.md).
 
 use futures::{future, prelude::*, ready, stream::{BoxStream, LocalBoxStream}};
-use tetsy_libp2p_core::muxing::{StreamMuxer, StreamMuxerEvent};
-use tetsy_libp2p_core::upgrade::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
+use tet_libp2p_core::muxing::{StreamMuxer, StreamMuxerEvent};
+use tet_libp2p_core::upgrade::{InboundUpgrade, OutboundUpgrade, UpgradeInfo};
 use parking_lot::Mutex;
 use std::{fmt, io, iter, pin::Pin, task::{Context, Poll}};
 use thiserror::Error;

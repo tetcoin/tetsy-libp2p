@@ -26,9 +26,9 @@ use criterion::{black_box, criterion_group, criterion_main, Criterion, Throughpu
 use futures::channel::oneshot;
 use futures::prelude::*;
 use futures::future::poll_fn;
-use tetsy_libp2p_core::{PeerId, Transport, StreamMuxer, identity, upgrade, transport, muxing, multiaddr::multiaddr, Multiaddr};
-use tetsy_libp2p_mplex as mplex;
-use tetsy_libp2p_plaintext::PlainText2Config;
+use tet_libp2p_core::{PeerId, Transport, StreamMuxer, identity, upgrade, transport, muxing, multiaddr::multiaddr, Multiaddr};
+use tet_libp2p_mplex as mplex;
+use tet_libp2p_plaintext::PlainText2Config;
 use std::time::Duration;
 
 type BenchTransport = transport::Boxed<(PeerId, muxing::StreamMuxerBox)>;
@@ -147,7 +147,7 @@ fn tcp_transport(split_send_size: usize) -> BenchTransport {
     let mut mplex = mplex::MplexConfig::default();
     mplex.set_split_send_size(split_send_size);
 
-    tetsy_libp2p_tcp::TcpConfig::new().nodelay(true)
+    tet_libp2p_tcp::TcpConfig::new().nodelay(true)
         .upgrade(upgrade::Version::V1)
         .authenticate(PlainText2Config { local_public_key })
         .multiplex(mplex)

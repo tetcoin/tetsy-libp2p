@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     connection::{ConnectionHandler, ConnectionHandlerEvent, Substream, SubstreamEndpoint},
     identity,
     muxing::StreamMuxerBox,
@@ -31,8 +31,8 @@ use tetsy_libp2p_core::{
     Transport,
     transport::{self, MemoryTransport}
 };
-use tetsy_libp2p_mplex::MplexConfig;
-use tetsy_libp2p_plaintext::PlainText2Config;
+use tet_libp2p_mplex::MplexConfig;
+use tet_libp2p_plaintext::PlainText2Config;
 use futures::{channel::oneshot, ready, prelude::*};
 use rand::random;
 use std::{io, task::{Context, Poll}};

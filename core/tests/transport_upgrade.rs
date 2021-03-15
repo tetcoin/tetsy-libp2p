@@ -21,11 +21,11 @@
 mod util;
 
 use futures::prelude::*;
-use tetsy_libp2p_core::identity;
-use tetsy_libp2p_core::transport::{Transport, MemoryTransport};
-use tetsy_libp2p_core::upgrade::{self, UpgradeInfo, InboundUpgrade, OutboundUpgrade};
-use tetsy_libp2p_mplex::MplexConfig;
-use tetsy_libp2p_noise as noise;
+use tet_libp2p_core::identity;
+use tet_libp2p_core::transport::{Transport, MemoryTransport};
+use tet_libp2p_core::upgrade::{self, UpgradeInfo, InboundUpgrade, OutboundUpgrade};
+use tet_libp2p_mplex::MplexConfig;
+use tet_libp2p_noise as noise;
 use multiaddr::{Multiaddr, Protocol};
 use rand::random;
 use std::{io, pin::Pin};

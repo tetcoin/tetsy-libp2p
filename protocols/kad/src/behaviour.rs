@@ -37,8 +37,8 @@ use crate::protocol::{KademliaProtocolConfig, KadConnectionType, KadPeer};
 use crate::query::{Query, QueryId, QueryPool, QueryConfig, QueryPoolState};
 use crate::record::{self, store::{self, RecordStore}, Record, ProviderRecord};
 use fnv::{FnvHashMap, FnvHashSet};
-use tetsy_libp2p_core::{ConnectedPoint, Multiaddr, PeerId, connection::ConnectionId};
-use tetsy_libp2p_swarm::{
+use tet_libp2p_core::{ConnectedPoint, Multiaddr, PeerId, connection::ConnectionId};
+use tet_libp2p_swarm::{
     DialPeerCondition,
     NetworkBehaviour,
     NetworkBehaviourAction,

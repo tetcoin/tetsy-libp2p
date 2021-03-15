@@ -25,16 +25,16 @@
 //!
 //! The `SecioConfig` implements [`InboundUpgrade`] and [`OutboundUpgrade`] and thus
 //! serves as a connection upgrade for authentication of a transport.
-//! See [`authenticate`](tetsy_libp2p_core::transport::upgrade::Builder::authenticate).
+//! See [`authenticate`](tet_libp2p_core::transport::upgrade::Builder::authenticate).
 //!
 //! ```no_run
 //! # fn main() {
 //! use futures::prelude::*;
-//! use tetsy_libp2p_secio::{SecioConfig, SecioOutput};
-//! use tetsy_libp2p_core::{PeerId, Multiaddr, identity, upgrade};
-//! use tetsy_libp2p_core::transport::Transport;
-//! use tetsy_libp2p_mplex::MplexConfig;
-//! use tetsy_libp2p_tcp::TcpConfig;
+//! use tet_libp2p_secio::{SecioConfig, SecioOutput};
+//! use tet_libp2p_core::{PeerId, Multiaddr, identity, upgrade};
+//! use tet_libp2p_core::transport::Transport;
+//! use tet_libp2p_mplex::MplexConfig;
+//! use tet_libp2p_tcp::TcpConfig;
 //!
 //! // Create a local peer identity.
 //! let local_keys = identity::Keypair::generate_ed25519();
@@ -59,7 +59,7 @@ pub use self::error::SecioError;
 
 use futures::stream::MapErr as StreamMapErr;
 use futures::prelude::*;
-use tetsy_libp2p_core::{PeerId, PublicKey, identity, upgrade::{UpgradeInfo, InboundUpgrade, OutboundUpgrade}};
+use tet_libp2p_core::{PeerId, PublicKey, identity, upgrade::{UpgradeInfo, InboundUpgrade, OutboundUpgrade}};
 use log::debug;
 use rw_stream_sink::RwStreamSink;
 use std::{io, iter, pin::Pin, task::Context, task::Poll};
@@ -78,7 +78,7 @@ pub use crate::algo_support::Digest;
 pub use crate::exchange::KeyAgreement;
 pub use crate::stream_cipher::Cipher;
 
-/// Implementation of the `ConnectionUpgrade` trait of `tetsy_libp2p_core`. Automatically applies
+/// Implementation of the `ConnectionUpgrade` trait of `tet_libp2p_core`. Automatically applies
 /// secio on any connection.
 #[derive(Clone)]
 pub struct SecioConfig {

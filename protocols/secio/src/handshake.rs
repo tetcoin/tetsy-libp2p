@@ -26,7 +26,7 @@ use crate::exchange;
 use crate::stream_cipher::ctr;
 use crate::structs_proto::{Exchange, Propose};
 use futures::prelude::*;
-use tetsy_libp2p_core::PublicKey;
+use tet_libp2p_core::PublicKey;
 use log::{debug, trace};
 use prost::Message;
 use rand::{self, RngCore};
@@ -367,7 +367,7 @@ where D: ::hmac::digest::Update + ::hmac::digest::BlockInput +
 mod tests {
     use super::{handshake, stretch_key};
     use crate::{algo_support::Digest, codec::Hmac, SecioConfig};
-    use tetsy_libp2p_core::identity;
+    use tet_libp2p_core::identity;
     use futures::{prelude::*, channel::oneshot};
 
     #[test]

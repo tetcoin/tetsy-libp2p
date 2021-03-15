@@ -24,7 +24,7 @@ use bytes::Bytes;
 use futures::future::{self, Ready};
 use futures::prelude::*;
 use futures::future::BoxFuture;
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     identity,
     InboundUpgrade,
     OutboundUpgrade,
@@ -46,21 +46,21 @@ mod structs_proto {
 /// `PlainText1Config` is an insecure connection handshake for testing purposes only.
 ///
 /// > **Note**: Given that `PlainText1Config` has no notion of exchanging peer identity information it is not compatible
-/// > with the `tetsy_libp2p_core::transport::upgrade::Builder` pattern. See
+/// > with the `tet_libp2p_core::transport::upgrade::Builder` pattern. See
 /// > [`PlainText2Config`](struct.PlainText2Config.html) if compatibility is needed. Even though not compatible with the
 /// > Builder pattern one can still do an upgrade *manually*:
 ///
 /// ```
-/// # use tetsy_libp2p_core::transport::{ Transport, memory::MemoryTransport };
-/// # use tetsy_libp2p_plaintext::PlainText1Config;
+/// # use tet_libp2p_core::transport::{ Transport, memory::MemoryTransport };
+/// # use tet_libp2p_plaintext::PlainText1Config;
 /// #
 /// MemoryTransport::default()
 ///   .and_then(move |io, endpoint| {
-///     tetsy_libp2p_core::upgrade::apply(
+///     tet_libp2p_core::upgrade::apply(
 ///       io,
 ///       PlainText1Config{},
 ///       endpoint,
-///       tetsy_libp2p_core::transport::upgrade::Version::V1,
+///       tet_libp2p_core::transport::upgrade::Version::V1,
 ///     )
 ///   })
 ///   .map(|plaintext, _endpoint| {

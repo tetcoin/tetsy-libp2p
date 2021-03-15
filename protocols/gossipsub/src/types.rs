@@ -21,7 +21,7 @@
 //! A collection of types using the Gossipsub system.
 use crate::rpc_proto;
 use crate::TopicHash;
-use tetsy_libp2p_core::PeerId;
+use tet_libp2p_core::PeerId;
 use std::fmt;
 use std::fmt::Debug;
 

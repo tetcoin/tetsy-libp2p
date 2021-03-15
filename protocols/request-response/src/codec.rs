@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-pub use tetsy_libp2p_core::ProtocolName;
+pub use tet_libp2p_core::ProtocolName;
 
 use async_trait::async_trait;
 use futures::prelude::*;

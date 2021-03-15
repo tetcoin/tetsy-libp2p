@@ -46,7 +46,7 @@
 //! encoded) by setting the `hash_topics` configuration parameter to true.
 //!
 //! - **Sequence Numbers** - A message on the gossipsub network is identified by the source
-//! [`tetsy_libp2p_core::PeerId`] and a nonce (sequence number) of the message. The sequence numbers in
+//! [`tet_libp2p_core::PeerId`] and a nonce (sequence number) of the message. The sequence numbers in
 //! this implementation are sent as raw bytes across the wire. They are 64-bit big-endian unsigned
 //! integers. They are chosen at random in this implementation of gossipsub, but are sequential in
 //! the current go implementation.
@@ -66,9 +66,9 @@
 //!
 //! ## Gossipsub
 //!
-//! The [`Gossipsub`] struct implements the [`tetsy_libp2p_swarm::NetworkBehaviour`] trait allowing it to
-//! act as the routing behaviour in a [`tetsy_libp2p_swarm::Swarm`]. This struct requires an instance of
-//! [`tetsy_libp2p_core::PeerId`] and [`GossipsubConfig`].
+//! The [`Gossipsub`] struct implements the [`tet_libp2p_swarm::NetworkBehaviour`] trait allowing it to
+//! act as the routing behaviour in a [`tet_libp2p_swarm::Swarm`]. This struct requires an instance of
+//! [`tet_libp2p_core::PeerId`] and [`GossipsubConfig`].
 //!
 //! [`Gossipsub`]: struct.Gossipsub.html
 
@@ -77,23 +77,23 @@
 //! An example of initialising a gossipsub compatible swarm:
 //!
 //! ```
-//! use tetsy_libp2p_gossipsub::GossipsubEvent;
-//! use tetsy_libp2p_core::{identity::Keypair,transport::{Transport, MemoryTransport}, Multiaddr};
-//! use tetsy_libp2p_gossipsub::MessageAuthenticity;
+//! use tet_libp2p_gossipsub::GossipsubEvent;
+//! use tet_libp2p_core::{identity::Keypair,transport::{Transport, MemoryTransport}, Multiaddr};
+//! use tet_libp2p_gossipsub::MessageAuthenticity;
 //! let local_key = Keypair::generate_ed25519();
-//! let local_peer_id = tetsy_libp2p_core::PeerId::from(local_key.public());
+//! let local_peer_id = tet_libp2p_core::PeerId::from(local_key.public());
 //!
 //! // Set up an encrypted TCP Transport over the Mplex
 //! // This is test transport (memory).
-//! let noise_keys = tetsy_libp2p_noise::Keypair::<tetsy_libp2p_noise::X25519Spec>::new().into_authentic(&local_key).unwrap();
+//! let noise_keys = tet_libp2p_noise::Keypair::<tet_libp2p_noise::X25519Spec>::new().into_authentic(&local_key).unwrap();
 //! let transport = MemoryTransport::default()
-//!            .upgrade(tetsy_libp2p_core::upgrade::Version::V1)
-//!            .authenticate(tetsy_libp2p_noise::NoiseConfig::xx(noise_keys).into_authenticated())
-//!            .multiplex(tetsy_libp2p_mplex::MplexConfig::new())
+//!            .upgrade(tet_libp2p_core::upgrade::Version::V1)
+//!            .authenticate(tet_libp2p_noise::NoiseConfig::xx(noise_keys).into_authenticated())
+//!            .multiplex(tet_libp2p_mplex::MplexConfig::new())
 //!            .boxed();
 //!
 //! // Create a Gossipsub topic
-//! let topic = tetsy_libp2p_gossipsub::IdentTopic::new("example");
+//! let topic = tet_libp2p_gossipsub::IdentTopic::new("example");
 //!
 //! // Set the message authenticity - How we expect to publish messages
 //! // Here we expect the publisher to sign the message with their key.
@@ -102,14 +102,14 @@
 //! // Create a Swarm to manage peers and events
 //! let mut swarm = {
 //!     // set default parameters for gossipsub
-//!     let gossipsub_config = tetsy_libp2p_gossipsub::GossipsubConfig::default();
+//!     let gossipsub_config = tet_libp2p_gossipsub::GossipsubConfig::default();
 //!     // build a gossipsub network behaviour
-//!     let mut gossipsub: tetsy_libp2p_gossipsub::Gossipsub =
-//!         tetsy_libp2p_gossipsub::Gossipsub::new(message_authenticity, gossipsub_config).unwrap();
+//!     let mut gossipsub: tet_libp2p_gossipsub::Gossipsub =
+//!         tet_libp2p_gossipsub::Gossipsub::new(message_authenticity, gossipsub_config).unwrap();
 //!     // subscribe to the topic
 //!     gossipsub.subscribe(&topic);
 //!     // create the swarm
-//!     tetsy_libp2p_swarm::Swarm::new(
+//!     tet_libp2p_swarm::Swarm::new(
 //!         transport,
 //!         gossipsub,
 //!         local_peer_id,
@@ -117,8 +117,8 @@
 //! };
 //!
 //! // Listen on a memory transport.
-//! let memory: Multiaddr = tetsy_libp2p_core::multiaddr::Protocol::Memory(10).into();
-//! let addr = tetsy_libp2p_swarm::Swarm::listen_on(&mut swarm, memory).unwrap();
+//! let memory: Multiaddr = tet_libp2p_core::multiaddr::Protocol::Memory(10).into();
+//! let addr = tet_libp2p_swarm::Swarm::listen_on(&mut swarm, memory).unwrap();
 //! println!("Listening on {:?}", addr);
 //! ```
 

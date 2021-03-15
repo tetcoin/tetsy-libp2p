@@ -93,7 +93,7 @@ use futures::{
     executor::ThreadPoolBuilder,
     stream::FusedStream,
 };
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     Executor,
     Transport,
     Multiaddr,
@@ -289,7 +289,7 @@ where
     pending_event: Option<(PeerId, PendingNotifyHandler, TInEvent)>,
 
     /// The configured override for substream protocol upgrades, if any.
-    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tet_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour, TInEvent, TOutEvent, THandler> Deref for
@@ -911,7 +911,7 @@ pub struct SwarmBuilder<TBehaviour> {
     transport: transport::Boxed<(PeerId, StreamMuxerBox)>,
     behaviour: TBehaviour,
     network_config: NetworkConfig,
-    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tet_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour> SwarmBuilder<TBehaviour>
@@ -1001,7 +1001,7 @@ where TBehaviour: NetworkBehaviour,
     /// > **Note**: If configured, specific upgrade protocols for
     /// > individual [`SubstreamProtocol`]s emitted by the `NetworkBehaviour`
     /// > are ignored.
-    pub fn substream_upgrade_protocol_override(mut self, v: tetsy_libp2p_core::upgrade::Version) -> Self {
+    pub fn substream_upgrade_protocol_override(mut self, v: tet_libp2p_core::upgrade::Version) -> Self {
         self.substream_upgrade_protocol_override = Some(v);
         self
     }
@@ -1121,13 +1121,13 @@ mod tests {
     use crate::protocols_handler::DummyProtocolsHandler;
     use crate::test::{MockBehaviour, CallTraceBehaviour};
     use futures::{future, executor};
-    use tetsy_libp2p_core::{
+    use tet_libp2p_core::{
         identity,
         upgrade,
         multiaddr,
         transport
     };
-    use tetsy_libp2p_noise as noise;
+    use tet_libp2p_noise as noise;
     use super::*;
 
     fn new_test_swarm<T, O>(handler_proto: T) -> Swarm<CallTraceBehaviour<MockBehaviour<T, O>>>
@@ -1142,7 +1142,7 @@ mod tests {
         let transport = transport::MemoryTransport::default()
             .upgrade(upgrade::Version::V1)
             .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-            .multiplex(tetsy_libp2p_mplex::MplexConfig::new())
+            .multiplex(tet_libp2p_mplex::MplexConfig::new())
             .boxed();
         let behaviour = CallTraceBehaviour::new(MockBehaviour::new(handler_proto));
         SwarmBuilder::new(transport, behaviour, pubkey.into()).build()

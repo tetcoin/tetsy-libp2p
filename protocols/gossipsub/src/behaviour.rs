@@ -37,11 +37,11 @@ use prost::Message;
 use rand::{seq::SliceRandom, thread_rng};
 use wasm_timer::{Instant, Interval};
 
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     connection::ConnectionId, identity::Keypair, multiaddr::Protocol::Ip4,
     multiaddr::Protocol::Ip6, ConnectedPoint, Multiaddr, PeerId,
 };
-use tetsy_libp2p_swarm::{
+use tet_libp2p_swarm::{
     DialPeerCondition, NetworkBehaviour, NetworkBehaviourAction, NotifyHandler, PollParameters,
     ProtocolsHandler,
 };

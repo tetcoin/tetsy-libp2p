@@ -22,7 +22,7 @@
 
 use crate::{KeyAgreement, SecioError};
 use futures::prelude::*;
-use tetsy_send_wrapper::SendWrapper;
+use tet_send_wrapper::SendWrapper;
 use std::{io, pin::Pin, task::Context, task::Poll};
 use wasm_bindgen::prelude::*;
 

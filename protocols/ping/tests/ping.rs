@@ -20,7 +20,7 @@
 
 //! Integration tests for the `Ping` network behaviour.
 
-use tetsy_libp2p_core::{
+use tet_libp2p_core::{
     Multiaddr,
     PeerId,
     identity,
@@ -28,12 +28,12 @@ use tetsy_libp2p_core::{
     transport::{self, Transport},
     upgrade
 };
-use tetsy_libp2p_mplex as mplex;
-use tetsy_libp2p_noise as noise;
-use tetsy_libp2p_ping::*;
-use tetsy_libp2p_swarm::{Swarm, SwarmEvent};
-use tetsy_libp2p_tcp::TcpConfig;
-use tetsy_libp2p_yamux as yamux;
+use tet_libp2p_mplex as mplex;
+use tet_libp2p_noise as noise;
+use tet_libp2p_ping::*;
+use tet_libp2p_swarm::{Swarm, SwarmEvent};
+use tet_libp2p_tcp::TcpConfig;
+use tet_libp2p_yamux as yamux;
 use futures::{prelude::*, channel::mpsc};
 use quickcheck::*;
 use rand::prelude::*;
