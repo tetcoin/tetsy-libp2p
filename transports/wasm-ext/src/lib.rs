@@ -34,7 +34,7 @@
 
 use futures::{prelude::*, future::Ready};
 use tet_libp2p_core::{transport::ListenerEvent, transport::TransportError, Multiaddr, Transport};
-use tet_send_wrapper::SendWrapper;
+use tetsy_send_wrapper::SendWrapper;
 use std::{collections::VecDeque, error, fmt, io, mem, pin::Pin, task::Context, task::Poll};
 use wasm_bindgen::{JsCast, prelude::*};
 use wasm_bindgen_futures::JsFuture;
