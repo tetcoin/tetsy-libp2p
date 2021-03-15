@@ -295,7 +295,7 @@ impl GossipsubConfig {
     /// Number of heartbeat ticks that specifcy the interval in which opportunistic grafting is
     /// applied. Every `opportunistic_graft_ticks` we will attempt to select some high-scoring mesh
     /// peers to replace lower-scoring ones, if the median score of our mesh peers falls below a
-    /// threshold (see https://godoc.org/github.com/libp2p/go-tetsy-libp2p-pubsub#PeerScoreThresholds).
+    /// threshold (see https://godoc.org/github.com/libp2p/go-tet-libp2p-pubsub#PeerScoreThresholds).
     /// The default is 60.
     pub fn opportunistic_graft_ticks(&self) -> u64 {
         self.opportunistic_graft_ticks
@@ -644,7 +644,7 @@ impl GossipsubConfigBuilder {
     /// Number of heartbeat ticks that specifcy the interval in which opportunistic grafting is
     /// applied. Every `opportunistic_graft_ticks` we will attempt to select some high-scoring mesh
     /// peers to replace lower-scoring ones, if the median score of our mesh peers falls below a
-    /// threshold (see https://godoc.org/github.com/libp2p/go-tetsy-libp2p-pubsub#PeerScoreThresholds).
+    /// threshold (see https://godoc.org/github.com/libp2p/go-tet-libp2p-pubsub#PeerScoreThresholds).
     /// The default is 60.
     pub fn opportunistic_graft_ticks(&mut self, opportunistic_graft_ticks: u64) -> &mut Self {
         self.config.opportunistic_graft_ticks = opportunistic_graft_ticks;

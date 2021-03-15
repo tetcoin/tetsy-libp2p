@@ -1,15 +1,15 @@
 [package]
-name = "tetsy-libp2p-core"
+name = "tet-libp2p-core"
 edition = "2018"
-description = "Core traits and structs of tetsy-libp2p"
+description = "Core traits and structs of tet-libp2p"
 version = "0.27.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-core"
+documentation = "https://docs.rs/tet-libp2p-core"
 
 [dependencies]
 asn1_der = "0.6.1"
@@ -22,7 +22,7 @@ futures-timer = "3"
 lazy_static = "1.2"
 libsecp256k1 = { version = "0.3.1", optional = true }
 log = "0.4"
-multiaddr = { package = "tetsy-multiaddr", version = "0.11", path = "../misc/multiaddr" }
+multiaddr = { package = "tet-multiaddr", version = "0.11", path = "../misc/multiaddr" }
 multihash = { version = "0.13", default-features = false, features = ["std", "multihash-impl", "identity", "sha2"] }
 multistream-select = { version = "0.10", path = "../misc/multistream-select" }
 parking_lot = "0.11.0"
@@ -43,9 +43,9 @@ ring = { version = "0.16.9", features = ["alloc", "std"], default-features = fal
 [dev-dependencies]
 async-std = { version = "1.6.2", features = ["attributes"] }
 criterion = "0.3"
-tetsy-libp2p-mplex = { path = "../muxers/mplex" }
-tetsy-libp2p-noise = { path = "../protocols/noise" }
-tetsy-libp2p-tcp = { path = "../transports/tcp" }
+tet-libp2p-mplex = { path = "../muxers/mplex" }
+tet-libp2p-noise = { path = "../protocols/noise" }
+tet-libp2p-tcp = { path = "../transports/tcp" }
 multihash = { version = "0.13", default-features = false, features = ["arb"] }
 quickcheck = "0.9.0"
 wasm-timer = "0.2"

@@ -1,17 +1,17 @@
 [package]
-name = "tetsy-libp2p-dns"
+name = "tet-libp2p-dns"
 edition = "2018"
-description = "DNS transport implementation for tetsy-libp2p"
+description = "DNS transport implementation for tet-libp2p"
 version = "0.27.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-dns"
+documentation = "https://docs.rs/tet-libp2p-dns"
 
 [dependencies]
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.1"
 futures = "0.3.1"

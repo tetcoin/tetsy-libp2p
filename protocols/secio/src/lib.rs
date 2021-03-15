@@ -45,8 +45,8 @@
 //!     .authenticate(SecioConfig::new(local_keys.clone()))
 //!     .multiplex(MplexConfig::default());
 //!
-//! // The transport can be used with a `Network` from `tetsy-libp2p-core`, or a
-//! // `Swarm` from from `tetsy-libp2p-swarm`. See the documentation of these
+//! // The transport can be used with a `Network` from `tet-libp2p-core`, or a
+//! // `Swarm` from from `tet-libp2p-swarm`. See the documentation of these
 //! // crates for mode details.
 //!
 //! // let network = Network::new(transport, local_keys.public().into_peer_id());

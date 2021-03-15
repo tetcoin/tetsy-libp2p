@@ -1,21 +1,21 @@
 [package]
-name = "tetsy-libp2p-wasm-ext"
+name = "tet-libp2p-wasm-ext"
 version = "0.27.0"
 authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>", "Tetcoin Developers <support@tetcoin.org>"]
 edition = "2018"
 description = "Allows passing in an external transport in a Testy WASM environment"
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-wasm-ext"
+documentation = "https://docs.rs/tet-libp2p-wasm-ext"
 
 [dependencies]
 futures = "0.3.1"
 js-sys = "0.3.19"
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
-tetsy-send-wrapper = "0.1.0"
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-send-wrapper = "0.1.0"
 wasm-bindgen = "0.2.42"
 wasm-bindgen-futures = "0.4.4"
 

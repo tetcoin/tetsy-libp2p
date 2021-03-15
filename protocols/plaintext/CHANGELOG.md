@@ -4,17 +4,17 @@
 
 # 0.26.0 [2020-12-17]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.25.0 [2020-11-25]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.24.1 [2020-11-11]
 
 - Ensure that no follow-up protocol data is dropped at the end of the
   plaintext protocol handshake.
-  [PR 1831](https://github.com/tetcoin/tetsy-libp2p/pull/1831).
+  [PR 1831](https://github.com/tetcoin/tet-libp2p/pull/1831).
 
 # 0.24.0 [2020-11-09]
 
@@ -23,21 +23,21 @@
 # 0.23.0 [2020-10-16]
 
 - Improve error logging
-  [PR 1759](https://github.com/tetcoin/tetsy-libp2p/pull/1759).
+  [PR 1759](https://github.com/tetcoin/tet-libp2p/pull/1759).
 
 - Update dependencies.
 
 - Only prefix handshake messages with the message length in bytes as an unsigned
   varint. Return a plain socket once handshaking succeeded. See [issue
-  1760](https://github.com/tetcoin/tetsy-libp2p/issues/1760) for details.
+  1760](https://github.com/tetcoin/tet-libp2p/issues/1760) for details.
 
 # 0.22.0 [2020-09-09]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.21.0 [2020-08-18]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.20.0 [2020-07-01]
 

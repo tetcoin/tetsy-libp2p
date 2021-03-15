@@ -5,7 +5,7 @@
 # 0.10.1 [2021-01-12]
 
 - Fix compilation with serde-1.0.119.
-  [PR 1912](https://github.com/tetcoin/tetsy-libp2p/pull/1912)
+  [PR 1912](https://github.com/tetcoin/tet-libp2p/pull/1912)
 
 # 0.10.0 [2020-11-25]
 
@@ -15,12 +15,12 @@
 
 - Move the `from_url` module and functionality behind the `url` feature,
   enabled by default.
-  [PR 1843](https://github.com/tetcoin/tetsy-libp2p/pull/1843).
+  [PR 1843](https://github.com/tetcoin/tet-libp2p/pull/1843).
 
 # 0.9.5 [2020-11-14]
 
 - Limit initial memory allocation in `visit_seq`.
-  [PR 1833](https://github.com/tetcoin/tetsy-libp2p/pull/1833).
+  [PR 1833](https://github.com/tetcoin/tet-libp2p/pull/1833).
 
 # 0.9.4 [2020-11-09]
 

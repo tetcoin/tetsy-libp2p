@@ -4,11 +4,11 @@
 
 # 0.26.0 [2020-12-17]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.25.0 [2020-11-25]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.24.0 [2020-11-09]
 
@@ -20,20 +20,20 @@
 
 # 0.22.0 [2020-09-09]
 
-- As of this release, SECIO is deprecated. Please use `tetsy-libp2p-noise` instead.
+- As of this release, SECIO is deprecated. Please use `tet-libp2p-noise` instead.
   For some more context, [see here](https://blog.ipfs.io/2020-08-07-deprecating-secio/).
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.21.0 [2020-08-18]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.20.0 [2020-07-01]
 
 - Updated dependencies.
 - Conditional compilation fixes for the `wasm32-wasi` target
-  ([PR 1633](https://github.com/tetcoin/tetsy-libp2p/pull/1633)).
+  ([PR 1633](https://github.com/tetcoin/tet-libp2p/pull/1633)).
 
 # 0.19.2 [2020-06-22]
 

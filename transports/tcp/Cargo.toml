@@ -1,15 +1,15 @@
 [package]
-name = "tetsy-libp2p-tcp"
+name = "tet-libp2p-tcp"
 edition = "2018"
-description = "TCP/IP transport protocol for tetsy-libp2p"
+description = "TCP/IP transport protocol for tet-libp2p"
 version = "0.27.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-tcp"
+documentation = "https://docs.rs/tet-libp2p-tcp"
 
 [dependencies]
 async-io-crate = { package = "async-io", version = "1.2.0", optional = true }
@@ -19,7 +19,7 @@ if-watch = { version = "0.1.4", optional = true }
 if-addrs = { version = "0.6.4", optional = true }
 ipnet = "2.0.0"
 libc = "0.2.80"
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.11"
 socket2 = { version = "0.3.17", features = ["reuseport"] }
 tokio-crate = { package = "tokio", version = "1.0.1", default-features = false, features = ["net"], optional = true }

@@ -135,7 +135,7 @@ pub enum Version {
     /// > the intermediate protocols that the dialer committed to. See [1] and [2].
     ///
     /// [1]: https://github.com/multiformats/go-multistream/issues/20
-    /// [2]: https://github.com/tetcoin/tetsy-libp2p/pull/1212
+    /// [2]: https://github.com/tetcoin/tet-libp2p/pull/1212
     V1Lazy,
     // Draft: https://github.com/libp2p/specs/pull/95
     // V2,

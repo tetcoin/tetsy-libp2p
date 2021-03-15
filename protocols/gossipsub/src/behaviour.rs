@@ -2485,7 +2485,7 @@ where
                         .encode(&mut buf)
                         .expect("Buffer has sufficient capacity");
 
-                    // the signature is over the bytes "tetsy-libp2p-pubsub:<protobuf-message>"
+                    // the signature is over the bytes "tet-libp2p-pubsub:<protobuf-message>"
                     let mut signature_bytes = SIGNING_PREFIX.to_vec();
                     signature_bytes.extend_from_slice(&buf);
                     Some(keypair.sign(&signature_bytes)?)

@@ -1,22 +1,22 @@
 [package]
-name = "tetsy-libp2p-websocket"
+name = "tet-libp2p-websocket"
 edition = "2018"
-description = "WebSocket transport for tetsy-libp2p"
+description = "WebSocket transport for tet-libp2p"
 version = "0.28.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-websocket"
+documentation = "https://docs.rs/tet-libp2p-websocket"
 
 
 [dependencies]
 futures-rustls = "0.21"
 either = "1.5.3"
 futures = "0.3.1"
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.8"
 quicksink = "0.1"
 rw-stream-sink = "0.2.0"
@@ -25,4 +25,4 @@ url = "2.1"
 webpki-roots = "0.21"
 
 [dev-dependencies]
-tetsy-libp2p-tcp = { path = "../tcp" }
+tet-libp2p-tcp = { path = "../tcp" }

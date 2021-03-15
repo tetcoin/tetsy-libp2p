@@ -7,7 +7,7 @@ documentation will refer to `X.Y.Z` as _major_, _minor_ and _patch_ version.
 
 - Every substantial pull request should add an entry to the `[unreleased]`
   section of the corresponding crate `CHANGELOG.md` file. See
-  [#1698](https://github.com/tetcoin/tetsy-libp2p/pull/1698/files) as an example.
+  [#1698](https://github.com/tetcoin/tet-libp2p/pull/1698/files) as an example.
   
   In case there is no `[unreleased]` section yet, create one with an increased
   major, minor or patch version depending on your change. In addition update the

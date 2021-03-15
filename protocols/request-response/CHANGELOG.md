@@ -3,18 +3,18 @@
 - Update dependencies.
 
 - Re-export `throttled`-specific response channel. [PR
-  1902](https://github.com/tetcoin/tetsy-libp2p/pull/1902).
+  1902](https://github.com/tetcoin/tet-libp2p/pull/1902).
 
 # 0.8.0 [2020-12-17]
 
-- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
+- Update `tet-libp2p-swarm` and `tet-libp2p-core`.
 
 - Emit `InboundFailure::ConnectionClosed` for inbound requests that failed due
   to the underlying connection closing.
-  [PR 1886](https://github.com/tetcoin/tetsy-libp2p/pull/1886).
+  [PR 1886](https://github.com/tetcoin/tet-libp2p/pull/1886).
 
 - Derive Clone for `InboundFailure` and `Outbound}Failure`.
-  [PR 1891](https://github.com/tetcoin/tetsy-libp2p/pull/1891)
+  [PR 1891](https://github.com/tetcoin/tet-libp2p/pull/1891)
 
 # 0.7.0 [2020-12-08]
 
@@ -22,11 +22,11 @@
   the `ResponseSent` event and the `ResponseOmission`
   inbound failures. This effectively removes previous
   support for one-way protocols without responses.
-  [PR 1867](https://github.com/tetcoin/tetsy-libp2p/pull/1867).
+  [PR 1867](https://github.com/tetcoin/tet-libp2p/pull/1867).
 
 # 0.6.0 [2020-11-25]
 
-- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
+- Update `tet-libp2p-swarm` and `tet-libp2p-core`.
 
 # 0.5.0 [2020-11-09]
 
@@ -40,15 +40,15 @@
 
 - Add support for opt-in request-based flow-control to any
   request-response protocol via `RequestResponse::throttled()`.
-  [PR 1726](https://github.com/tetcoin/tetsy-libp2p/pull/1726).
+  [PR 1726](https://github.com/tetcoin/tet-libp2p/pull/1726).
 
-- Update `tetsy-libp2p-swarm` and `tetsy-libp2p-core`.
+- Update `tet-libp2p-swarm` and `tet-libp2p-core`.
 
 # 0.2.0 [2020-08-18]
 
 - Fixed connection keep-alive, permitting connections to close due
   to inactivity.
-- Bump `tetsy-libp2p-core` and `tetsy-libp2p-swarm` dependencies.
+- Bump `tet-libp2p-core` and `tet-libp2p-swarm` dependencies.
 
 # 0.1.1
 
@@ -56,7 +56,7 @@
 responses in the `InboundUpgrade` and `OutboundUpgrade`. Otherwise this is
 left to `RequestResponseCodec::write_request` and `RequestResponseCodec::write_response`,
 which can be a pitfall and lead to subtle problems (see e.g.
-https://github.com/tetcoin/tetsy-libp2p/pull/1606).
+https://github.com/tetcoin/tet-libp2p/pull/1606).
 
 # 0.1.0
 

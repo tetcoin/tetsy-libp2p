@@ -1,62 +1,62 @@
-- [`tetsy-libp2p-core` CHANGELOG](core/CHANGELOG.md)
-- [`tetsy-libp2p-deflate` CHANGELOG](protocols/deflate/CHANGELOG.md)
-- [`tetsy-libp2p-dns` CHANGELOG](transports/dns/CHANGELOG.md)
-- [`tetsy-libp2p-floodsub` CHANGELOG](protocols/floodsub/CHANGELOG.md)
-- [`tetsy-libp2p-gossipsub` CHANGELOG](protocols/gossipsub/CHANGELOG.md)
-- [`tetsy-libp2p-identify` CHANGELOG](protocols/identify/CHANGELOG.md)
-- [`tetsy-libp2p-kad` CHANGELOG](protocols/kad/CHANGELOG.md)
-- [`tetsy-libp2p-mdns` CHANGELOG](protocols/mdns/CHANGELOG.md)
-- [`tetsy-libp2p-mplex` CHANGELOG](muxers/mplex/CHANGELOG.md)
-- [`tetsy-libp2p-noise` CHANGELOG](protocols/noise/CHANGELOG.md)
-- [`tetsy-libp2p-ping` CHANGELOG](protocols/ping/CHANGELOG.md)
-- [`tetsy-libp2p-plaintext` CHANGELOG](protocols/plaintext/CHANGELOG.md)
-- [`tetsy-libp2p-pnet` CHANGELOG](protocols/pnet/CHANGELOG.md)
-- [`tetsy-libp2p-request-response` CHANGELOG](protocols/request-response/CHANGELOG.md)
-- [`tetsy-libp2p-secio` CHANGELOG](protocols/secio/CHANGELOG.md)
-- [`tetsy-libp2p-swarm` CHANGELOG](swarm/CHANGELOG.md)
-- [`tetsy-libp2p-tcp` CHANGELOG](transports/tcp/CHANGELOG.md)
-- [`tetsy-libp2p-uds` CHANGELOG](transports/uds/CHANGELOG.md)
-- [`tetsy-libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
-- [`tetsy-libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
-- [`tetsy-libp2p-yamux` CHANGELOG](muxers/yamux/CHANGELOG.md)
+- [`tet-libp2p-core` CHANGELOG](core/CHANGELOG.md)
+- [`tet-libp2p-deflate` CHANGELOG](protocols/deflate/CHANGELOG.md)
+- [`tet-libp2p-dns` CHANGELOG](transports/dns/CHANGELOG.md)
+- [`tet-libp2p-floodsub` CHANGELOG](protocols/floodsub/CHANGELOG.md)
+- [`tet-libp2p-gossipsub` CHANGELOG](protocols/gossipsub/CHANGELOG.md)
+- [`tet-libp2p-identify` CHANGELOG](protocols/identify/CHANGELOG.md)
+- [`tet-libp2p-kad` CHANGELOG](protocols/kad/CHANGELOG.md)
+- [`tet-libp2p-mdns` CHANGELOG](protocols/mdns/CHANGELOG.md)
+- [`tet-libp2p-mplex` CHANGELOG](muxers/mplex/CHANGELOG.md)
+- [`tet-libp2p-noise` CHANGELOG](protocols/noise/CHANGELOG.md)
+- [`tet-libp2p-ping` CHANGELOG](protocols/ping/CHANGELOG.md)
+- [`tet-libp2p-plaintext` CHANGELOG](protocols/plaintext/CHANGELOG.md)
+- [`tet-libp2p-pnet` CHANGELOG](protocols/pnet/CHANGELOG.md)
+- [`tet-libp2p-request-response` CHANGELOG](protocols/request-response/CHANGELOG.md)
+- [`tet-libp2p-secio` CHANGELOG](protocols/secio/CHANGELOG.md)
+- [`tet-libp2p-swarm` CHANGELOG](swarm/CHANGELOG.md)
+- [`tet-libp2p-tcp` CHANGELOG](transports/tcp/CHANGELOG.md)
+- [`tet-libp2p-uds` CHANGELOG](transports/uds/CHANGELOG.md)
+- [`tet-libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
+- [`tet-libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
+- [`tet-libp2p-yamux` CHANGELOG](muxers/yamux/CHANGELOG.md)
 - [`multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
-- [`tetsy-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
-- [`tetsy-libp2p-core-derive` CHANGELOG](misc/core-derive/CHANGELOG.md)
+- [`tet-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
+- [`tet-libp2p-core-derive` CHANGELOG](misc/core-derive/CHANGELOG.md)
 
 # Version 0.34.0 [2021-01-12]
 
-- Update `tetsy-libp2p-core` and all dependent crates.
+- Update `tet-libp2p-core` and all dependent crates.
 
 - The `tcp-async-std` feature is now `tcp-async-io`, still
   enabled by default.
 
 # Version 0.33.0 [2020-12-17]
 
-- Update `tetsy-libp2p-core` and all dependent crates.
+- Update `tet-libp2p-core` and all dependent crates.
 
 # Version 0.32.2 [2020-12-10]
 
-- Update `tetsy-libp2p-websocket`.
+- Update `tet-libp2p-websocket`.
 
 # Version 0.32.1 [2020-12-09]
 
-- Update minimum patch version of `tetsy-libp2p-websocket`.
+- Update minimum patch version of `tet-libp2p-websocket`.
 
 # Version 0.32.0 [2020-12-08]
 
-- Update `tetsy-libp2p-request-response`.
+- Update `tet-libp2p-request-response`.
 
-- Update to `tetsy-libp2p-mdns-0.26`.
+- Update to `tet-libp2p-mdns-0.26`.
 
-- Update `tetsy-libp2p-websocket` minimum patch version.
+- Update `tet-libp2p-websocket` minimum patch version.
 
 # Version 0.31.2 [2020-12-02]
 
-- Bump minimum `tetsy-libp2p-core` patch version.
+- Bump minimum `tet-libp2p-core` patch version.
 
 # Version 0.31.1 [2020-11-26]
 
-- Bump minimum `tetsy-libp2p-tcp` patch version.
+- Bump minimum `tet-libp2p-tcp` patch version.
 
 # Version 0.31.0 [2020-11-25]
 
@@ -64,236 +64,236 @@
 
 # Version 0.30.1 [2020-11-11]
 
-- Update `tetsy-libp2p-plaintext`.
+- Update `tet-libp2p-plaintext`.
 
 # Version 0.30.0 [2020-11-09]
 
-- Update `tetsy-libp2p-mdns`, `tetsy-libp2p-tcp` and `tetsy-libp2p-uds` as well as `tetsy-libp2p-core`
+- Update `tet-libp2p-mdns`, `tet-libp2p-tcp` and `tet-libp2p-uds` as well as `tet-libp2p-core`
   and all its dependers.
 
 # Version 0.29.1 [2020-10-20]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # Version 0.29.0 [2020-10-16]
 
-- Update `tetsy-libp2p-core`, `tetsy-libp2p-floodsub`, `tetsy-libp2p-gossipsub`, `tetsy-libp2p-mplex`,
-  `tetsy-libp2p-noise`, `tetsy-libp2p-plaintext`, `tetsy-libp2p-pnet`, `tetsy-libp2p-request-response`,
-  `tetsy-libp2p-swarm`, `tetsy-libp2p-tcp`, `tetsy-libp2p-websocket` and `tetsy-multiaddr`.
+- Update `tet-libp2p-core`, `tet-libp2p-floodsub`, `tet-libp2p-gossipsub`, `tet-libp2p-mplex`,
+  `tet-libp2p-noise`, `tet-libp2p-plaintext`, `tet-libp2p-pnet`, `tet-libp2p-request-response`,
+  `tet-libp2p-swarm`, `tet-libp2p-tcp`, `tet-libp2p-websocket` and `tet-multiaddr`.
 
 # Version 0.28.1 [2020-09-10]
 
-- Update to `tetsy-libp2p-core` `0.22.1`.
+- Update to `tet-libp2p-core` `0.22.1`.
 
 # Version 0.28.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.25.0`. *Step 4 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-yamux` to `0.25.0`. *Step 4 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
 
 # Version 0.27.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.24.0`. *Step 3 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-yamux` to `0.24.0`. *Step 3 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
 
 # Version 0.26.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.23.0`. *Step 2 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-yamux` to `0.23.0`. *Step 2 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
 
 # Version 0.25.0 [2020-09-09]
 
-- Remove the deprecated `tetsy-libp2p-secio` dependency. To continue to use
-  SECIO, add an explicit dependency on `tetsy-libp2p-secio`. However,
-  transitioning to `tetsy-libp2p-noise` is strongly recommended.
+- Remove the deprecated `tet-libp2p-secio` dependency. To continue to use
+  SECIO, add an explicit dependency on `tet-libp2p-secio`. However,
+  transitioning to `tet-libp2p-noise` is strongly recommended.
 
-- Update `tetsy-libp2p-yamux` to `0.22.0`. *This version starts a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-yamux` to `0.22.0`. *This version starts a multi-release
+  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
 
-- Bump `tetsy-libp2p-noise` to `0.24`. See the `tetsy-libp2p-noise`
+- Bump `tet-libp2p-noise` to `0.24`. See the `tet-libp2p-noise`
 changelog for details about the `LegacyConfig`.
 
-- The `ProtocolsHandler` in `tetsy-libp2p-swarm` has a new associated type
+- The `ProtocolsHandler` in `tet-libp2p-swarm` has a new associated type
   `InboundOpenInfo` ([PR 1714]).
 
-[PR 1714]: https://github.com/tetcoin/tetsy-libp2p/pull/1714
+[PR 1714]: https://github.com/tetcoin/tet-libp2p/pull/1714
 
 # Version 0.24.0 [2020-08-18]
 
-- Update `tetsy-libp2p-core`, `tetsy-libp2p-gossipsub`, `tetsy-libp2p-kad`, `tetsy-libp2p-mdns`,
-  `tetsy-libp2p-ping`, `tetsy-libp2p-request-response`, `tetsy-libp2p-swarm` and dependent crates.
+- Update `tet-libp2p-core`, `tet-libp2p-gossipsub`, `tet-libp2p-kad`, `tet-libp2p-mdns`,
+  `tet-libp2p-ping`, `tet-libp2p-request-response`, `tet-libp2p-swarm` and dependent crates.
 
 # Version 0.23.0 (2020-08-03)
 
 **NOTE**: For a smooth upgrade path from `0.21` to `> 0.22`
 on an existing deployment, this version must not be skipped
-or the provided legacy configuration for `tetsy-libp2p-noise` used!
+or the provided legacy configuration for `tet-libp2p-noise` used!
 
-- Bump `tetsy-libp2p-noise` dependency to `0.22`. See the `tetsy-libp2p-noise`
+- Bump `tet-libp2p-noise` dependency to `0.22`. See the `tet-libp2p-noise`
 changelog for details about the `LegacyConfig`.
 
-- Refactored bandwidth logging ([PR 1670](https://github.com/tetcoin/tetsy-libp2p/pull/1670)).
+- Refactored bandwidth logging ([PR 1670](https://github.com/tetcoin/tet-libp2p/pull/1670)).
 
 # Version 0.22.0 (2020-07-17)
 
 **NOTE**: For a smooth upgrade path from `0.21` to `> 0.22`
-on an existing deployment using `tetsy-libp2p-noise`, this version
+on an existing deployment using `tet-libp2p-noise`, this version
 must not be skipped!
 
-- Bump `tetsy-libp2p-noise` dependency to `0.21`.
+- Bump `tet-libp2p-noise` dependency to `0.21`.
 
 # Version 0.21.1 (2020-07-02)
 
-- Bump `tetsy-libp2p-websockets` lower bound.
+- Bump `tet-libp2p-websockets` lower bound.
 
 # Version 0.21.0 (2020-07-01)
 
 - Conditional compilation fixes for the `wasm32-wasi` target
-  ([PR 1633](https://github.com/tetcoin/tetsy-libp2p/pull/1633)).
+  ([PR 1633](https://github.com/tetcoin/tet-libp2p/pull/1633)).
 
-- New `tetsy-libp2p-request-response` crate
-  ([PR 1596](https://github.com/tetcoin/tetsy-libp2p/pull/1596)).
+- New `tet-libp2p-request-response` crate
+  ([PR 1596](https://github.com/tetcoin/tet-libp2p/pull/1596)).
 
 - Updated libp2p dependencies.
 
 # Version 0.19.1 (2020-05-25)
 
 - Temporarily pin all `async-std` dependencies to `< 1.6`.
-  [PR 1589](https://github.com/tetcoin/tetsy-libp2p/pull/1589)
+  [PR 1589](https://github.com/tetcoin/tet-libp2p/pull/1589)
 
-- `tetsy-libp2p-core-derive`: Fully qualified std::result::Result in macro
-  [PR 1587](https://github.com/tetcoin/tetsy-libp2p/pull/1587)
+- `tet-libp2p-core-derive`: Fully qualified std::result::Result in macro
+  [PR 1587](https://github.com/tetcoin/tet-libp2p/pull/1587)
 
 # Version 0.19.0 (2020-05-18)
 
-- `tetsy-libp2p-core`, `tetsy-libp2p-swarm`: Added support for multiple dialing
+- `tet-libp2p-core`, `tet-libp2p-swarm`: Added support for multiple dialing
   attempts per peer, with a configurable limit.
-  [PR 1506](https://github.com/tetcoin/tetsy-libp2p/pull/1506)
+  [PR 1506](https://github.com/tetcoin/tet-libp2p/pull/1506)
 
-- `tetsy-libp2p-core`: `PeerId`s that use the identity hashing will now be properly
+- `tet-libp2p-core`: `PeerId`s that use the identity hashing will now be properly
   displayed using the string representation of an identity multihash, rather
   than the canonical SHA 256 representation.
-  [PR 1576](https://github.com/tetcoin/tetsy-libp2p/pull/1576)
+  [PR 1576](https://github.com/tetcoin/tet-libp2p/pull/1576)
 
-- `tetsy-libp2p-core`: Updated to multihash 0.11.0.
-  [PR 1566](https://github.com/tetcoin/tetsy-libp2p/pull/1566)
+- `tet-libp2p-core`: Updated to multihash 0.11.0.
+  [PR 1566](https://github.com/tetcoin/tet-libp2p/pull/1566)
 
-- `tetsy-libp2p-core`: Make the number of events buffered to/from tasks configurable.
-  [PR 1574](https://github.com/tetcoin/tetsy-libp2p/pull/1574)
+- `tet-libp2p-core`: Make the number of events buffered to/from tasks configurable.
+  [PR 1574](https://github.com/tetcoin/tet-libp2p/pull/1574)
 
-- `tetsy-libp2p-dns`, `tetsy-multiaddr`: Added support for the `/dns` multiaddr
+- `tet-libp2p-dns`, `tet-multiaddr`: Added support for the `/dns` multiaddr
   protocol. Additionally, the `multiaddr::from_url` function will now use
   `/dns` instead of `/dns4`.
-  [PR 1575](https://github.com/tetcoin/tetsy-libp2p/pull/1575)
+  [PR 1575](https://github.com/tetcoin/tet-libp2p/pull/1575)
 
-- `tetsy-libp2p-noise`: Added the `X25519Spec` protocol suite which uses
-  tetsy-libp2p-noise-spec compliant signatures on static keys as well as the
-  `/noise` protocol upgrade, hence providing a tetsy-libp2p-noise-spec compliant
+- `tet-libp2p-noise`: Added the `X25519Spec` protocol suite which uses
+  tet-libp2p-noise-spec compliant signatures on static keys as well as the
+  `/noise` protocol upgrade, hence providing a tet-libp2p-noise-spec compliant
   `XX` handshake. `IK` and `IX` are still supported with `X25519Spec`
   though not guaranteed to be interoperable with other libp2p
   implementations as these handshake patterns are not currently
-  included in the tetsy-libp2p-noise-spec. The `X25519Spec` implementation
+  included in the tet-libp2p-noise-spec. The `X25519Spec` implementation
   will eventually replace the current `X25519` implementation, with
   the former being removed. To upgrade without interruptions, you may
   temporarily include `NoiseConfig`s for both implementations as
   alternatives in your transport upgrade pipeline.
 
-- `tetsy-libp2p-kad`: Consider fixed (K_VALUE) amount of peers at closest query
+- `tet-libp2p-kad`: Consider fixed (K_VALUE) amount of peers at closest query
   initialization. Unless `KademliaConfig::set_replication_factor` is used change
   has no effect.
-  [PR 1536](https://github.com/tetcoin/tetsy-libp2p/pull/1536)
+  [PR 1536](https://github.com/tetcoin/tet-libp2p/pull/1536)
 
-- `tetsy-libp2p-kad`: Provide more insight into, and control of, the execution of
+- `tet-libp2p-kad`: Provide more insight into, and control of, the execution of
   queries. All query results are now wrapped in `KademliaEvent::QueryResult`.
   As a side-effect of these changes and for as long as the record storage
   API is not asynchronous, local storage errors on `put_record` are reported
   synchronously in a `Result`, instead of being reported asynchronously by
   an event.
-  [PR 1567](https://github.com/tetcoin/tetsy-libp2p/pull/1567)
+  [PR 1567](https://github.com/tetcoin/tet-libp2p/pull/1567)
 
-- `tetsy-libp2p-tcp`, `libp2p`: Made the `tetsy-libp2p-tcp/async-std` feature flag
+- `tet-libp2p-tcp`, `libp2p`: Made the `tet-libp2p-tcp/async-std` feature flag
   disabled by default, and split the `libp2p/tcp` feature in two:
   `tcp-async-std` and `tcp-tokio`. `tcp-async-std` is still enabled by default.
-  [PR 1471](https://github.com/tetcoin/tetsy-libp2p/pull/1471)
+  [PR 1471](https://github.com/tetcoin/tet-libp2p/pull/1471)
 
-- `tetsy-libp2p-tcp`: On listeners started with an IPv6 multi-address the socket
+- `tet-libp2p-tcp`: On listeners started with an IPv6 multi-address the socket
   option `IPV6_V6ONLY` is set to true. Instead of relying on IPv4-mapped IPv6
   address support, two listeners can be started if IPv4 and IPv6 should both
   be supported. IPv4 listener addresses are not affected by this change.
-  [PR 1555](https://github.com/tetcoin/tetsy-libp2p/pull/1555)
+  [PR 1555](https://github.com/tetcoin/tet-libp2p/pull/1555)
 
 # Version 0.18.1 (2020-04-17)
 
-- `tetsy-libp2p-swarm`: Make sure inject_dial_failure is called in all situations.
-  [PR 1549](https://github.com/tetcoin/tetsy-libp2p/pull/1549)
+- `tet-libp2p-swarm`: Make sure inject_dial_failure is called in all situations.
+  [PR 1549](https://github.com/tetcoin/tet-libp2p/pull/1549)
 
 # Version 0.18.0 (2020-04-09)
 
-- `tetsy-libp2p-core`: Treat connection limit errors as pending connection errors.
-  [PR 1546](https://github.com/tetcoin/tetsy-libp2p/pull/1546)
+- `tet-libp2p-core`: Treat connection limit errors as pending connection errors.
+  [PR 1546](https://github.com/tetcoin/tet-libp2p/pull/1546)
 
-- `tetsy-libp2p-core-derive`: Disambiguate calls to `NetworkBehaviour::inject_event`.
-  [PR 1543](https://github.com/tetcoin/tetsy-libp2p/pull/1543)
+- `tet-libp2p-core-derive`: Disambiguate calls to `NetworkBehaviour::inject_event`.
+  [PR 1543](https://github.com/tetcoin/tet-libp2p/pull/1543)
 
-- `tetsy-libp2p-floodsub`: Allow sent messages seen as subscribed.
-  [PR 1520](https://github.com/tetcoin/tetsy-libp2p/pull/1520)
+- `tet-libp2p-floodsub`: Allow sent messages seen as subscribed.
+  [PR 1520](https://github.com/tetcoin/tet-libp2p/pull/1520)
 
-- `tetsy-libp2p-kad`: Return peers independent of record existence.
-  [PR 1544](https://github.com/tetcoin/tetsy-libp2p/pull/1544)
+- `tet-libp2p-kad`: Return peers independent of record existence.
+  [PR 1544](https://github.com/tetcoin/tet-libp2p/pull/1544)
 
-- `tetsy-libp2p-wasm-ext`: Fix "parsed is null" errors being thrown.
-  [PR 1535](https://github.com/tetcoin/tetsy-libp2p/pull/1535)
+- `tet-libp2p-wasm-ext`: Fix "parsed is null" errors being thrown.
+  [PR 1535](https://github.com/tetcoin/tet-libp2p/pull/1535)
 
 # Version 0.17.0 (2020-04-02)
 
-- `tetsy-libp2p-core`: Finished "identity hashing" for peer IDs migration.
-  [PR 1460](https://github.com/tetcoin/tetsy-libp2p/pull/1460)
-- `tetsy-libp2p-core`: Remove `poll_broadcast`.
-  [PR 1527](https://github.com/tetcoin/tetsy-libp2p/pull/1527)
-- `tetsy-libp2p-core`, `tetsy-libp2p-swarm`: Report addresses of closed listeners.
-  [PR 1485](https://github.com/tetcoin/tetsy-libp2p/pull/1485)
-- `tetsy-libp2p-core`: Support for multiple connections per peer and configurable connection limits.
-  See [PR #1440](https://github.com/tetcoin/tetsy-libp2p/pull/1440),
-  [PR #1519](https://github.com/tetcoin/tetsy-libp2p/pull/1519) and
-  [issue #912](https://github.com/tetcoin/tetsy-libp2p/issues/912) for details.
+- `tet-libp2p-core`: Finished "identity hashing" for peer IDs migration.
+  [PR 1460](https://github.com/tetcoin/tet-libp2p/pull/1460)
+- `tet-libp2p-core`: Remove `poll_broadcast`.
+  [PR 1527](https://github.com/tetcoin/tet-libp2p/pull/1527)
+- `tet-libp2p-core`, `tet-libp2p-swarm`: Report addresses of closed listeners.
+  [PR 1485](https://github.com/tetcoin/tet-libp2p/pull/1485)
+- `tet-libp2p-core`: Support for multiple connections per peer and configurable connection limits.
+  See [PR #1440](https://github.com/tetcoin/tet-libp2p/pull/1440),
+  [PR #1519](https://github.com/tetcoin/tet-libp2p/pull/1519) and
+  [issue #912](https://github.com/tetcoin/tet-libp2p/issues/912) for details.
 
-- `tetsy-libp2p-swarm`: Pass the cause of closing a listener to `inject_listener_closed`.
-  [PR 1517](https://github.com/tetcoin/tetsy-libp2p/pull/1517)
-- `tetsy-libp2p-swarm`: Support for multiple connections per peer and configurable connection limits.
-  See [PR #1440](https://github.com/tetcoin/tetsy-libp2p/pull/1440),
-  [PR #1519](https://github.com/tetcoin/tetsy-libp2p/pull/1519) and
-  [issue #912](https://github.com/tetcoin/tetsy-libp2p/issues/912) for details.
-- `tetsy-libp2p-swarm`: The `SwarmEvent` now returns more events.
-  [PR 1515](https://github.com/tetcoin/tetsy-libp2p/pull/1515)
-- `tetsy-libp2p-swarm`: New `protocols_handler::multi` module.
-  [PR 1497](https://github.com/tetcoin/tetsy-libp2p/pull/1497)
-- `tetsy-libp2p-swarm`: Allow configuration of outbound substreams.
-  [PR 1521](https://github.com/tetcoin/tetsy-libp2p/pull/1521)
+- `tet-libp2p-swarm`: Pass the cause of closing a listener to `inject_listener_closed`.
+  [PR 1517](https://github.com/tetcoin/tet-libp2p/pull/1517)
+- `tet-libp2p-swarm`: Support for multiple connections per peer and configurable connection limits.
+  See [PR #1440](https://github.com/tetcoin/tet-libp2p/pull/1440),
+  [PR #1519](https://github.com/tetcoin/tet-libp2p/pull/1519) and
+  [issue #912](https://github.com/tetcoin/tet-libp2p/issues/912) for details.
+- `tet-libp2p-swarm`: The `SwarmEvent` now returns more events.
+  [PR 1515](https://github.com/tetcoin/tet-libp2p/pull/1515)
+- `tet-libp2p-swarm`: New `protocols_handler::multi` module.
+  [PR 1497](https://github.com/tetcoin/tet-libp2p/pull/1497)
+- `tet-libp2p-swarm`: Allow configuration of outbound substreams.
+  [PR 1521](https://github.com/tetcoin/tet-libp2p/pull/1521)
 
-- `tetsy-libp2p-kad`: Providers returned from a lookup are now deduplicated.
-  [PR 1528](https://github.com/tetcoin/tetsy-libp2p/pull/1528)
-- `tetsy-libp2p-kad`: Allow customising the maximum packet size.
-  [PR 1502](https://github.com/tetcoin/tetsy-libp2p/pull/1502)
-- `tetsy-libp2p-kad`: Allow customising the (libp2p) connection keep-alive timeout.
-  [PR 1477](https://github.com/tetcoin/tetsy-libp2p/pull/1477)
-- `tetsy-libp2p-kad`: Avoid storing records that are expired upon receipt (optimisation).
-  [PR 1496](https://github.com/tetcoin/tetsy-libp2p/pull/1496)
-- `tetsy-libp2p-kad`: Fixed potential panic on computing record expiry.
-  [PR 1492](https://github.com/tetcoin/tetsy-libp2p/pull/1492)
+- `tet-libp2p-kad`: Providers returned from a lookup are now deduplicated.
+  [PR 1528](https://github.com/tetcoin/tet-libp2p/pull/1528)
+- `tet-libp2p-kad`: Allow customising the maximum packet size.
+  [PR 1502](https://github.com/tetcoin/tet-libp2p/pull/1502)
+- `tet-libp2p-kad`: Allow customising the (libp2p) connection keep-alive timeout.
+  [PR 1477](https://github.com/tetcoin/tet-libp2p/pull/1477)
+- `tet-libp2p-kad`: Avoid storing records that are expired upon receipt (optimisation).
+  [PR 1496](https://github.com/tetcoin/tet-libp2p/pull/1496)
+- `tet-libp2p-kad`: Fixed potential panic on computing record expiry.
+  [PR 1492](https://github.com/tetcoin/tet-libp2p/pull/1492)
 
-- `tetsy-libp2p-mplex`: Guard against use of underlying `Sink` upon
+- `tet-libp2p-mplex`: Guard against use of underlying `Sink` upon
   error or connection close.
-  [PR 1529](https://github.com/tetcoin/tetsy-libp2p/pull/1529)
+  [PR 1529](https://github.com/tetcoin/tet-libp2p/pull/1529)
 
 - `multistream-select`: Upgrade to stable futures.
-  [PR 1484](https://github.com/tetcoin/tetsy-libp2p/pull/1484)
+  [PR 1484](https://github.com/tetcoin/tet-libp2p/pull/1484)
 
 - `multihash`: Removed the crate in favour of the upstream crate.
-  [PR 1472](https://github.com/tetcoin/tetsy-libp2p/pull/1472)
+  [PR 1472](https://github.com/tetcoin/tet-libp2p/pull/1472)
 
 # Version 0.16.2 (2020-02-28)
 
 - Fixed yamux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
-- Added a `websocket_transport()` function in `tetsy-libp2p-wasm-ext`, behind a Cargo feature.
+- Added a `websocket_transport()` function in `tet-libp2p-wasm-ext`, behind a Cargo feature.
 - Fixed ambiguity in `IntoProtocolsHandler::select` vs `ProtocolsHandler::select` in the `NetworkBehaviour` custom derive.
 
 # Version 0.16.1 (2020-02-18)
@@ -308,26 +308,26 @@ must not be skipped!
 - Removed the first generic parameter (the transport) from `Swarm` and `ExpandedSwarm`. The transport is now abstracted away in the internals of the swarm.
 - The `Send` and `'static` bounds are now enforced directly on the `ProtocolsHandler` trait and its associated `InboundUpgrade` and `OutboundUpgrade` implementations.
 - Modified `PeerId`s to compare equal across the identity and SHA256 hashes. As a consequence, the `Borrow` implementation of `PeerId` now always returns the bytes representation of a multihash with a SHA256 hash.
-- Modified tetsy-libp2p-floodsub to no longer hash the topic. The new behaviour is now compatible with go-libp2p and js-libp2p, but is a breaking change with regards to rust-libp2p.
-- Added tetsy-libp2p-pnet. It makes it possible to protect networks with a pre-shared key (PSK).
+- Modified tet-libp2p-floodsub to no longer hash the topic. The new behaviour is now compatible with go-libp2p and js-libp2p, but is a breaking change with regards to rust-libp2p.
+- Added tet-libp2p-pnet. It makes it possible to protect networks with a pre-shared key (PSK).
 - Modified the `poll_method` parameter of the `NetworkBehaviour` custom derive. The expected method now takes an additional parameter of type `impl PollParameters` to be consistent with the `NetworkBehaviour::poll` method.
-- tetsy-libp2p-noise now compiles for WASM targets.
-- Changed tetsy-libp2p-noise to grow its memory buffers dynamically. This should reduce the overall memory usage of connections that use the noise encryption.
-- Fixed tetsy-libp2p-gossipsub to no longer close the connection if the inbound substream is closed by the remote.
-- All crates prefixed with `tetsy-libp2p-` now use the same version number.
-- Added a new variant `ListenerEvent::Error` for listeners to report non-fatal errors. `tetsy-libp2p-tcp` uses this variant to report errors that happen on remote sockets before they have been accepted and errors when trying to determine the local machine's IP address.
+- tet-libp2p-noise now compiles for WASM targets.
+- Changed tet-libp2p-noise to grow its memory buffers dynamically. This should reduce the overall memory usage of connections that use the noise encryption.
+- Fixed tet-libp2p-gossipsub to no longer close the connection if the inbound substream is closed by the remote.
+- All crates prefixed with `tet-libp2p-` now use the same version number.
+- Added a new variant `ListenerEvent::Error` for listeners to report non-fatal errors. `tet-libp2p-tcp` uses this variant to report errors that happen on remote sockets before they have been accepted and errors when trying to determine the local machine's IP address.
 
 # Version 0.15.0 (2020-01-24)
 
-- Added `tetsy-libp2p-gossipsub`.
+- Added `tet-libp2p-gossipsub`.
 - Added `SwarmBuilder::executor` to allow configuring which tasks executor to use.
-- Added `TokioTcpConfig` in `tetsy-libp2p-tcp` and `TokioUdsConfig` in `tetsy-libp2p-uds` behind `tokio` features. These structs use `tokio` and require a `tokio` runtime executor to be configured via `SwarmBuilder::executor`.
+- Added `TokioTcpConfig` in `tet-libp2p-tcp` and `TokioUdsConfig` in `tet-libp2p-uds` behind `tokio` features. These structs use `tokio` and require a `tokio` runtime executor to be configured via `SwarmBuilder::executor`.
 - Changed the `OutboundUpgrade` and `InboundUpgrade` traits to no longer be passed a `Negotiated<C>` but just a `C`. The `Negotiated` is now in the trait bounds requirements of `ProtocolsHandler`.
-- Fixed `tetsy-libp2p-wasm-ext` returning `Err(WouldBlock)` rather than `Pending`.
-- Fixed `tetsy-libp2p-dns` not segregating DNS4 and DNS6.
+- Fixed `tet-libp2p-wasm-ext` returning `Err(WouldBlock)` rather than `Pending`.
+- Fixed `tet-libp2p-dns` not segregating DNS4 and DNS6.
 - Removed some unnecessary `Unpin` requirements on futures.
 - Changed `Mdns::new` to no longer be `async`.
-- Fixed `tetsy-libp2p-kad` keeping connections alive when it shouldn't.
+- Fixed `tet-libp2p-kad` keeping connections alive when it shouldn't.
 - Fixed `InboundUpgrade` not always properly implemented on `NoiseConfig`.
 
 # Version 0.14.0-alpha.1 (2020-01-07)
@@ -344,7 +344,7 @@ must not be skipped!
 
 # Version 0.13.2 (2020-01-02)
 
-- Fixed the `tetsy-libp2p-noise` handshake not flushing the underlying stream before waiting for a response.
+- Fixed the `tet-libp2p-noise` handshake not flushing the underlying stream before waiting for a response.
 - Fixed semver issue with the `protobuf` crate.
 
 # Version 0.13.1 (2019-11-13)
@@ -353,16 +353,16 @@ must not be skipped!
 
 # Version 0.13.0 (2019-11-05)
 
-- Reworked the transport upgrade API. See https://github.com/tetcoin/tetsy-libp2p/pull/1240 for more information.
-- Added a parameter allowing to choose the protocol negotiation protocol when upgrading a connection or a substream. See https://github.com/tetcoin/tetsy-libp2p/pull/1245 for more information.
+- Reworked the transport upgrade API. See https://github.com/tetcoin/tet-libp2p/pull/1240 for more information.
+- Added a parameter allowing to choose the protocol negotiation protocol when upgrading a connection or a substream. See https://github.com/tetcoin/tet-libp2p/pull/1245 for more information.
 - Added an alternative `multistream-select` protocol called `V1Lazy`.
 - Added `PlainText2Config` that implements the `/plaintext/2.0.0` protocol.
-- Refactored `tetsy-libp2p-identify`. Some items have been renamed.
+- Refactored `tet-libp2p-identify`. Some items have been renamed.
 - Now accepting `PeerId`s using the `identity` hashing algorithm as valid.
-- Removed `tetsy-libp2p-observed` and `tetsy-libp2p-ratelimit`.
+- Removed `tet-libp2p-observed` and `tet-libp2p-ratelimit`.
 - Fixed mDNS long peer IDs not being transmitted properly.
 - Added some `Debug` trait implementations.
-- Fixed potential arithmetic overflows in `tetsy-libp2p-kad` and `multistream-select`.
+- Fixed potential arithmetic overflows in `tet-libp2p-kad` and `multistream-select`.
 
 # Version 0.12.0 (2019-08-15)
 
@@ -370,17 +370,17 @@ must not be skipped!
 - Replaced `listen_addr` with `local_addr` in events related to incoming connections. The address no longer has to match a previously-reported address.
 - Listeners now have an identifier and can be stopped.
 - Added `NetworkBehaviour::inject_listener_error` and `NetworkBehaviour::inject_listener_closed`. For diagnostic purposes, listeners can now report errors on incoming connections, such as when calling `accept(2)` fails.
-- Fixed tasks sometimes not being notified when a network event happens in `tetsy-libp2p-mplex`.
-- Fixed a memory leak in `tetsy-libp2p-kad`.
+- Fixed tasks sometimes not being notified when a network event happens in `tet-libp2p-mplex`.
+- Fixed a memory leak in `tet-libp2p-kad`.
 - Added `Toggle::is_enabled()`.
 - Removed `IdentifyTransport`.
 
 # Version 0.11.0 (2019-07-18)
 
-- `tetsy-libp2p-kad`: Completed the core functionality of the record storage API, thereby extending the `RecordStore` for provider records. All records expire by default and are subject to regular republication and caching as per the Kademlia spec(s). Expiration and publication intervals are configurable through the `KademliaConfig`.
-- `tetsy-libp2p-kad`: The routing table now never stores peers without a known (listen) address. In particular, on receiving a new inbound connection, the Kademlia behaviour now emits `KademliaEvent::UnroutablePeer` to indicate that in order for the peer to be added to the routing table and hence considered a reachable node in the DHT, a listen address of the peer must be discovered and reported via `Kademlia::add_address`. This is usually achieved through the use of the `Identify` protocol on the same connection(s).
-- `tetsy-libp2p-kad`: Documentation updates.
-- Extracted the `swarm` and `protocols_handler`-related contents from `tetsy-libp2p-core` to a new `tetsy-libp2p-swarm` crate.
+- `tet-libp2p-kad`: Completed the core functionality of the record storage API, thereby extending the `RecordStore` for provider records. All records expire by default and are subject to regular republication and caching as per the Kademlia spec(s). Expiration and publication intervals are configurable through the `KademliaConfig`.
+- `tet-libp2p-kad`: The routing table now never stores peers without a known (listen) address. In particular, on receiving a new inbound connection, the Kademlia behaviour now emits `KademliaEvent::UnroutablePeer` to indicate that in order for the peer to be added to the routing table and hence considered a reachable node in the DHT, a listen address of the peer must be discovered and reported via `Kademlia::add_address`. This is usually achieved through the use of the `Identify` protocol on the same connection(s).
+- `tet-libp2p-kad`: Documentation updates.
+- Extracted the `swarm` and `protocols_handler`-related contents from `tet-libp2p-core` to a new `tet-libp2p-swarm` crate.
 - Renamed `RawSwarm` to `Network`.
 - Added `Floodsub::publish_any`.
 - Replaced unbounded channels with bounded ones at the boundary between the `Network` (formerly `RawSwarm`) and `NodeHandler`. The node handlers will now wait if the main task is busy, instead of continuing to push events to the channel.
@@ -402,19 +402,19 @@ must not be skipped!
 
 # Version 0.9.0 (2019-06-04)
 
-- Major fixes and performance improvements to tetsy-libp2p-kad.
-- Initial prototype for record storage in tetsy-libp2p-kad.
+- Major fixes and performance improvements to tet-libp2p-kad.
+- Initial prototype for record storage in tet-libp2p-kad.
 - Rewrote the implementation of WebSockets. It now properly supports WebSockets Secure (WSS).
 - Removed `BrowserWsConfig`. Please use `libp2p::wasm_ext::ExtTransport` instead.
-- Added a `Path` parameter to `multiaddr::Protocol::WS` and `WSS`. The string representation when a path is present is respectively `x-tetsy-ws/<path>` and `x-tetsy-wss/<path>` where `<path>` is percent-encoded.
-- Fixed an issue with `tetsy-libp2p-tcp` where the wrong listened address was returned, if the actual address was loopback.
+- Added a `Path` parameter to `multiaddr::Protocol::WS` and `WSS`. The string representation when a path is present is respectively `x-tet-ws/<path>` and `x-tet-wss/<path>` where `<path>` is percent-encoded.
+- Fixed an issue with `tet-libp2p-tcp` where the wrong listened address was returned, if the actual address was loopback.
 - Added `core::upgrade::OptionalUpgrade`.
 - Added some utility functions in `core::identity::secp256k1`.
 - It is now possible to inject an artificial connection in the `RawSwarm`.
 
 # Version 0.8.1 (2019-05-15)
 
-- Fixed a vulnerability in ED25519 signatures verification in tetsy-libp2p-core.
+- Fixed a vulnerability in ED25519 signatures verification in tet-libp2p-core.
 
 # Version 0.8.0 (2019-05-15)
 
@@ -428,13 +428,13 @@ must not be skipped!
 - Fixed `Kademlia::add_providing` taking a `PeerId` instead of a `Multihash`.
 - Fixed various bugs in the implementation of `Kademlia`.
 - Added `OneSubstreamMuxer`.
-- Added the `tetsy-libp2p-wasm-ext` crate.
+- Added the `tet-libp2p-wasm-ext` crate.
 - Added `multiaddr::from_url`.
 - Added `OptionalTransport`.
 
 # Version 0.7.1 (2019-05-15)
 
-- Fixed a vulnerability in ED25519 signatures verification in tetsy-libp2p-core.
+- Fixed a vulnerability in ED25519 signatures verification in tet-libp2p-core.
 
 # Version 0.7.0 (2019-04-23)
 
@@ -444,7 +444,7 @@ must not be skipped!
 - Added `NetworkBehaviour::inject_new_listen_addr`, `NetworkBehaviour::inject_expired_listen_addr` and `NetworkBehaviour::inject_new_external_addr`.
 - `ProtocolsHandler::listen_protocol` and `ProtocolsHandlerEvent::OutboundSubstreamRequest` must now return a `SubstreamProtocol` struct containing a timeout for the upgrade.
 - `Ping::new` now requires a `PingConfig`, which can be created with `PingConfig::new`.
-- Removed `Transport::nat_traversal` in favour of a stand-alone `address_translation` function in `tetsy-libp2p-core`.
+- Removed `Transport::nat_traversal` in favour of a stand-alone `address_translation` function in `tet-libp2p-core`.
 - Reworked the API of `Multiaddr`.
 - Removed the `ToMultiaddr` trait in favour of `TryFrom`.
 - Added `Swarm::ban_peer_id` and `Swarm::unban_peer_id`.
@@ -488,7 +488,7 @@ must not be skipped!
 
 # Version 0.4.1 (2019-02-20)
 
-- Fixed wrong version of tetsy-libp2p-noise.
+- Fixed wrong version of tet-libp2p-noise.
 
 # Version 0.4.0 (2019-02-20)
 
@@ -514,7 +514,7 @@ must not be skipped!
 # Version 0.3.0 (2019-01-30)
 
 - Removed the `topology` module and everything it contained, including the `Topology` trait.
-- Added `tetsy-libp2p-noise` that supports Noise handshakes, as an alternative to `tetsy-libp2p-secio`.
+- Added `tet-libp2p-noise` that supports Noise handshakes, as an alternative to `tet-libp2p-secio`.
 - Updated `ring` to version 0.14.
 - Creating a `Swarm` now expects the `PeerId` of the local node, instead of a `Topology`.
 - Added `NetworkBehaviour::addresses_of_peer` that returns the addresses a `NetworkBehaviour` knows about a given peer. This exists as a replacement for the topology.

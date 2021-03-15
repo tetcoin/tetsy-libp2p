@@ -41,7 +41,7 @@ use prost::Message as ProtobufMessage;
 use std::{borrow::Cow, pin::Pin};
 use unsigned_varint::codec;
 
-pub(crate) const SIGNING_PREFIX: &[u8] = b"tetsy-libp2p-pubsub:";
+pub(crate) const SIGNING_PREFIX: &[u8] = b"tet-libp2p-pubsub:";
 
 /// Implementation of [`InboundUpgrade`] and [`OutboundUpgrade`] for the Gossipsub protocol.
 #[derive(Clone)]

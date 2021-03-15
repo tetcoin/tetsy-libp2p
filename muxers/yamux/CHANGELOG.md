@@ -4,23 +4,23 @@
 
 # 0.29.0 [2020-12-17]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.28.0 [2020-11-25]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.27.0 [2020-11-09]
 
 - Tweak the naming in the `MplexConfig` API for better
-  consistency with `tetsy-libp2p-mplex`.
-  [PR 1822](https://github.com/tetcoin/tetsy-libp2p/pull/1822).
+  consistency with `tet-libp2p-mplex`.
+  [PR 1822](https://github.com/tetcoin/tet-libp2p/pull/1822).
 
 - Update dependencies.
 
 # 0.26.0 [2020-10-16]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.25.0 [2020-09-09]
 
@@ -56,23 +56,23 @@
   directly upgrade from version `0.21.0` to `0.25.0` without any intermediate
   upgrades.
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 [1]: https://github.com/paritytech/yamux/issues/92
 
 # 0.21.0 [2020-08-18]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 - Allow overriding the mode (client/server), e.g. in the context
-of TCP hole punching. [PR 1691](https://github.com/tetcoin/tetsy-libp2p/pull/1691).
+of TCP hole punching. [PR 1691](https://github.com/tetcoin/tet-libp2p/pull/1691).
 
 # 0.20.0 [2020-07-01]
 
-- Update `tetsy-libp2p-core`, i.e. `StreamMuxer::poll_inbound` has been renamed
+- Update `tet-libp2p-core`, i.e. `StreamMuxer::poll_inbound` has been renamed
   to `poll_event` and returns a `StreamMuxerEvent`.
 
 # 0.19.1 [2020-06-22]
 
 - Deprecated method `Yamux::is_remote_acknowledged` has been removed
-  as part of [PR 1616](https://github.com/tetcoin/tetsy-libp2p/pull/1616).
+  as part of [PR 1616](https://github.com/tetcoin/tet-libp2p/pull/1616).

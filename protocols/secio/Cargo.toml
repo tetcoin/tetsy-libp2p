@@ -1,11 +1,11 @@
 [package]
-name = "tetsy-libp2p-secio"
+name = "tet-libp2p-secio"
 edition = "2018"
-description = "Secio encryption protocol for tetsy-libp2p"
+description = "Secio encryption protocol for tet-libp2p"
 version = "0.27.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
@@ -21,7 +21,7 @@ ctr = "0.3"
 futures = "0.3.1"
 hmac = "0.9.0"
 lazy_static = "1.2.0"
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.6"
 prost = "0.6.1"
 pin-project = "1.0.0"
@@ -37,7 +37,7 @@ ring = { version = "0.16.9", features = ["alloc"], default-features = false }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 js-sys = "0.3.10"
-tetsy-send-wrapper = "0.1"
+tet-send-wrapper = "0.1"
 wasm-bindgen = "0.2.33"
 wasm-bindgen-futures = "0.4.5"
 web-sys = { version = "0.3.10", features = ["Crypto", "CryptoKey", "SubtleCrypto", "Window"] }
@@ -53,5 +53,5 @@ aes-all = ["aesni"]
 [dev-dependencies]
 async-std = "1.6.2"
 criterion = "0.3"
-tetsy-libp2p-mplex = { path = "../../muxers/mplex" }
-tetsy-libp2p-tcp = { path = "../../transports/tcp" }
+tet-libp2p-mplex = { path = "../../muxers/mplex" }
+tet-libp2p-tcp = { path = "../../transports/tcp" }

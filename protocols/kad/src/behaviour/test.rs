@@ -879,7 +879,7 @@ fn add_provider() {
 
 /// User code should be able to start queries beyond the internal
 /// query limit for background jobs. Originally this even produced an
-/// arithmetic overflow, see https://github.com/tetcoin/tetsy-libp2p/issues/1290.
+/// arithmetic overflow, see https://github.com/tetcoin/tet-libp2p/issues/1290.
 #[test]
 fn exceed_jobs_max_queries() {
     let (_addr, mut swarm) = build_node();

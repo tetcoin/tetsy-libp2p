@@ -1,15 +1,15 @@
 [package]
-name = "tetsy-multiaddr"
+name = "tet-multiaddr"
 edition = "2018"
 authors = ["dignifiedquire <dignifiedquire@gmail.com>", "Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
-description = "Implementation of the tetsy-multiaddr format"
+description = "Implementation of the tet-multiaddr format"
 license = "MIT"
 version = "0.11.0"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-core"
+documentation = "https://docs.rs/tet-libp2p-core"
 
 [features]
 default = ["url"]

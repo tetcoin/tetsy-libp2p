@@ -271,13 +271,13 @@ mod tests {
     #[test]
     fn ws_path() {
         let addr = from_url("ws://1.2.3.4:1000/foo/bar").unwrap();
-        assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/x-tetsy-ws/%2ffoo%2fbar".parse().unwrap());
+        assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/x-tet-ws/%2ffoo%2fbar".parse().unwrap());
 
         let addr = from_url("ws://1.2.3.4:1000/").unwrap();
         assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/ws".parse().unwrap());
 
         let addr = from_url("wss://1.2.3.4:1000/foo/bar").unwrap();
-        assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/x-tetsy-wss/%2ffoo%2fbar".parse().unwrap());
+        assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/x-tet-wss/%2ffoo%2fbar".parse().unwrap());
 
         let addr = from_url("wss://1.2.3.4:1000").unwrap();
         assert_eq!(addr, "/ip4/1.2.3.4/tcp/1000/wss".parse().unwrap());

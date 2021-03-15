@@ -1,22 +1,22 @@
 [package]
-name = "tetsy-libp2p-floodsub"
+name = "tet-libp2p-floodsub"
 edition = "2018"
-description = "Floodsub protocol for tetsy-libp2p"
+description = "Floodsub protocol for tet-libp2p"
 version = "0.27.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
-repository = "https://github.com/tetcoin/tetsy-libp2p"
+repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tetsy-libp2p-floodsub"
+documentation = "https://docs.rs/tet-libp2p-floodsub"
 
 [dependencies]
 cuckoofilter = "0.5.0"
 fnv = "1.0"
 futures = "0.3.1"
-tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
-tetsy-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
+tet-libp2p-core = { version = "0.27.0", path = "../../core" }
+tet-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
 log = "0.4"
 prost = "0.7"
 rand = "0.7"

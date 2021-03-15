@@ -4,14 +4,14 @@
 
 # 0.26.0 [2020-12-17]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 # 0.25.0 [2020-11-25]
 
-- Update `tetsy-libp2p-core`.
+- Update `tet-libp2p-core`.
 
 - Change the default `split_send_size` from 1KiB to 8KiB.
-  [PR 1834](https://github.com/tetcoin/tetsy-libp2p/pull/1834).
+  [PR 1834](https://github.com/tetcoin/tet-libp2p/pull/1834).
 
 # 0.24.0 [2020-11-09]
 
@@ -22,11 +22,11 @@
   chance to read from the buffer(s) before the `MaxBufferBehaviour`
   takes effect. This is primarily relevant for
   `MaxBufferBehaviour::ResetStream`.
-  [PR 1825](https://github.com/tetcoin/tetsy-libp2p/pull/1825/).
+  [PR 1825](https://github.com/tetcoin/tet-libp2p/pull/1825/).
 
 - Tweak the naming in the `MplexConfig` API for better
-  consistency with `tetsy-libp2p-yamux`.
-  [PR 1822](https://github.com/tetcoin/tetsy-libp2p/pull/1822).
+  consistency with `tet-libp2p-yamux`.
+  [PR 1822](https://github.com/tetcoin/tet-libp2p/pull/1822).
 
 - Update dependencies.
 
@@ -43,10 +43,10 @@
 
 - More granular execution of pending flushes, better logging and
   avoiding unnecessary hashing.
-  [PR 1785](https://github.com/tetcoin/tetsy-libp2p/pull/1785).
+  [PR 1785](https://github.com/tetcoin/tet-libp2p/pull/1785).
 
 - Split receive buffers per substream.
-  [PR 1784](https://github.com/tetcoin/tetsy-libp2p/pull/1784).
+  [PR 1784](https://github.com/tetcoin/tet-libp2p/pull/1784).
 
 - Address a potential stall when reading from substreams.
 
@@ -68,20 +68,20 @@
 
 # 0.22.0 [2020-09-09]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.21.0 [2020-08-18]
 
-- Bump `tetsy-libp2p-core` dependency.
+- Bump `tet-libp2p-core` dependency.
 
 # 0.20.0 [2020-07-01]
 
-- Update `tetsy-libp2p-core`, i.e. `StreamMuxer::poll_inbound` has been renamed
+- Update `tet-libp2p-core`, i.e. `StreamMuxer::poll_inbound` has been renamed
   to `poll_event` and returns a `StreamMuxerEvent`.
 
 # 0.19.2 [2020-06-22]
 
 - Deprecated method `Multiplex::is_remote_acknowledged` has been removed
-  as part of [PR 1616](https://github.com/tetcoin/tetsy-libp2p/pull/1616).
+  as part of [PR 1616](https://github.com/tetcoin/tet-libp2p/pull/1616).
 
 - Updated dependencies.
