@@ -24,20 +24,20 @@
 //! peer ID will be generated randomly.
 
 use async_std::task;
-use tetsy_libp2p::{
+use tet_libp2p::{
     Swarm,
     PeerId,
     identity,
     build_development_transport
 };
-use tetsy_libp2p::kad::{
+use tet_libp2p::kad::{
     Kademlia,
     KademliaConfig,
     KademliaEvent,
     GetClosestPeersError,
     QueryResult,
 };
-use tetsy_libp2p::kad::record::store::MemoryStore;
+use tet_libp2p::kad::record::store::MemoryStore;
 use std::{env, error::Error, time::Duration};
 
 fn main() -> Result<(), Box<dyn Error>> {

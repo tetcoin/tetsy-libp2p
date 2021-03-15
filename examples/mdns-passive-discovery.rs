@@ -19,7 +19,7 @@
 // DEALINGS IN THE SOFTWARE.
 
 use async_std::task;
-use tetsy_libp2p::mdns::service::{MdnsPacket, MdnsService};
+use tet_libp2p::mdns::service::{MdnsPacket, MdnsService};
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {

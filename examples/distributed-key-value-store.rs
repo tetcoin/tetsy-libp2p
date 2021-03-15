@@ -42,8 +42,8 @@
 
 use async_std::{io, task};
 use futures::prelude::*;
-use tetsy_libp2p::kad::record::store::MemoryStore;
-use tetsy_libp2p::kad::{
+use tet_libp2p::kad::record::store::MemoryStore;
+use tet_libp2p::kad::{
     AddProviderOk,
     Kademlia,
     KademliaEvent,
@@ -54,7 +54,7 @@ use tetsy_libp2p::kad::{
     Record,
     record::Key,
 };
-use tetsy_libp2p::{
+use tet_libp2p::{
     NetworkBehaviour,
     PeerId,
     Swarm,

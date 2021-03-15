@@ -22,7 +22,7 @@ use tet_libp2p_core_derive::*;
 
 /// Small utility to check that a type implements `NetworkBehaviour`.
 #[allow(dead_code)]
-fn require_net_behaviour<T: tetsy_libp2p::swarm::NetworkBehaviour>() {}
+fn require_net_behaviour<T: tet_libp2p::swarm::NetworkBehaviour>() {}
 
 // TODO: doesn't compile
 /*#[test]
@@ -37,11 +37,11 @@ fn one_field() {
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
+        ping: tet_libp2p::ping::Ping,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
@@ -56,17 +56,17 @@ fn two_fields() {
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::identify::IdentifyEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::identify::IdentifyEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::identify::IdentifyEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
@@ -81,25 +81,25 @@ fn three_fields() {
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
-        kad: tetsy_libp2p::kad::Kademlia<tetsy_libp2p::kad::record::store::MemoryStore>,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
+        kad: tet_libp2p::kad::Kademlia<tet_libp2p::kad::record::store::MemoryStore>,
         #[behaviour(ignore)]
         foo: String,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::identify::IdentifyEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::identify::IdentifyEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::identify::IdentifyEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::kad::KademliaEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::kad::KademliaEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::kad::KademliaEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::kad::KademliaEvent) {
         }
     }
 
@@ -114,19 +114,19 @@ fn three_fields_non_last_ignored() {
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
+        ping: tet_libp2p::ping::Ping,
         #[behaviour(ignore)]
         identify: String,
-        kad: tetsy_libp2p::kad::Kademlia<tetsy_libp2p::kad::record::store::MemoryStore>,
+        kad: tet_libp2p::kad::Kademlia<tet_libp2p::kad::record::store::MemoryStore>,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::kad::KademliaEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::kad::KademliaEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::kad::KademliaEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::kad::KademliaEvent) {
         }
     }
 
@@ -142,22 +142,22 @@ fn custom_polling() {
     #[derive(NetworkBehaviour)]
     #[behaviour(poll_method = "foo")]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::identify::IdentifyEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::identify::IdentifyEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::identify::IdentifyEvent) {
         }
     }
 
     impl Foo {
-        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy_libp2p::swarm::PollParameters) -> std::task::Poll<tetsy_libp2p::swarm::NetworkBehaviourAction<T, ()>> { std::task::Poll::Pending }
+        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tet_libp2p::swarm::PollParameters) -> std::task::Poll<tet_libp2p::swarm::NetworkBehaviourAction<T, ()>> { std::task::Poll::Pending }
     }
 
     #[allow(dead_code)]
@@ -172,17 +172,17 @@ fn custom_event_no_polling() {
     #[derive(NetworkBehaviour)]
     #[behaviour(out_event = "Vec<String>")]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::identify::IdentifyEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::identify::IdentifyEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::identify::IdentifyEvent) {
         }
     }
 
@@ -198,22 +198,22 @@ fn custom_event_and_polling() {
     #[derive(NetworkBehaviour)]
     #[behaviour(poll_method = "foo", out_event = "String")]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
-    impl tetsy_libp2p::swarm::NetworkBehaviourEventProcess<tetsy_libp2p::identify::IdentifyEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::identify::IdentifyEvent) {
+    impl tet_libp2p::swarm::NetworkBehaviourEventProcess<tet_libp2p::identify::IdentifyEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::identify::IdentifyEvent) {
         }
     }
 
     impl Foo {
-        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tetsy_libp2p::swarm::PollParameters) -> std::task::Poll<tetsy_libp2p::swarm::NetworkBehaviourAction<T, String>> { std::task::Poll::Pending }
+        fn foo<T>(&mut self, _: &mut std::task::Context, _: &mut impl tet_libp2p::swarm::PollParameters) -> std::task::Poll<tet_libp2p::swarm::NetworkBehaviourAction<T, String>> { std::task::Poll::Pending }
     }
 
     #[allow(dead_code)]
@@ -227,19 +227,19 @@ fn where_clause() {
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo<T: Copy> {
-        ping: tetsy_libp2p::ping::Ping,
+        ping: tet_libp2p::ping::Ping,
         bar: T,
     }
 }
 
 #[test]
 fn nested_derives_with_import() {
-    use tetsy_libp2p::swarm::NetworkBehaviourEventProcess;
+    use tet_libp2p::swarm::NetworkBehaviourEventProcess;
 
     #[allow(dead_code)]
     #[derive(NetworkBehaviour)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
+        ping: tet_libp2p::ping::Ping,
     }
 
     #[allow(dead_code)]
@@ -248,8 +248,8 @@ fn nested_derives_with_import() {
         foo: Foo,
     }
 
-    impl NetworkBehaviourEventProcess<tetsy_libp2p::ping::PingEvent> for Foo {
-        fn inject_event(&mut self, _: tetsy_libp2p::ping::PingEvent) {
+    impl NetworkBehaviourEventProcess<tet_libp2p::ping::PingEvent> for Foo {
+        fn inject_event(&mut self, _: tet_libp2p::ping::PingEvent) {
         }
     }
 
@@ -267,18 +267,18 @@ fn nested_derives_with_import() {
 #[test]
 fn event_process_false() {
     enum BehaviourOutEvent {
-        Ping(tetsy_libp2p::ping::PingEvent),
-        Identify(tetsy_libp2p::identify::IdentifyEvent)
+        Ping(tet_libp2p::ping::PingEvent),
+        Identify(tet_libp2p::identify::IdentifyEvent)
     }
 
-    impl From<tetsy_libp2p::ping::PingEvent> for BehaviourOutEvent {
-        fn from(event: tetsy_libp2p::ping::PingEvent) -> Self {
+    impl From<tet_libp2p::ping::PingEvent> for BehaviourOutEvent {
+        fn from(event: tet_libp2p::ping::PingEvent) -> Self {
             BehaviourOutEvent::Ping(event)
         }
     }
 
-    impl From<tetsy_libp2p::identify::IdentifyEvent> for BehaviourOutEvent {
-        fn from(event: tetsy_libp2p::identify::IdentifyEvent) -> Self {
+    impl From<tet_libp2p::identify::IdentifyEvent> for BehaviourOutEvent {
+        fn from(event: tet_libp2p::identify::IdentifyEvent) -> Self {
             BehaviourOutEvent::Identify(event)
         }
     }
@@ -287,15 +287,15 @@ fn event_process_false() {
     #[derive(NetworkBehaviour)]
     #[behaviour(out_event = "BehaviourOutEvent", event_process = false)]
     struct Foo {
-        ping: tetsy_libp2p::ping::Ping,
-        identify: tetsy_libp2p::identify::Identify,
+        ping: tet_libp2p::ping::Ping,
+        identify: tet_libp2p::identify::Identify,
     }
 
     #[allow(dead_code)]
     fn bar() {
         require_net_behaviour::<Foo>();
 
-        let mut swarm: tetsy_libp2p::Swarm<Foo> = unimplemented!();
+        let mut swarm: tet_libp2p::Swarm<Foo> = unimplemented!();
 
         // check that the event is bubbled up all the way to swarm
         let _ = async {
