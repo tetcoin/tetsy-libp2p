@@ -77,9 +77,9 @@
 //! An example of initialising a gossipsub compatible swarm:
 //!
 //! ```
-//! use tet_libp2p_gossipsub::GossipsubEvent;
+//! use gossipsub::GossipsubEvent;
 //! use tet_libp2p_core::{identity::Keypair,transport::{Transport, MemoryTransport}, Multiaddr};
-//! use tet_libp2p_gossipsub::MessageAuthenticity;
+//! use gossipsub::MessageAuthenticity;
 //! let local_key = Keypair::generate_ed25519();
 //! let local_peer_id = tet_libp2p_core::PeerId::from(local_key.public());
 //!
@@ -93,7 +93,7 @@
 //!            .boxed();
 //!
 //! // Create a Gossipsub topic
-//! let topic = tet_libp2p_gossipsub::IdentTopic::new("example");
+//! let topic = gossipsub::IdentTopic::new("example");
 //!
 //! // Set the message authenticity - How we expect to publish messages
 //! // Here we expect the publisher to sign the message with their key.
@@ -102,10 +102,10 @@
 //! // Create a Swarm to manage peers and events
 //! let mut swarm = {
 //!     // set default parameters for gossipsub
-//!     let gossipsub_config = tet_libp2p_gossipsub::GossipsubConfig::default();
+//!     let gossipsub_config = gossipsub::GossipsubConfig::default();
 //!     // build a gossipsub network behaviour
-//!     let mut gossipsub: tet_libp2p_gossipsub::Gossipsub =
-//!         tet_libp2p_gossipsub::Gossipsub::new(message_authenticity, gossipsub_config).unwrap();
+//!     let mut gossipsub: gossipsub::Gossipsub =
+//!         gossipsub::Gossipsub::new(message_authenticity, gossipsub_config).unwrap();
 //!     // subscribe to the topic
 //!     gossipsub.subscribe(&topic);
 //!     // create the swarm

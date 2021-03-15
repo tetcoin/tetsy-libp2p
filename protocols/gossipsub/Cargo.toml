@@ -1,5 +1,5 @@
 [package]
-name = "tet-libp2p-gossipsub"
+name = "gossipsub"
 edition = "2018"
 description = "Gossipsub protocol for tet-libp2p"
 version = "0.27.0"
@@ -9,7 +9,7 @@ repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tet-libp2p-gossipsub"
+documentation = "https://docs.rs/gossipsub"
 
 [dependencies]
 tet-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
@@ -33,9 +33,9 @@ regex = "1.4.0"
 [dev-dependencies]
 async-std = "1.6.3"
 env_logger = "0.8.1"
-tet-libp2p-plaintext = { path = "../plaintext" }
+plaintext = { path = "../plaintext" }
 tet-libp2p-remux = { path = "../../muxers/remux" }
-tet-libp2p-mplex = { path = "../../muxers/mplex" }
+mplex = { path = "../../muxers/mplex" }
 tet-libp2p-noise = { path = "../../protocols/noise" }
 quickcheck = "0.9.2"
 hex = "0.4.2"

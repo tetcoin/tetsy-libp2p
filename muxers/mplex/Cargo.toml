@@ -1,5 +1,5 @@
 [package]
-name = "tet-libp2p-mplex"
+name = "mplex"
 edition = "2018"
 description = "Mplex multiplexing protocol for tet-libp2p"
 version = "0.27.0"
@@ -9,7 +9,7 @@ repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tet-libp2p-mplex"
+documentation = "https://docs.rs/mplex"
 
 [dependencies]
 bytes = "1"
@@ -29,7 +29,7 @@ criterion = "0.3"
 env_logger = "0.8"
 futures = "0.3"
 tet-libp2p-tcp = { path = "../../transports/tcp" }
-tet-libp2p-plaintext = { path = "../../protocols/plaintext" }
+plaintext = { path = "../../protocols/plaintext" }
 quickcheck = "0.9"
 rand = "0.7"
 

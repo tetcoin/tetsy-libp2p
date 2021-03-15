@@ -13,7 +13,7 @@
 # 0.27.0 [2020-11-09]
 
 - Tweak the naming in the `MplexConfig` API for better
-  consistency with `tet-libp2p-mplex`.
+  consistency with `mplex`.
   [PR 1822](https://github.com/tetcoin/tet-libp2p/pull/1822).
 
 - Update dependencies.

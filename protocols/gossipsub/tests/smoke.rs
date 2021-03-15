@@ -32,11 +32,11 @@ use futures::StreamExt;
 use tet_libp2p_core::{
     identity, multiaddr::Protocol, transport::MemoryTransport, upgrade, Multiaddr, Transport,
 };
-use tet_libp2p_gossipsub::{
+use gossipsub::{
     Gossipsub, GossipsubConfigBuilder, GossipsubEvent, IdentTopic as Topic, MessageAuthenticity,
     ValidationMode,
 };
-use tet_libp2p_plaintext::PlainText2Config;
+use plaintext::PlainText2Config;
 use tet_libp2p_swarm::Swarm;
 use tet_libp2p_remux as remux;
 

@@ -30,7 +30,7 @@ use tet_libp2p_core::{
     upgrade::{self, read_one, write_one}
 };
 use tet_libp2p_noise::{NoiseConfig, X25519Spec, Keypair};
-use tet_libp2p_request_response::*;
+use request_response::*;
 use tet_libp2p_swarm::{Swarm, SwarmEvent};
 use tet_libp2p_tcp::TcpConfig;
 use futures::{prelude::*, channel::mpsc, executor::LocalPool, task::SpawnExt};

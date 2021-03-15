@@ -39,7 +39,7 @@ ring = { version = "0.16.9", features = ["alloc"], default-features = false }
 js-sys = "0.3.10"
 tetsy-send-wrapper = "0.1"
 wasm-bindgen = "0.2.33"
-wasm-bindgen-futures = "0.4.5"
+tet-wasm-bindgen-futures = "0.4.5"
 web-sys = { version = "0.3.10", features = ["Crypto", "CryptoKey", "SubtleCrypto", "Window"] }
 
 [build-dependencies]
@@ -53,5 +53,5 @@ aes-all = ["aesni"]
 [dev-dependencies]
 async-std = "1.6.2"
 criterion = "0.3"
-tet-libp2p-mplex = { path = "../../muxers/mplex" }
+mplex = { path = "../../muxers/mplex" }
 tet-libp2p-tcp = { path = "../../transports/tcp" }

@@ -187,11 +187,11 @@ pub use tet_libp2p_kad as kad;
 #[cfg(feature = "floodsub")]
 #[cfg_attr(docsrs, doc(cfg(feature = "floodsub")))]
 #[doc(inline)]
-pub use tet_libp2p_floodsub as floodsub;
+pub use floodsub as floodsub;
 #[cfg(feature = "gossipsub")]
 #[cfg_attr(docsrs, doc(cfg(feature = "gossipsub")))]
 #[doc(inline)]
-pub use tet_libp2p_gossipsub as gossipsub;
+pub use gossipsub as gossipsub;
 #[cfg(feature = "mplex")]
 #[cfg_attr(docsrs, doc(cfg(feature = "mplex")))]
 #[doc(inline)]
@@ -212,7 +212,7 @@ pub use tet_libp2p_ping as ping;
 #[cfg(feature = "plaintext")]
 #[cfg_attr(docsrs, doc(cfg(feature = "plaintext")))]
 #[doc(inline)]
-pub use tet_libp2p_plaintext as plaintext;
+pub use plaintext as plaintext;
 #[doc(inline)]
 pub use tet_libp2p_swarm as swarm;
 #[cfg(any(feature = "tcp-async-io", feature = "tcp-tokio"))]
@@ -244,7 +244,7 @@ pub use tet_libp2p_pnet as pnet;
 #[cfg(feature = "request-response")]
 #[cfg_attr(docsrs, doc(cfg(feature = "request-response")))]
 #[doc(inline)]
-pub use tet_libp2p_request_response as request_response;
+pub use request_response as request_response;
 
 mod transport_ext;
 

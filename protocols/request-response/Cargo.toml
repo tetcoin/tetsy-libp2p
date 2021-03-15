@@ -1,5 +1,5 @@
 [package]
-name = "tet-libp2p-request-response"
+name = "request-response"
 edition = "2018"
 description = "Tetsy Generic Request/Response Protocols"
 version = "0.9.0"

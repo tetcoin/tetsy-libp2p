@@ -1,5 +1,5 @@
 [package]
-name = "tet-libp2p-plaintext"
+name = "plaintext"
 edition = "2018"
 description = "Plaintext encryption dummy protocol for tet-libp2p"
 version = "0.27.0"
@@ -9,7 +9,7 @@ repository = "https://github.com/tetcoin/tet-libp2p"
 keywords = ["tetcoin", "tetcore", "crypto", "blockchain", "framework"]
 categories = ["cryptography::cryptocurrencies", "network-programming", "asynchronous"]
 homepage = "https://core.tetcoin.org"
-documentation = "https://docs.rs/tet-libp2p-plaintext"
+documentation = "https://docs.rs/plaintext"
 
 [dependencies]
 bytes = "1"

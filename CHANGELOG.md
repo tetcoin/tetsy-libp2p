@@ -1,17 +1,17 @@
 - [`tet-libp2p-core` CHANGELOG](core/CHANGELOG.md)
 - [`tet-libp2p-deflate` CHANGELOG](protocols/deflate/CHANGELOG.md)
 - [`tet-libp2p-dns` CHANGELOG](transports/dns/CHANGELOG.md)
-- [`tet-libp2p-floodsub` CHANGELOG](protocols/floodsub/CHANGELOG.md)
-- [`tet-libp2p-gossipsub` CHANGELOG](protocols/gossipsub/CHANGELOG.md)
+- [`floodsub` CHANGELOG](protocols/floodsub/CHANGELOG.md)
+- [`gossipsub` CHANGELOG](protocols/gossipsub/CHANGELOG.md)
 - [`tet-libp2p-identify` CHANGELOG](protocols/identify/CHANGELOG.md)
 - [`tet-libp2p-kad` CHANGELOG](protocols/kad/CHANGELOG.md)
 - [`tet-libp2p-mdns` CHANGELOG](protocols/mdns/CHANGELOG.md)
-- [`tet-libp2p-mplex` CHANGELOG](muxers/mplex/CHANGELOG.md)
+- [`mplex` CHANGELOG](muxers/mplex/CHANGELOG.md)
 - [`tet-libp2p-noise` CHANGELOG](protocols/noise/CHANGELOG.md)
 - [`tet-libp2p-ping` CHANGELOG](protocols/ping/CHANGELOG.md)
-- [`tet-libp2p-plaintext` CHANGELOG](protocols/plaintext/CHANGELOG.md)
+- [`plaintext` CHANGELOG](protocols/plaintext/CHANGELOG.md)
 - [`tet-libp2p-pnet` CHANGELOG](protocols/pnet/CHANGELOG.md)
-- [`tet-libp2p-request-response` CHANGELOG](protocols/request-response/CHANGELOG.md)
+- [`request-response` CHANGELOG](protocols/request-response/CHANGELOG.md)
 - [`secio` CHANGELOG](protocols/secio/CHANGELOG.md)
 - [`tet-libp2p-swarm` CHANGELOG](swarm/CHANGELOG.md)
 - [`tet-libp2p-tcp` CHANGELOG](transports/tcp/CHANGELOG.md)
@@ -44,7 +44,7 @@
 
 # Version 0.32.0 [2020-12-08]
 
-- Update `tet-libp2p-request-response`.
+- Update `request-response`.
 
 - Update to `tet-libp2p-mdns-0.26`.
 
@@ -64,7 +64,7 @@
 
 # Version 0.30.1 [2020-11-11]
 
-- Update `tet-libp2p-plaintext`.
+- Update `plaintext`.
 
 # Version 0.30.0 [2020-11-09]
 
@@ -77,8 +77,8 @@
 
 # Version 0.29.0 [2020-10-16]
 
-- Update `tet-libp2p-core`, `tet-libp2p-floodsub`, `tet-libp2p-gossipsub`, `tet-libp2p-mplex`,
-  `tet-libp2p-noise`, `tet-libp2p-plaintext`, `tet-libp2p-pnet`, `tet-libp2p-request-response`,
+- Update `tet-libp2p-core`, `floodsub`, `gossipsub`, `mplex`,
+  `tet-libp2p-noise`, `plaintext`, `tet-libp2p-pnet`, `request-response`,
   `tet-libp2p-swarm`, `tet-libp2p-tcp`, `tet-libp2p-websocket` and `tet-multiaddr`.
 
 # Version 0.28.1 [2020-09-10]
@@ -119,8 +119,8 @@ changelog for details about the `LegacyConfig`.
 
 # Version 0.24.0 [2020-08-18]
 
-- Update `tet-libp2p-core`, `tet-libp2p-gossipsub`, `tet-libp2p-kad`, `tet-libp2p-mdns`,
-  `tet-libp2p-ping`, `tet-libp2p-request-response`, `tet-libp2p-swarm` and dependent crates.
+- Update `tet-libp2p-core`, `gossipsub`, `tet-libp2p-kad`, `tet-libp2p-mdns`,
+  `tet-libp2p-ping`, `request-response`, `tet-libp2p-swarm` and dependent crates.
 
 # Version 0.23.0 (2020-08-03)
 
@@ -150,7 +150,7 @@ must not be skipped!
 - Conditional compilation fixes for the `wasm32-wasi` target
   ([PR 1633](https://github.com/tetcoin/tet-libp2p/pull/1633)).
 
-- New `tet-libp2p-request-response` crate
+- New `request-response` crate
   ([PR 1596](https://github.com/tetcoin/tet-libp2p/pull/1596)).
 
 - Updated libp2p dependencies.
@@ -234,7 +234,7 @@ must not be skipped!
 - `tet-libp2p-core-derive`: Disambiguate calls to `NetworkBehaviour::inject_event`.
   [PR 1543](https://github.com/tetcoin/tet-libp2p/pull/1543)
 
-- `tet-libp2p-floodsub`: Allow sent messages seen as subscribed.
+- `floodsub`: Allow sent messages seen as subscribed.
   [PR 1520](https://github.com/tetcoin/tet-libp2p/pull/1520)
 
 - `tet-libp2p-kad`: Return peers independent of record existence.
@@ -280,7 +280,7 @@ must not be skipped!
 - `tet-libp2p-kad`: Fixed potential panic on computing record expiry.
   [PR 1492](https://github.com/tetcoin/tet-libp2p/pull/1492)
 
-- `tet-libp2p-mplex`: Guard against use of underlying `Sink` upon
+- `mplex`: Guard against use of underlying `Sink` upon
   error or connection close.
   [PR 1529](https://github.com/tetcoin/tet-libp2p/pull/1529)
 
@@ -308,18 +308,18 @@ must not be skipped!
 - Removed the first generic parameter (the transport) from `Swarm` and `ExpandedSwarm`. The transport is now abstracted away in the internals of the swarm.
 - The `Send` and `'static` bounds are now enforced directly on the `ProtocolsHandler` trait and its associated `InboundUpgrade` and `OutboundUpgrade` implementations.
 - Modified `PeerId`s to compare equal across the identity and SHA256 hashes. As a consequence, the `Borrow` implementation of `PeerId` now always returns the bytes representation of a multihash with a SHA256 hash.
-- Modified tet-libp2p-floodsub to no longer hash the topic. The new behaviour is now compatible with go-libp2p and js-libp2p, but is a breaking change with regards to rust-libp2p.
+- Modified floodsub to no longer hash the topic. The new behaviour is now compatible with go-libp2p and js-libp2p, but is a breaking change with regards to rust-libp2p.
 - Added tet-libp2p-pnet. It makes it possible to protect networks with a pre-shared key (PSK).
 - Modified the `poll_method` parameter of the `NetworkBehaviour` custom derive. The expected method now takes an additional parameter of type `impl PollParameters` to be consistent with the `NetworkBehaviour::poll` method.
 - tet-libp2p-noise now compiles for WASM targets.
 - Changed tet-libp2p-noise to grow its memory buffers dynamically. This should reduce the overall memory usage of connections that use the noise encryption.
-- Fixed tet-libp2p-gossipsub to no longer close the connection if the inbound substream is closed by the remote.
+- Fixed gossipsub to no longer close the connection if the inbound substream is closed by the remote.
 - All crates prefixed with `tet-libp2p-` now use the same version number.
 - Added a new variant `ListenerEvent::Error` for listeners to report non-fatal errors. `tet-libp2p-tcp` uses this variant to report errors that happen on remote sockets before they have been accepted and errors when trying to determine the local machine's IP address.
 
 # Version 0.15.0 (2020-01-24)
 
-- Added `tet-libp2p-gossipsub`.
+- Added `gossipsub`.
 - Added `SwarmBuilder::executor` to allow configuring which tasks executor to use.
 - Added `TokioTcpConfig` in `tet-libp2p-tcp` and `TokioUdsConfig` in `tet-libp2p-uds` behind `tokio` features. These structs use `tokio` and require a `tokio` runtime executor to be configured via `SwarmBuilder::executor`.
 - Changed the `OutboundUpgrade` and `InboundUpgrade` traits to no longer be passed a `Negotiated<C>` but just a `C`. The `Negotiated` is now in the trait bounds requirements of `ProtocolsHandler`.
@@ -370,7 +370,7 @@ must not be skipped!
 - Replaced `listen_addr` with `local_addr` in events related to incoming connections. The address no longer has to match a previously-reported address.
 - Listeners now have an identifier and can be stopped.
 - Added `NetworkBehaviour::inject_listener_error` and `NetworkBehaviour::inject_listener_closed`. For diagnostic purposes, listeners can now report errors on incoming connections, such as when calling `accept(2)` fails.
-- Fixed tasks sometimes not being notified when a network event happens in `tet-libp2p-mplex`.
+- Fixed tasks sometimes not being notified when a network event happens in `mplex`.
 - Fixed a memory leak in `tet-libp2p-kad`.
 - Added `Toggle::is_enabled()`.
 - Removed `IdentifyTransport`.

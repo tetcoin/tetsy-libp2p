@@ -22,7 +22,7 @@ wasm-timer = "0.2"
 
 [dev-dependencies]
 async-std = "1.6.2"
-tet-libp2p-mplex = { path = "../../muxers/mplex" }
+mplex = { path = "../../muxers/mplex" }
 tet-libp2p-noise = { path = "../../protocols/noise" }
 tet-libp2p-tcp = { path = "../../transports/tcp" }
 

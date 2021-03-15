@@ -43,7 +43,7 @@ ring = { version = "0.16.9", features = ["alloc", "std"], default-features = fal
 [dev-dependencies]
 async-std = { version = "1.6.2", features = ["attributes"] }
 criterion = "0.3"
-tet-libp2p-mplex = { path = "../muxers/mplex" }
+mplex = { path = "../muxers/mplex" }
 tet-libp2p-noise = { path = "../protocols/noise" }
 tet-libp2p-tcp = { path = "../transports/tcp" }
 multihash = { version = "0.13", default-features = false, features = ["arb"] }
