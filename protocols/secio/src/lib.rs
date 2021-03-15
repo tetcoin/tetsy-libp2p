@@ -30,7 +30,7 @@
 //! ```no_run
 //! # fn main() {
 //! use futures::prelude::*;
-//! use tet_libp2p_secio::{SecioConfig, SecioOutput};
+//! use secio::{SecioConfig, SecioOutput};
 //! use tet_libp2p_core::{PeerId, Multiaddr, identity, upgrade};
 //! use tet_libp2p_core::transport::Transport;
 //! use tet_libp2p_mplex::MplexConfig;

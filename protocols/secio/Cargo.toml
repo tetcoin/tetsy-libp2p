@@ -1,5 +1,5 @@
 [package]
-name = "tet-libp2p-secio"
+name = "secio"
 edition = "2018"
 description = "Secio encryption protocol for tet-libp2p"
 version = "0.27.0"

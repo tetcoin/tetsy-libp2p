@@ -1,7 +1,7 @@
 [package]
-name = "tet-libp2p-yamux"
+name = "tet-libp2p-remux"
 edition = "2018"
-description = "Yamux multiplexing protocol for tet-libp2p"
+description = "Remux multiplexing protocol for tet-libp2p"
 version = "0.30.0"
 authors = ["Parity Technologies <admin@parity.io>", "Tetcoin Developers <support@tetcoin.org>"]
 license = "MIT"
@@ -16,4 +16,4 @@ futures = "0.3.1"
 tet-libp2p-core = { version = "0.27.0", path = "../../core" }
 parking_lot = "0.11"
 thiserror = "1.0"
-yamux = "0.8.0"
+remux = "0.8.0"

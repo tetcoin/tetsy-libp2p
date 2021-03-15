@@ -29,5 +29,5 @@ wasm-timer = "0.2"
 async-std = "1.6.2"
 tet-libp2p-noise = { path = "../noise" }
 tet-libp2p-tcp = { path = "../../transports/tcp" }
-tet-libp2p-yamux = { path = "../../muxers/yamux" }
+tet-libp2p-remux = { path = "../../muxers/remux" }
 rand = "0.7"

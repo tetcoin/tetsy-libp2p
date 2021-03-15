@@ -25,7 +25,7 @@
   [PR 1825](https://github.com/tetcoin/tet-libp2p/pull/1825/).
 
 - Tweak the naming in the `MplexConfig` API for better
-  consistency with `tet-libp2p-yamux`.
+  consistency with `tet-libp2p-remux`.
   [PR 1822](https://github.com/tetcoin/tet-libp2p/pull/1822).
 
 - Update dependencies.

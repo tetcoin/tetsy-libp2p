@@ -32,7 +32,7 @@ default = [
     "uds",
     "wasm-ext",
     "websocket",
-    "yamux",
+    "remux",
 ]
 deflate = ["tet-libp2p-deflate"]
 dns = ["tet-libp2p-dns"]
@@ -53,7 +53,7 @@ uds = ["tet-libp2p-uds"]
 wasm-ext = ["tet-libp2p-wasm-ext"]
 wasm-ext-websocket = ["wasm-ext", "tet-libp2p-wasm-ext/websocket"]
 websocket = ["tet-libp2p-websocket"]
-yamux = ["tet-libp2p-yamux"]
+remux = ["tet-libp2p-remux"]
 secp256k1 = ["tet-libp2p-core/secp256k1"]
 
 [package.metadata.docs.rs]
@@ -79,7 +79,7 @@ tet-libp2p-request-response = { version = "0.9.0", path = "protocols/request-res
 tet-libp2p-swarm = { version = "0.27.0", path = "swarm" }
 tet-libp2p-uds = { version = "0.27.0", path = "transports/uds", optional = true }
 tet-libp2p-wasm-ext = { version = "0.27.0", path = "transports/wasm-ext", optional = true }
-tet-libp2p-yamux = { version = "0.30.0", path = "muxers/yamux", optional = true }
+tet-libp2p-remux = { version = "0.30.0", path = "muxers/remux", optional = true }
 multiaddr = { package = "tet-multiaddr", version = "0.11.0", path = "misc/multiaddr" }
 parking_lot = "0.11.0"
 pin-project = "1.0.0"
@@ -106,7 +106,7 @@ members = [
     "misc/multistream-select",
     "misc/peer-id-generator",
     "muxers/mplex",
-    "muxers/yamux",
+    "muxers/remux",
     "protocols/deflate",
     "protocols/floodsub",
     "protocols/gossipsub",

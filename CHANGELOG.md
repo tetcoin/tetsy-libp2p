@@ -12,13 +12,13 @@
 - [`tet-libp2p-plaintext` CHANGELOG](protocols/plaintext/CHANGELOG.md)
 - [`tet-libp2p-pnet` CHANGELOG](protocols/pnet/CHANGELOG.md)
 - [`tet-libp2p-request-response` CHANGELOG](protocols/request-response/CHANGELOG.md)
-- [`tet-libp2p-secio` CHANGELOG](protocols/secio/CHANGELOG.md)
+- [`secio` CHANGELOG](protocols/secio/CHANGELOG.md)
 - [`tet-libp2p-swarm` CHANGELOG](swarm/CHANGELOG.md)
 - [`tet-libp2p-tcp` CHANGELOG](transports/tcp/CHANGELOG.md)
 - [`tet-libp2p-uds` CHANGELOG](transports/uds/CHANGELOG.md)
 - [`tet-libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
 - [`tet-libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
-- [`tet-libp2p-yamux` CHANGELOG](muxers/yamux/CHANGELOG.md)
+- [`tet-libp2p-remux` CHANGELOG](muxers/remux/CHANGELOG.md)
 - [`multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
 - [`tet-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
 - [`tet-libp2p-core-derive` CHANGELOG](misc/core-derive/CHANGELOG.md)
@@ -87,27 +87,27 @@
 
 # Version 0.28.0 [2020-09-09]
 
-- Update `tet-libp2p-yamux` to `0.25.0`. *Step 4 of 4 in a multi-release
-  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-remux` to `0.25.0`. *Step 4 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-remux` CHANGELOG for details.
 
 # Version 0.27.0 [2020-09-09]
 
-- Update `tet-libp2p-yamux` to `0.24.0`. *Step 3 of 4 in a multi-release
-  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-remux` to `0.24.0`. *Step 3 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-remux` CHANGELOG for details.
 
 # Version 0.26.0 [2020-09-09]
 
-- Update `tet-libp2p-yamux` to `0.23.0`. *Step 2 of 4 in a multi-release
-  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-remux` to `0.23.0`. *Step 2 of 4 in a multi-release
+  upgrade process.* See the `tet-libp2p-remux` CHANGELOG for details.
 
 # Version 0.25.0 [2020-09-09]
 
-- Remove the deprecated `tet-libp2p-secio` dependency. To continue to use
-  SECIO, add an explicit dependency on `tet-libp2p-secio`. However,
+- Remove the deprecated `secio` dependency. To continue to use
+  SECIO, add an explicit dependency on `secio`. However,
   transitioning to `tet-libp2p-noise` is strongly recommended.
 
-- Update `tet-libp2p-yamux` to `0.22.0`. *This version starts a multi-release
-  upgrade process.* See the `tet-libp2p-yamux` CHANGELOG for details.
+- Update `tet-libp2p-remux` to `0.22.0`. *This version starts a multi-release
+  upgrade process.* See the `tet-libp2p-remux` CHANGELOG for details.
 
 - Bump `tet-libp2p-noise` to `0.24`. See the `tet-libp2p-noise`
 changelog for details about the `LegacyConfig`.
@@ -292,7 +292,7 @@ must not be skipped!
 
 # Version 0.16.2 (2020-02-28)
 
-- Fixed yamux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
+- Fixed remux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
 - Added a `websocket_transport()` function in `tet-libp2p-wasm-ext`, behind a Cargo feature.
 - Fixed ambiguity in `IntoProtocolsHandler::select` vs `ProtocolsHandler::select` in the `NetworkBehaviour` custom derive.
 
@@ -514,7 +514,7 @@ must not be skipped!
 # Version 0.3.0 (2019-01-30)
 
 - Removed the `topology` module and everything it contained, including the `Topology` trait.
-- Added `tet-libp2p-noise` that supports Noise handshakes, as an alternative to `tet-libp2p-secio`.
+- Added `tet-libp2p-noise` that supports Noise handshakes, as an alternative to `secio`.
 - Updated `ring` to version 0.14.
 - Creating a `Swarm` now expects the `PeerId` of the local node, instead of a `Topology`.
 - Added `NetworkBehaviour::addresses_of_peer` that returns the addresses a `NetworkBehaviour` knows about a given peer. This exists as a replacement for the topology.
