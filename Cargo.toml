@@ -1,5 +1,5 @@
 [package]
-name = "libp2p"
+name = "tetsy-libp2p"
 edition = "2018"
 description = "Peer-to-peer networking library"
 version = "0.34.0"
