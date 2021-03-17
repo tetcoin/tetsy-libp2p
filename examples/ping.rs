@@ -40,7 +40,7 @@
 
 use async_std::task;
 use futures::{future, prelude::*};
-use libp2p::{identity, PeerId, ping::{Ping, PingConfig}, Swarm};
+use tetsy_libp2p::{identity, PeerId, ping::{Ping, PingConfig}, Swarm};
 use std::{error::Error, task::{Context, Poll}};
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -52,7 +52,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     println!("Local peer id: {:?}", peer_id);
 
     // Create a transport.
-    let transport = libp2p::build_development_transport(id_keys)?;
+    let transport = tetsy_libp2p::build_development_transport(id_keys)?;
 
     // Create a ping network behaviour.
     //

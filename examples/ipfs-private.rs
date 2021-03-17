@@ -33,7 +33,7 @@
 //! to work, the ipfs node needs to be configured to use gossipsub.
 use async_std::{io, task};
 use futures::{future, prelude::*};
-use libp2p::{
+use tetsy_libp2p::{
     core::{
         either::EitherTransport, muxing::StreamMuxerBox, transport, transport::upgrade::Version,
     },

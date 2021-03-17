@@ -303,7 +303,7 @@ must not be skipped!
 
 # Version 0.16.0 (2020-02-13)
 
-- Removed the `Substream` associated type from the `ProtocolsHandler` trait. The type of the substream is now always `libp2p::swarm::NegotiatedSubstream`.
+- Removed the `Substream` associated type from the `ProtocolsHandler` trait. The type of the substream is now always `tetsy_libp2p::swarm::NegotiatedSubstream`.
 - As a consequence of the previous change, most of the implementations of the `NetworkBehaviour` trait provided by tetsy-libp2p (`Ping`, `Identify`, `Kademlia`, `Floodsub`, `Gossipsub`) have lost a generic parameter.
 - Removed the first generic parameter (the transport) from `Swarm` and `ExpandedSwarm`. The transport is now abstracted away in the internals of the swarm.
 - The `Send` and `'static` bounds are now enforced directly on the `ProtocolsHandler` trait and its associated `InboundUpgrade` and `OutboundUpgrade` implementations.
@@ -398,14 +398,14 @@ must not be skipped!
 # Version 0.9.1 (2019-06-05)
 
 - `EitherOutput` now implements `Stream` and `Sink` if their variants also implement these traits.
-- `libp2p::websocket::error::Error` now implements `Sync`.
+- `tetsy_libp2p::websocket::error::Error` now implements `Sync`.
 
 # Version 0.9.0 (2019-06-04)
 
 - Major fixes and performance improvements to tetsy-libp2p-kad.
 - Initial prototype for record storage in tetsy-libp2p-kad.
 - Rewrote the implementation of WebSockets. It now properly supports WebSockets Secure (WSS).
-- Removed `BrowserWsConfig`. Please use `libp2p::wasm_ext::ExtTransport` instead.
+- Removed `BrowserWsConfig`. Please use `tetsy_libp2p::wasm_ext::ExtTransport` instead.
 - Added a `Path` parameter to `multiaddr::Protocol::WS` and `WSS`. The string representation when a path is present is respectively `x-tetsy-ws/<path>` and `x-tetsy-wss/<path>` where `<path>` is percent-encoded.
 - Fixed an issue with `tetsy-libp2p-tcp` where the wrong listened address was returned, if the actual address was loopback.
 - Added `core::upgrade::OptionalUpgrade`.

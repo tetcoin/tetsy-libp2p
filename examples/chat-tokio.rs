@@ -36,7 +36,7 @@
 //!    --features="floodsub mplex noise tcp-tokio mdns-tokio"
 //! ```
 
-use libp2p::{
+use tetsy_libp2p::{
     Multiaddr,
     NetworkBehaviour,
     PeerId,
