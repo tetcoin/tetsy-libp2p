@@ -82,21 +82,21 @@
 //! *upgraded*. Upgrading a transport is the process of negotiating an additional protocol
 //! with the remote, mediated through a negotiation protocol called [`multistream-select`].
 //!
-//! Example ([`noise`] + [`yamux`] Protocol Upgrade):
+//! Example ([`noise`] + [`remux`] Protocol Upgrade):
 //!
 //! ```rust
-//! # #[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), feature = "noise", feature = "yamux"))] {
-//! use libp2p::{Transport, core::upgrade, tcp::TcpConfig, noise, identity::Keypair, yamux};
+//! # #[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), feature = "noise", feature = "remux"))] {
+//! use libp2p::{Transport, core::upgrade, tcp::TcpConfig, noise, identity::Keypair, remux};
 //! let tcp = TcpConfig::new();
 //! let id_keys = Keypair::generate_ed25519();
 //! let noise_keys = noise::Keypair::<noise::X25519Spec>::new().into_authentic(&id_keys).unwrap();
 //! let noise = noise::NoiseConfig::xx(noise_keys).into_authenticated();
-//! let yamux = yamux::YamuxConfig::default();
-//! let transport = tcp.upgrade(upgrade::Version::V1).authenticate(noise).multiplex(yamux);
+//! let remux = remux::RemuxConfig::default();
+//! let transport = tcp.upgrade(upgrade::Version::V1).authenticate(noise).multiplex(remux);
 //! # }
 //! ```
 //! In this example, `transport` is a new [`Transport`] that negotiates the
-//! noise and yamux protocols on all connections.
+//! noise and remux protocols on all connections.
 //!
 //! ## Network Behaviour
 //!
@@ -126,7 +126,7 @@
 //!      all the desired protocols, such as for transport security and multiplexing.
 //!      In order to be usable with a [`Swarm`] later, the [`Output`](Transport::Output)
 //!      of the final transport must be a tuple of a [`PeerId`] and a value whose type
-//!      implements [`StreamMuxer`] (e.g. [`Yamux`]). The peer ID must be the
+//!      implements [`StreamMuxer`] (e.g. [`Remux`]). The peer ID must be the
 //!      identity of the remote peer of the established connection, which is
 //!      usually obtained through a transport encryption protocol such as
 //!      [`noise`] that authenticates the peer. See the implementation of
@@ -146,7 +146,7 @@
 //! [`TcpConfig`]: tcp::TcpConfig
 //! [`NetworkBehaviour`]: swarm::NetworkBehaviour
 //! [`StreamMuxer`]: core::muxing::StreamMuxer
-//! [`Yamux`]: yamux::Yamux
+//! [`Remux`]: remux::Remux
 //!
 //! [tokio]: https://tokio.rs
 //! [`multistream-select`]: https://github.com/multiformats/multistream-select
@@ -233,10 +233,10 @@ pub use tetsy_libp2p_wasm_ext as wasm_ext;
 #[cfg(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")))]
 #[doc(inline)]
 pub use tetsy_libp2p_websocket as websocket;
-#[cfg(feature = "yamux")]
-#[cfg_attr(docsrs, doc(cfg(feature = "yamux")))]
+#[cfg(feature = "remux")]
+#[cfg_attr(docsrs, doc(cfg(feature = "remux")))]
 #[doc(inline)]
-pub use tetsy_libp2p_yamux as yamux;
+pub use tetsy_libp2p_remux as remux;
 #[cfg(feature = "pnet")]
 #[cfg_attr(docsrs, doc(cfg(feature = "pnet")))]
 #[doc(inline)]
@@ -268,21 +268,21 @@ pub use self::transport_ext::TransportExt;
 ///
 /// > **Note**: This `Transport` is not suitable for production usage, as its implementation
 /// >           reserves the right to support additional protocols or remove deprecated protocols.
-#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux"))]
-#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux"))))]
+#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))]
+#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))))]
 pub fn build_development_transport(keypair: identity::Keypair)
     -> std::io::Result<core::transport::Boxed<(PeerId, core::muxing::StreamMuxerBox)>>
 {
-     build_tcp_ws_noise_mplex_yamux(keypair)
+     build_tcp_ws_noise_mplex_remux(keypair)
 }
 
 /// Builds an implementation of `Transport` that is suitable for usage with the `Swarm`.
 ///
 /// The implementation supports TCP/IP, WebSockets over TCP/IP, noise as the encryption layer,
-/// and mplex or yamux as the multiplexing layer.
-#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux"))]
-#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux"))))]
-pub fn build_tcp_ws_noise_mplex_yamux(keypair: identity::Keypair)
+/// and mplex or remux as the multiplexing layer.
+#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))]
+#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))))]
+pub fn build_tcp_ws_noise_mplex_remux(keypair: identity::Keypair)
     -> std::io::Result<core::transport::Boxed<(PeerId, core::muxing::StreamMuxerBox)>>
 {
     let transport = {
@@ -302,7 +302,7 @@ pub fn build_tcp_ws_noise_mplex_yamux(keypair: identity::Keypair)
     Ok(transport
         .upgrade(core::upgrade::Version::V1)
         .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-        .multiplex(core::upgrade::SelectUpgrade::new(yamux::YamuxConfig::default(), mplex::MplexConfig::default()))
+        .multiplex(core::upgrade::SelectUpgrade::new(remux::RemuxConfig::default(), mplex::MplexConfig::default()))
         .timeout(std::time::Duration::from_secs(20))
         .boxed())
 }
@@ -310,10 +310,10 @@ pub fn build_tcp_ws_noise_mplex_yamux(keypair: identity::Keypair)
 /// Builds an implementation of `Transport` that is suitable for usage with the `Swarm`.
 ///
 /// The implementation supports TCP/IP, WebSockets over TCP/IP, noise as the encryption layer,
-/// and mplex or yamux as the multiplexing layer.
-#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux", feature = "pnet"))]
-#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "yamux", feature = "pnet"))))]
-pub fn build_tcp_ws_pnet_noise_mplex_yamux(keypair: identity::Keypair, psk: PreSharedKey)
+/// and mplex or remux as the multiplexing layer.
+#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))]
+#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))))]
+pub fn build_tcp_ws_pnet_noise_mplex_remux(keypair: identity::Keypair, psk: PreSharedKey)
     -> std::io::Result<core::transport::Boxed<(PeerId, core::muxing::StreamMuxerBox)>>
 {
     let transport = {
@@ -334,7 +334,7 @@ pub fn build_tcp_ws_pnet_noise_mplex_yamux(keypair: identity::Keypair, psk: PreS
         .and_then(move |socket, _| PnetConfig::new(psk).handshake(socket))
         .upgrade(core::upgrade::Version::V1)
         .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-        .multiplex(core::upgrade::SelectUpgrade::new(yamux::YamuxConfig::default(), mplex::MplexConfig::default()))
+        .multiplex(core::upgrade::SelectUpgrade::new(remux::RemuxConfig::default(), mplex::MplexConfig::default()))
         .timeout(std::time::Duration::from_secs(20))
         .boxed())
 }

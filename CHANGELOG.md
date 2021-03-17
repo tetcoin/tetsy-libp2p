@@ -18,7 +18,7 @@
 - [`tetsy-libp2p-uds` CHANGELOG](transports/uds/CHANGELOG.md)
 - [`tetsy-libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
 - [`tetsy-libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
-- [`tetsy-libp2p-yamux` CHANGELOG](muxers/yamux/CHANGELOG.md)
+- [`tetsy-libp2p-remux` CHANGELOG](muxers/remux/CHANGELOG.md)
 - [`multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
 - [`tetsy-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
 - [`tetsy-libp2p-core-derive` CHANGELOG](misc/core-derive/CHANGELOG.md)
@@ -87,18 +87,18 @@
 
 # Version 0.28.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.25.0`. *Step 4 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tetsy-libp2p-remux` to `0.25.0`. *Step 4 of 4 in a multi-release
+  upgrade process.* See the `tetsy-libp2p-remux` CHANGELOG for details.
 
 # Version 0.27.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.24.0`. *Step 3 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tetsy-libp2p-remux` to `0.24.0`. *Step 3 of 4 in a multi-release
+  upgrade process.* See the `tetsy-libp2p-remux` CHANGELOG for details.
 
 # Version 0.26.0 [2020-09-09]
 
-- Update `tetsy-libp2p-yamux` to `0.23.0`. *Step 2 of 4 in a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tetsy-libp2p-remux` to `0.23.0`. *Step 2 of 4 in a multi-release
+  upgrade process.* See the `tetsy-libp2p-remux` CHANGELOG for details.
 
 # Version 0.25.0 [2020-09-09]
 
@@ -106,8 +106,8 @@
   SECIO, add an explicit dependency on `tetsy-libp2p-secio`. However,
   transitioning to `tetsy-libp2p-noise` is strongly recommended.
 
-- Update `tetsy-libp2p-yamux` to `0.22.0`. *This version starts a multi-release
-  upgrade process.* See the `tetsy-libp2p-yamux` CHANGELOG for details.
+- Update `tetsy-libp2p-remux` to `0.22.0`. *This version starts a multi-release
+  upgrade process.* See the `tetsy-libp2p-remux` CHANGELOG for details.
 
 - Bump `tetsy-libp2p-noise` to `0.24`. See the `tetsy-libp2p-noise`
 changelog for details about the `LegacyConfig`.
@@ -292,7 +292,7 @@ must not be skipped!
 
 # Version 0.16.2 (2020-02-28)
 
-- Fixed yamux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
+- Fixed remux connections not properly closing and being stuck in the `CLOSE_WAIT` state.
 - Added a `websocket_transport()` function in `tetsy-libp2p-wasm-ext`, behind a Cargo feature.
 - Fixed ambiguity in `IntoProtocolsHandler::select` vs `ProtocolsHandler::select` in the `NetworkBehaviour` custom derive.
 

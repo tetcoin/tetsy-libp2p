@@ -22,6 +22,6 @@ wasm-timer = "0.2"
 async-std = "1.6.2"
 tetsy-libp2p-tcp = { path = "../../transports/tcp" }
 tetsy-libp2p-noise = { path = "../../protocols/noise" }
-tetsy-libp2p-yamux = { path = "../../muxers/yamux" }
+tetsy-libp2p-remux = { path = "../../muxers/remux" }
 tetsy-libp2p-mplex = { path = "../../muxers/mplex" }
 quickcheck = "0.9.0"

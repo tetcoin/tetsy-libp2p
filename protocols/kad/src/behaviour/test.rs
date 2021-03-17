@@ -43,7 +43,7 @@ use tetsy_libp2p_core::{
 };
 use tetsy_libp2p_noise as noise;
 use tetsy_libp2p_swarm::Swarm;
-use tetsy_libp2p_yamux as yamux;
+use tetsy_libp2p_remux as remux;
 use quickcheck::*;
 use rand::{Rng, random, thread_rng, rngs::StdRng, SeedableRng};
 use std::{collections::{HashSet, HashMap}, time::Duration, num::NonZeroUsize, u64};
@@ -61,7 +61,7 @@ fn build_node_with_config(cfg: KademliaConfig) -> (Multiaddr, TestSwarm) {
     let transport = MemoryTransport::default()
         .upgrade(upgrade::Version::V1)
         .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-        .multiplex(yamux::YamuxConfig::default())
+        .multiplex(remux::RemuxConfig::default())
         .boxed();
 
     let local_id = local_public_key.clone().into_peer_id();

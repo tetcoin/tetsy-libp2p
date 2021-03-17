@@ -46,7 +46,7 @@ use libp2p::{
     pnet::{PnetConfig, PreSharedKey},
     swarm::NetworkBehaviourEventProcess,
     tcp::TcpConfig,
-    yamux::YamuxConfig,
+    remux::RemuxConfig,
     Multiaddr, NetworkBehaviour, PeerId, Swarm, Transport,
 };
 use std::{
@@ -68,7 +68,7 @@ pub fn build_transport(
         .into_authentic(&key_pair)
         .unwrap();
     let noise_config = noise::NoiseConfig::xx(noise_keys).into_authenticated();
-    let yamux_config = YamuxConfig::default();
+    let remux_config = RemuxConfig::default();
 
     let base_transport = TcpConfig::new().nodelay(true);
     let maybe_encrypted = match psk {
@@ -80,7 +80,7 @@ pub fn build_transport(
     maybe_encrypted
         .upgrade(Version::V1)
         .authenticate(noise_config)
-        .multiplex(yamux_config)
+        .multiplex(remux_config)
         .timeout(Duration::from_secs(20))
         .boxed()
 }
@@ -156,7 +156,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("using swarm key with fingerprint: {}", psk.fingerprint());
     }
 
-    // Set up a an encrypted DNS-enabled TCP Transport over and Yamux protocol
+    // Set up a an encrypted DNS-enabled TCP Transport over and Remux protocol
     let transport = build_transport(local_key.clone(), psk);
 
     // Create a Gosspipsub topic

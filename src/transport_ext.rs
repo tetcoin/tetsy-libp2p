@@ -38,7 +38,7 @@ pub trait TransportExt: Transport {
         BandwidthLogging::new(self)
     }
 
-    // TODO: add methods to easily upgrade for secio/mplex/yamux
+    // TODO: add methods to easily upgrade for secio/mplex/remux
 }
 
 impl<TTransport> TransportExt for TTransport where TTransport: Transport {}
