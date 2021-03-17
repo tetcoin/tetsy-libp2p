@@ -27,10 +27,10 @@
 //! # Usage
 //!
 //! This crate provides the `Mdns` struct which implements the `NetworkBehaviour` trait. This
-//! struct will automatically discover other libp2p nodes on the local network.
+//! struct will automatically discover other tetsy-libp2p nodes on the local network.
 //!
 
-/// The DNS service name for all libp2p peers used to query for addresses.
+/// The DNS service name for all tetsy-libp2p peers used to query for addresses.
 const SERVICE_NAME: &[u8] = b"_p2p._udp.local";
 /// The meta query for looking up the `SERVICE_NAME`.
 const META_QUERY_SERVICE: &[u8] = b"_services._dns-sd._udp.local";

@@ -18,13 +18,13 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for TCP/IP.
+//! Implementation of the tetsy-libp2p `Transport` trait for TCP/IP.
 //!
 //! # Usage
 //!
 //! This crate provides a `TcpConfig` and `TokioTcpConfig`, depending on
 //! the enabled features, which implement the `Transport` trait for use as a
-//! transport with `libp2p-core` or `libp2p-swarm`.
+//! transport with `tetsy-libp2p-core` or `tetsy-libp2p-swarm`.
 
 mod provider;
 
@@ -48,7 +48,7 @@ use futures::{
     ready,
 };
 use futures_timer::Delay;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     address_translation,
     multiaddr::{Multiaddr, Protocol},
     transport::{ListenerEvent, Transport, TransportError},
@@ -250,13 +250,13 @@ where
     /// the following example:
     ///
     /// ```no_run
-    /// # use libp2p_core::transport::ListenerEvent;
-    /// # use libp2p_core::{Multiaddr, Transport};
+    /// # use tetsy_libp2p_core::transport::ListenerEvent;
+    /// # use tetsy_libp2p_core::{Multiaddr, Transport};
     /// # use futures::stream::StreamExt;
     /// #[cfg(feature = "async-io")]
     /// #[async_std::main]
     /// async fn main() -> std::io::Result<()> {
-    /// use libp2p_tcp::TcpConfig;
+    /// use tetsy_libp2p_tcp::TcpConfig;
     ///
     /// let listen_addr1: Multiaddr = "/ip4/127.0.0.1/tcp/9001".parse().unwrap();
     /// let listen_addr2: Multiaddr = "/ip4/127.0.0.1/tcp/9002".parse().unwrap();

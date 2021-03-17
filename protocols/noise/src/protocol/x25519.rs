@@ -21,13 +21,13 @@
 //! Legacy Noise protocols based on X25519.
 //!
 //! **Note**: This set of protocols is not interoperable with other
-//! libp2p implementations.
+//! tetsy-libp2p implementations.
 
 use crate::{NoiseConfig, NoiseError, Protocol, ProtocolParams};
 use curve25519_dalek::edwards::CompressedEdwardsY;
 use lazy_static::lazy_static;
-use libp2p_core::UpgradeInfo;
-use libp2p_core::{identity, identity::ed25519};
+use tetsy_libp2p_core::UpgradeInfo;
+use tetsy_libp2p_core::{identity, identity::ed25519};
 use rand::Rng;
 use sha2::{Sha512, Digest};
 use x25519_dalek::{X25519_BASEPOINT_BYTES, x25519};
@@ -98,7 +98,7 @@ impl<R> UpgradeInfo for NoiseConfig<IK, X25519, R> {
 /// Legacy Noise protocol for X25519.
 ///
 /// **Note**: This `Protocol` provides no configuration that
-/// is interoperable  with other libp2p implementations.
+/// is interoperable  with other tetsy-libp2p implementations.
 /// See [`crate::X25519Spec`] instead.
 impl Protocol<X25519> for X25519 {
     fn params_ik() -> ProtocolParams {
@@ -262,7 +262,7 @@ impl snow::types::Dh for Keypair<X25519> {
 
 #[cfg(test)]
 mod tests {
-    use libp2p_core::identity::ed25519;
+    use tetsy_libp2p_core::identity::ed25519;
     use quickcheck::*;
     use sodiumoxide::crypto::sign;
     use std::os::raw::c_int;

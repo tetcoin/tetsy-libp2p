@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! A basic chat application with logs demonstrating libp2p and the gossipsub protocol.
+//! A basic chat application with logs demonstrating tetsy-libp2p and the gossipsub protocol.
 //!
 //! Using two terminal windows, start two instances. Type a message in either terminal and hit return: the
 //! message is sent and printed in the other terminal. Close with Ctrl-c.

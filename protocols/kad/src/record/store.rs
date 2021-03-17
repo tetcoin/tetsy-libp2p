@@ -55,7 +55,7 @@ pub enum Error {
 ///      who can supposedly provide the associated value. These records are
 ///      mere "pointers" to the data which may be followed by contacting these
 ///      providers to obtain the value. These records are specific to the
-///      libp2p Kademlia specification and realise a "pull-model" for distributed
+///      tetsy-libp2p Kademlia specification and realise a "pull-model" for distributed
 ///      content. Just like a regular record, a provider record is distributed
 ///      to the closest nodes to the key.
 ///

@@ -24,7 +24,7 @@ use dns_parser::{Packet, RData};
 use futures::{prelude::*, select};
 use if_watch::{IfEvent, IfWatcher};
 use lazy_static::lazy_static;
-use libp2p_core::{multiaddr::{Multiaddr, Protocol}, PeerId};
+use tetsy_libp2p_core::{multiaddr::{Multiaddr, Protocol}, PeerId};
 use log::warn;
 use socket2::{Socket, Domain, Type};
 use std::{convert::TryFrom, fmt, io, net::{IpAddr, Ipv4Addr, UdpSocket, SocketAddr}, str, time::{Duration, Instant}};
@@ -38,7 +38,7 @@ lazy_static! {
     ));
 }
 
-/// A running service that discovers libp2p peers and responds to other libp2p peers' queries on
+/// A running service that discovers tetsy-libp2p peers and responds to other tetsy-libp2p peers' queries on
 /// the local network.
 ///
 /// # Usage
@@ -62,14 +62,14 @@ lazy_static! {
 /// ```rust
 /// # use futures::prelude::*;
 /// # use futures::executor::block_on;
-/// # use libp2p_core::{identity, Multiaddr, PeerId};
-/// # use libp2p_mdns::service::{MdnsPacket, build_query_response, build_service_discovery_response};
+/// # use tetsy_libp2p_core::{identity, Multiaddr, PeerId};
+/// # use tetsy_libp2p_mdns::service::{MdnsPacket, build_query_response, build_service_discovery_response};
 /// # use std::{io, time::Duration, task::Poll};
 /// # fn main() {
 /// # let my_peer_id = PeerId::from(identity::Keypair::generate_ed25519().public());
 /// # let my_listened_addrs: Vec<Multiaddr> = vec![];
 /// # async {
-/// # let mut service = libp2p_mdns::service::MdnsService::new().await.unwrap();
+/// # let mut service = tetsy_libp2p_mdns::service::MdnsService::new().await.unwrap();
 /// let _future_to_poll = async {
 ///     let (mut service, packet) = service.next().await;
 ///
@@ -592,7 +592,7 @@ mod tests {
     macro_rules! testgen {
         ($runtime_name:ident, $service_name:ty, $block_on_fn:tt) => {
     mod $runtime_name {
-        use libp2p_core::{PeerId, multihash::{Code, MultihashDigest}};
+        use tetsy_libp2p_core::{PeerId, multihash::{Code, MultihashDigest}};
         use std::time::Duration;
         use crate::service::MdnsPacket;
 

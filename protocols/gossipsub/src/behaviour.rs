@@ -37,11 +37,11 @@ use prost::Message;
 use rand::{seq::SliceRandom, thread_rng};
 use wasm_timer::{Instant, Interval};
 
-use libp2p_core::{
+use tetsy_libp2p_core::{
     connection::ConnectionId, identity::Keypair, multiaddr::Protocol::Ip4,
     multiaddr::Protocol::Ip6, ConnectedPoint, Multiaddr, PeerId,
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     DialPeerCondition, NetworkBehaviour, NetworkBehaviourAction, NotifyHandler, PollParameters,
     ProtocolsHandler,
 };
@@ -96,7 +96,7 @@ pub enum MessageAuthenticity {
     ///
     /// NOTE: Excluding these fields may make these messages invalid by other nodes who
     /// enforce validation of these fields. See [`ValidationMode`] in the [`GossipsubConfig`]
-    /// for how to customise this for rust-libp2p gossipsub.  A custom `message_id`
+    /// for how to customise this for rust-tetsy-libp2p gossipsub.  A custom `message_id`
     /// function will need to be set to prevent all messages from a peer being filtered
     /// as duplicates.
     Anonymous,
@@ -2485,7 +2485,7 @@ where
                         .encode(&mut buf)
                         .expect("Buffer has sufficient capacity");
 
-                    // the signature is over the bytes "libp2p-pubsub:<protobuf-message>"
+                    // the signature is over the bytes "tetsy-libp2p-pubsub:<protobuf-message>"
                     let mut signature_bytes = SIGNING_PREFIX.to_vec();
                     signature_bytes.extend_from_slice(&buf);
                     Some(keypair.sign(&signature_bytes)?)

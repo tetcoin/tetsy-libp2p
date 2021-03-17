@@ -72,13 +72,13 @@ use handler::{
     RequestResponseHandler,
     RequestResponseHandlerEvent,
 };
-use libp2p_core::{
+use tetsy_libp2p_core::{
     ConnectedPoint,
     Multiaddr,
     PeerId,
     connection::ConnectionId,
 };
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     DialPeerCondition,
     NetworkBehaviour,
     NetworkBehaviourAction,

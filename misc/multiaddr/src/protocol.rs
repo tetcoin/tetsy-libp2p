@@ -172,12 +172,12 @@ impl<'a> Protocol<'a> {
             "quic" => Ok(Protocol::Quic),
             "ws" => Ok(Protocol::Ws(Cow::Borrowed("/"))),
             "wss" => Ok(Protocol::Wss(Cow::Borrowed("/"))),
-            "x-parity-ws" => {
+            "x-tetsy-ws" => {
                 let s = iter.next().ok_or(Error::InvalidProtocolString)?;
                 let decoded = percent_encoding::percent_decode(s.as_bytes()).decode_utf8()?;
                 Ok(Protocol::Ws(decoded))
             }
-            "x-parity-wss" => {
+            "x-tetsy-wss" => {
                 let s = iter.next().ok_or(Error::InvalidProtocolString)?;
                 let decoded = percent_encoding::percent_decode(s.as_bytes()).decode_utf8()?;
                 Ok(Protocol::Wss(decoded))
@@ -503,12 +503,12 @@ impl<'a> fmt::Display for Protocol<'a> {
             Ws(ref s) if s == "/" => f.write_str("/ws"),
             Ws(s) => {
                 let encoded = percent_encoding::percent_encode(s.as_bytes(), PATH_SEGMENT_ENCODE_SET);
-                write!(f, "/x-parity-ws/{}", encoded)
+                write!(f, "/x-tetsy-ws/{}", encoded)
             },
             Wss(ref s) if s == "/" => f.write_str("/wss"),
             Wss(s) => {
                 let encoded = percent_encoding::percent_encode(s.as_bytes(), PATH_SEGMENT_ENCODE_SET);
-                write!(f, "/x-parity-wss/{}", encoded)
+                write!(f, "/x-tetsy-wss/{}", encoded)
             },
         }
     }

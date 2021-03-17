@@ -1,8 +1,8 @@
 [package]
-name = "libp2p-mdns"
+name = "tetsy-libp2p-mdns"
 edition = "2018"
 version = "0.28.0"
-description = "Implementation of the libp2p mDNS discovery method"
+description = "Implementation of the tetsy-libp2p mDNS discovery method"
 authors = ["Parity Technologies <admin@parity.io>"]
 license = "MIT"
 repository = "https://github.com/libp2p/rust-libp2p"
@@ -16,8 +16,8 @@ dns-parser = "0.8.0"
 futures = "0.3.8"
 if-watch = "0.1.6"
 lazy_static = "1.4.0"
-libp2p-core = { version = "0.27.0", path = "../../core" }
-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-swarm = { version = "0.27.0", path = "../../swarm" }
 log = "0.4.11"
 rand = "0.7.3"
 smallvec = "1.5.0"

@@ -21,7 +21,7 @@
 //! The `pnet` protocol implements *Pre-shared Key Based Private Networks in libp2p*,
 //! as specified in [the spec](https://github.com/libp2p/specs/blob/master/pnet/Private-Networks-PSK-V1.md)
 //!
-//! Libp2p nodes configured with a pre-shared key can only communicate with other nodes with
+//! tetsy-libp2p nodes configured with a pre-shared key can only communicate with other nodes with
 //! the same key.
 mod crypt_writer;
 use crypt_writer::CryptWriter;
@@ -60,7 +60,7 @@ impl PreSharedKey {
         Self(data)
     }
 
-    /// Compute PreSharedKey fingerprint identical to the go-libp2p fingerprint.
+    /// Compute PreSharedKey fingerprint identical to the go-tetsy-libp2p fingerprint.
     /// The computation of the fingerprint is not specified in the spec.
     ///
     /// This provides a way to check that private keys are properly configured

@@ -25,16 +25,16 @@
 //!
 //! The `SecioConfig` implements [`InboundUpgrade`] and [`OutboundUpgrade`] and thus
 //! serves as a connection upgrade for authentication of a transport.
-//! See [`authenticate`](libp2p_core::transport::upgrade::Builder::authenticate).
+//! See [`authenticate`](tetsy_libp2p_core::transport::upgrade::Builder::authenticate).
 //!
 //! ```no_run
 //! # fn main() {
 //! use futures::prelude::*;
-//! use libp2p_secio::{SecioConfig, SecioOutput};
-//! use libp2p_core::{PeerId, Multiaddr, identity, upgrade};
-//! use libp2p_core::transport::Transport;
-//! use libp2p_mplex::MplexConfig;
-//! use libp2p_tcp::TcpConfig;
+//! use tetsy_libp2p_secio::{SecioConfig, SecioOutput};
+//! use tetsy_libp2p_core::{PeerId, Multiaddr, identity, upgrade};
+//! use tetsy_libp2p_core::transport::Transport;
+//! use tetsy_libp2p_mplex::MplexConfig;
+//! use tetsy_libp2p_tcp::TcpConfig;
 //!
 //! // Create a local peer identity.
 //! let local_keys = identity::Keypair::generate_ed25519();
@@ -45,8 +45,8 @@
 //!     .authenticate(SecioConfig::new(local_keys.clone()))
 //!     .multiplex(MplexConfig::default());
 //!
-//! // The transport can be used with a `Network` from `libp2p-core`, or a
-//! // `Swarm` from from `libp2p-swarm`. See the documentation of these
+//! // The transport can be used with a `Network` from `tetsy-libp2p-core`, or a
+//! // `Swarm` from from `tetsy-libp2p-swarm`. See the documentation of these
 //! // crates for mode details.
 //!
 //! // let network = Network::new(transport, local_keys.public().into_peer_id());
@@ -59,7 +59,7 @@ pub use self::error::SecioError;
 
 use futures::stream::MapErr as StreamMapErr;
 use futures::prelude::*;
-use libp2p_core::{PeerId, PublicKey, identity, upgrade::{UpgradeInfo, InboundUpgrade, OutboundUpgrade}};
+use tetsy_libp2p_core::{PeerId, PublicKey, identity, upgrade::{UpgradeInfo, InboundUpgrade, OutboundUpgrade}};
 use log::debug;
 use rw_stream_sink::RwStreamSink;
 use std::{io, iter, pin::Pin, task::Context, task::Poll};
@@ -78,7 +78,7 @@ pub use crate::algo_support::Digest;
 pub use crate::exchange::KeyAgreement;
 pub use crate::stream_cipher::Cipher;
 
-/// Implementation of the `ConnectionUpgrade` trait of `libp2p_core`. Automatically applies
+/// Implementation of the `ConnectionUpgrade` trait of `tetsy_libp2p_core`. Automatically applies
 /// secio on any connection.
 #[derive(Clone)]
 pub struct SecioConfig {

@@ -18,12 +18,12 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Records and record storage abstraction of the libp2p Kademlia DHT.
+//! Records and record storage abstraction of the tetsy-libp2p Kademlia DHT.
 
 pub mod store;
 
 use bytes::Bytes;
-use libp2p_core::{PeerId, Multiaddr, multihash::Multihash};
+use tetsy_libp2p_core::{PeerId, Multiaddr, multihash::Multihash};
 use std::borrow::Borrow;
 use std::hash::{Hash, Hasher};
 use wasm_timer::Instant;
@@ -158,7 +158,7 @@ impl ProviderRecord {
 mod tests {
     use super::*;
     use quickcheck::*;
-    use libp2p_core::multihash::Code;
+    use tetsy_libp2p_core::multihash::Code;
     use rand::Rng;
     use std::time::Duration;
 

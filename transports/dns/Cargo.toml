@@ -1,5 +1,5 @@
 [package]
-name = "libp2p-dns"
+name = "tetsy-libp2p-dns"
 edition = "2018"
 description = "DNS transport implementation for libp2p"
 version = "0.27.0"
@@ -10,6 +10,6 @@ keywords = ["peer-to-peer", "libp2p", "networking"]
 categories = ["network-programming", "asynchronous"]
 
 [dependencies]
-libp2p-core = { version = "0.27.0", path = "../../core" }
+tetsy-libp2p-core = { version = "0.27.0", path = "../../core" }
 log = "0.4.1"
 futures = "0.3.1"

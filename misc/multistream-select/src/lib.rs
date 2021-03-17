@@ -21,7 +21,7 @@
 //! # Multistream-select Protocol Negotiation
 //!
 //! This crate implements the `multistream-select` protocol, which is the protocol
-//! used by libp2p to negotiate which application-layer protocol to use with the
+//! used by tetsy-libp2p to negotiate which application-layer protocol to use with the
 //! remote on a connection or substream.
 //!
 //! > **Note**: This crate is used primarily by core components of *libp2p* and it

@@ -20,7 +20,7 @@
 
 use crate::structs_proto;
 use futures::prelude::*;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     Multiaddr,
     PublicKey,
     upgrade::{self, InboundUpgrade, OutboundUpgrade, UpgradeInfo}
@@ -207,9 +207,9 @@ fn parse_proto_msg(msg: impl AsRef<[u8]>) -> Result<(IdentifyInfo, Multiaddr), i
 #[cfg(test)]
 mod tests {
     use crate::protocol::{IdentifyInfo, RemoteInfo, IdentifyProtocolConfig};
-    use libp2p_tcp::TcpConfig;
+    use tetsy_libp2p_tcp::TcpConfig;
     use futures::{prelude::*, channel::oneshot};
-    use libp2p_core::{
+    use tetsy_libp2p_core::{
         identity,
         Transport,
         upgrade::{self, apply_outbound, apply_inbound}

@@ -18,10 +18,10 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for external transports.
+//! Implementation of the tetsy-libp2p `Transport` trait for external transports.
 //!
 //! This `Transport` is used in the context of WASM to allow delegating the transport mechanism
-//! to the code that uses rust-libp2p, as opposed to inside of rust-libp2p itself.
+//! to the code that uses rust-libp2p, as opposed to inside of rust-tetsy-libp2p itself.
 //!
 //! > **Note**: This only allows transports that produce a raw stream with the remote. You
 //! >           couldn't, for example, pass an implementation QUIC.
@@ -33,7 +33,7 @@
 //!
 
 use futures::{prelude::*, future::Ready};
-use libp2p_core::{transport::ListenerEvent, transport::TransportError, Multiaddr, Transport};
+use tetsy_libp2p_core::{transport::ListenerEvent, transport::TransportError, Multiaddr, Transport};
 use parity_send_wrapper::SendWrapper;
 use std::{collections::VecDeque, error, fmt, io, mem, pin::Pin, task::Context, task::Poll};
 use wasm_bindgen::{JsCast, prelude::*};
@@ -512,8 +512,8 @@ impl From<JsValue> for JsErr {
     }
 }
 
-impl From<libp2p_core::multiaddr::Error> for JsErr {
-    fn from(err: libp2p_core::multiaddr::Error) -> JsErr {
+impl From<tetsy_libp2p_core::multiaddr::Error> for JsErr {
+    fn from(err: tetsy_libp2p_core::multiaddr::Error) -> JsErr {
         JsValue::from_str(&err.to_string()).into()
     }
 }

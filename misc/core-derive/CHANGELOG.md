@@ -1,6 +1,6 @@
 # 0.21.0 [2020-11-25]
 
-- Update for compatibility with `libp2p-swarm-0.25`.
+- Update for compatibility with `tetsy-libp2p-swarm-0.25`.
 
 # 0.20.2 [2020-07-28]
 

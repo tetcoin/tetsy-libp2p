@@ -33,7 +33,7 @@ use bytes::BytesMut;
 use futures::future;
 use futures::prelude::*;
 use asynchronous_codec::{Decoder, Encoder, Framed};
-use libp2p_core::{
+use tetsy_libp2p_core::{
     identity::PublicKey, InboundUpgrade, OutboundUpgrade, PeerId, ProtocolName, UpgradeInfo,
 };
 use log::{debug, warn};
@@ -41,7 +41,7 @@ use prost::Message as ProtobufMessage;
 use std::{borrow::Cow, pin::Pin};
 use unsigned_varint::codec;
 
-pub(crate) const SIGNING_PREFIX: &[u8] = b"libp2p-pubsub:";
+pub(crate) const SIGNING_PREFIX: &[u8] = b"tetsy-libp2p-pubsub:";
 
 /// Implementation of [`InboundUpgrade`] and [`OutboundUpgrade`] for the Gossipsub protocol.
 #[derive(Clone)]
@@ -554,7 +554,7 @@ mod tests {
     use crate::config::GossipsubConfig;
     use crate::Gossipsub;
     use crate::IdentTopic as Topic;
-    use libp2p_core::identity::Keypair;
+    use tetsy_libp2p_core::identity::Keypair;
     use quickcheck::*;
     use rand::Rng;
 

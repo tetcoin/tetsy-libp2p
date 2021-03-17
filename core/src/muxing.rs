@@ -180,7 +180,7 @@ pub trait StreamMuxer {
 
     /// Returns `true` if the remote has shown any sign of activity after the muxer has been open.
     ///
-    /// For optimisation purposes, the connection handshake of libp2p can be very optimistic and is
+    /// For optimisation purposes, the connection handshake of tetsy-libp2p can be very optimistic and is
     /// allowed to assume that the handshake has succeeded when it didn't in fact succeed. This
     /// method can be called in order to determine whether the remote has accepted our handshake or
     /// has potentially not received it yet.

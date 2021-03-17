@@ -21,8 +21,8 @@
 mod util;
 
 use futures::{ready, future::poll_fn};
-use libp2p_core::multiaddr::{multiaddr, Multiaddr};
-use libp2p_core::{
+use tetsy_libp2p_core::multiaddr::{multiaddr, Multiaddr};
+use tetsy_libp2p_core::{
     PeerId,
     connection::PendingConnectionError,
     network::{NetworkEvent, NetworkConfig, ConnectionLimits},

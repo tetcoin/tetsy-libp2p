@@ -21,7 +21,7 @@
 //! High level manager of the network.
 //!
 //! A [`Swarm`] contains the state of the network as a whole. The entire
-//! behaviour of a libp2p network can be controlled through the `Swarm`.
+//! behaviour of a tetsy-libp2p network can be controlled through the `Swarm`.
 //! The `Swarm` struct contains all active and pending connections to
 //! remotes and manages the state of all the substreams that have been
 //! opened, and all the upgrades that were built upon these substreams.
@@ -93,7 +93,7 @@ use futures::{
     executor::ThreadPoolBuilder,
     stream::FusedStream,
 };
-use libp2p_core::{
+use tetsy_libp2p_core::{
     Executor,
     Transport,
     Multiaddr,
@@ -289,7 +289,7 @@ where
     pending_event: Option<(PeerId, PendingNotifyHandler, TInEvent)>,
 
     /// The configured override for substream protocol upgrades, if any.
-    substream_upgrade_protocol_override: Option<libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour, TInEvent, TOutEvent, THandler> Deref for
@@ -911,7 +911,7 @@ pub struct SwarmBuilder<TBehaviour> {
     transport: transport::Boxed<(PeerId, StreamMuxerBox)>,
     behaviour: TBehaviour,
     network_config: NetworkConfig,
-    substream_upgrade_protocol_override: Option<libp2p_core::upgrade::Version>,
+    substream_upgrade_protocol_override: Option<tetsy_libp2p_core::upgrade::Version>,
 }
 
 impl<TBehaviour> SwarmBuilder<TBehaviour>
@@ -1001,7 +1001,7 @@ where TBehaviour: NetworkBehaviour,
     /// > **Note**: If configured, specific upgrade protocols for
     /// > individual [`SubstreamProtocol`]s emitted by the `NetworkBehaviour`
     /// > are ignored.
-    pub fn substream_upgrade_protocol_override(mut self, v: libp2p_core::upgrade::Version) -> Self {
+    pub fn substream_upgrade_protocol_override(mut self, v: tetsy_libp2p_core::upgrade::Version) -> Self {
         self.substream_upgrade_protocol_override = Some(v);
         self
     }
@@ -1019,7 +1019,7 @@ where TBehaviour: NetworkBehaviour,
         // If no executor has been explicitly configured, try to set up a thread pool.
         let network_cfg = self.network_config.or_else_with_executor(|| {
             match ThreadPoolBuilder::new()
-                .name_prefix("libp2p-swarm-task-")
+                .name_prefix("tetsy-libp2p-swarm-task-")
                 .create()
             {
                 Ok(tp) => {
@@ -1121,13 +1121,13 @@ mod tests {
     use crate::protocols_handler::DummyProtocolsHandler;
     use crate::test::{MockBehaviour, CallTraceBehaviour};
     use futures::{future, executor};
-    use libp2p_core::{
+    use tetsy_libp2p_core::{
         identity,
         upgrade,
         multiaddr,
         transport
     };
-    use libp2p_noise as noise;
+    use tetsy_libp2p_noise as noise;
     use super::*;
 
     fn new_test_swarm<T, O>(handler_proto: T) -> Swarm<CallTraceBehaviour<MockBehaviour<T, O>>>
@@ -1142,7 +1142,7 @@ mod tests {
         let transport = transport::MemoryTransport::default()
             .upgrade(upgrade::Version::V1)
             .authenticate(noise::NoiseConfig::xx(noise_keys).into_authenticated())
-            .multiplex(libp2p_mplex::MplexConfig::new())
+            .multiplex(tetsy_libp2p_mplex::MplexConfig::new())
             .boxed();
         let behaviour = CallTraceBehaviour::new(MockBehaviour::new(handler_proto));
         SwarmBuilder::new(transport, behaviour, pubkey.into()).build()

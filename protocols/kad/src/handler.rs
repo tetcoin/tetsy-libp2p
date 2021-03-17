@@ -24,7 +24,7 @@ use crate::protocol::{
 };
 use crate::record::{self, Record};
 use futures::prelude::*;
-use libp2p_swarm::{
+use tetsy_libp2p_swarm::{
     IntoProtocolsHandler,
     KeepAlive,
     NegotiatedSubstream,
@@ -33,7 +33,7 @@ use libp2p_swarm::{
     ProtocolsHandlerEvent,
     ProtocolsHandlerUpgrErr
 };
-use libp2p_core::{
+use tetsy_libp2p_core::{
     ConnectedPoint,
     PeerId,
     either::EitherOutput,

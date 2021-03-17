@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for Unix domain sockets.
+//! Implementation of the tetsy-libp2p `Transport` trait for Unix domain sockets.
 //!
 //! # Platform support
 //!
@@ -29,14 +29,14 @@
 //! The `UdsConfig` transport supports multiaddresses of the form `/unix//tmp/foo`.
 //!
 //! The `UdsConfig` structs implements the `Transport` trait of the `core` library. See the
-//! documentation of `core` and of libp2p in general to learn how to use the `Transport` trait.
+//! documentation of `core` and of tetsy-libp2p in general to learn how to use the `Transport` trait.
 
 #![cfg(all(unix, not(target_os = "emscripten")))]
 #![cfg_attr(docsrs, doc(cfg(all(unix, not(target_os = "emscripten")))))]
 
 use futures::{prelude::*, future::{BoxFuture, Ready}};
 use futures::stream::BoxStream;
-use libp2p_core::{
+use tetsy_libp2p_core::{
     Transport,
     multiaddr::{Protocol, Multiaddr},
     transport::{ListenerEvent, TransportError}
@@ -164,7 +164,7 @@ mod tests {
     use super::{multiaddr_to_path, UdsConfig};
     use futures::{channel::oneshot, prelude::*};
     use std::{self, borrow::Cow, path::Path};
-    use libp2p_core::{Transport, multiaddr::{Protocol, Multiaddr}};
+    use tetsy_libp2p_core::{Transport, multiaddr::{Protocol, Multiaddr}};
     use tempfile;
 
     #[test]

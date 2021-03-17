@@ -4,28 +4,28 @@
 
 # 0.26.0 [2020-12-17]
 
-- Update `libp2p-core`.
+- Update `tetsy-libp2p-core`.
 
 # 0.25.0 [2020-11-25]
 
-- Update `libp2p-core`.
+- Update `tetsy-libp2p-core`.
 
 # 0.24.0 [2020-11-09]
 
-- Fix the WebSocket implementation parsing `x-parity-ws` multiaddresses as `x-parity-wss`.
+- Fix the WebSocket implementation parsing `x-tetsy-ws` multiaddresses as `x-tetsy-wss`.
 - Update dependencies.
 
 # 0.23.0 [2020-10-16]
 
-- Update `libp2p-core` dependency.
+- Update `tetsy-libp2p-core` dependency.
 
 # 0.22.0 [2020-09-09]
 
-- Update `libp2p-core` dependency.
+- Update `tetsy-libp2p-core` dependency.
 
 # 0.21.0 [2020-08-18]
 
-- Update `libp2p-core` dependency.
+- Update `tetsy-libp2p-core` dependency.
 
 # 0.20.1 [2020-07-06]
 

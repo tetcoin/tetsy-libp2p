@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-//! Implementation of the libp2p `Transport` trait for Websockets.
+//! Implementation of the tetsy-libp2p `Transport` trait for Websockets.
 
 pub mod error;
 pub mod framed;
@@ -27,7 +27,7 @@ pub mod tls;
 use error::Error;
 use framed::Connection;
 use futures::{future::BoxFuture, prelude::*, stream::BoxStream, ready};
-use libp2p_core::{
+use tetsy_libp2p_core::{
     ConnectedPoint,
     Transport,
     multiaddr::Multiaddr,
@@ -187,10 +187,10 @@ where
 
 #[cfg(test)]
 mod tests {
-    use libp2p_core::Multiaddr;
-    use libp2p_tcp as tcp;
+    use tetsy_libp2p_core::Multiaddr;
+    use tetsy_libp2p_tcp as tcp;
     use futures::prelude::*;
-    use libp2p_core::{Transport, multiaddr::Protocol};
+    use tetsy_libp2p_core::{Transport, multiaddr::Protocol};
     use super::WsConfig;
 
     #[test]

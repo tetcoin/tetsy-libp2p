@@ -1,15 +1,15 @@
 # Central repository for work on libp2p
 
-<a href="http://libp2p.io/"><img src="https://img.shields.io/badge/project-libp2p-yellow.svg?style=flat-square" /></a>
-<a href="http://webchat.freenode.net/?channels=%23libp2p"><img src="https://img.shields.io/badge/freenode-%23libp2p-yellow.svg?style=flat-square" /></a>
+<a href="http://libp2p.io/"><img src="https://img.shields.io/badge/project-tetsy-libp2p-yellow.svg?style=flat-square" /></a>
+<a href="http://webchat.freenode.net/?channels=%23libp2p"><img src="https://img.shields.io/badge/freenode-%23tetsy-libp2p-yellow.svg?style=flat-square" /></a>
 <a href="https://riot.permaweb.io/#/room/#libp2p:permaweb.io"><img src="https://img.shields.io/badge/matrix-%23libp2p%3Apermaweb.io-blue.svg?style=flat-square" /> </a>
   <a href="https://discord.gg/66KBrm2"><img src="https://img.shields.io/discord/475789330380488707?color=blueviolet&label=discord&style=flat-square" /></a>
 [![dependency status](https://deps.rs/repo/github/libp2p/rust-libp2p/status.svg?style=flat-square)](https://deps.rs/repo/github/libp2p/rust-libp2p)
 
 This repository is the central place for Rust development of the [libp2p](https://libp2p.io) spec.
 
-**Warning**: While we are trying our best to be compatible with other libp2p implementations, we
-cannot guarantee that this is the case considering the lack of a precise libp2p specifications.
+**Warning**: While we are trying our best to be compatible with other tetsy-libp2p implementations, we
+cannot guarantee that this is the case considering the lack of a precise tetsy-libp2p specifications.
 
 ## Documentation
 
@@ -20,7 +20,7 @@ How to use the library?
 Where to ask questions?
 
 - In the Rust section of https://discuss.libp2p.io.
-- In the #libp2p IRC channel on freenode.
+- In the #tetsy-libp2p IRC channel on freenode.
 - By opening an issue in this repository.
 
 ## Notable users
