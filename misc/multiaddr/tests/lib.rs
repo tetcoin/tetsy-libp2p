@@ -1,7 +1,7 @@
 
 use data_encoding::HEXUPPER;
 use multihash::Multihash;
-use parity_multiaddr::*;
+use tetsy_multiaddr::*;
 use quickcheck::{Arbitrary, Gen, QuickCheck};
 use rand::Rng;
 use std::{
