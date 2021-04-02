@@ -68,7 +68,7 @@ tetsy-libp2p-gossipsub = { version = "0.27.0", path = "./protocols/gossipsub", o
 tetsy-libp2p-identify = { version = "0.27.0", path = "protocols/identify", optional = true }
 tetsy-libp2p-kad = { version = "0.28.0", path = "protocols/kad", optional = true }
 tetsy-libp2p-mplex = { version = "0.27.0", path = "muxers/mplex", optional = true }
-tetsy-libp2p-noise = { version = "0.29.0", path = "protocols/noise", optional = true }
+tetsy-libp2p-noise = { version = "0.29.1", path = "protocols/noise", optional = true }
 tetsy-libp2p-ping = { version = "0.27.0", path = "protocols/ping", optional = true }
 tetsy-libp2p-plaintext = { version = "0.27.0", path = "protocols/plaintext", optional = true }
 tetsy-libp2p-pnet = { version = "0.20.0", path = "protocols/pnet", optional = true }
