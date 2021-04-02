@@ -74,7 +74,7 @@ tetsy-libp2p-plaintext = { version = "0.27.0", path = "protocols/plaintext", opt
 tetsy-libp2p-pnet = { version = "0.20.0", path = "protocols/pnet", optional = true }
 tetsy-libp2p-request-response = { version = "0.9.0", path = "protocols/request-response", optional = true }
 tetsy-libp2p-swarm = { version = "0.27.0", path = "swarm" }
-tetsy-libp2p-uds = { version = "0.27.0", path = "transports/uds", optional = true }
+tetsy-libp2p-uds = { version = "0.27.1", path = "transports/uds", optional = true }
 tetsy-libp2p-wasm-ext = { version = "0.27.0", path = "transports/wasm-ext", optional = true }
 tetsy-libp2p-remux = { version = "0.30.0", path = "muxers/remux", optional = true }
 multiaddr = { package = "tetsy-multiaddr", version = "0.11.0", path = "misc/multiaddr" }
