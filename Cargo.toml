@@ -88,7 +88,7 @@ tetsy-libp2p-deflate = { version = "0.27.0", path = "protocols/deflate", optiona
 tetsy-libp2p-dns = { version = "0.27.1", path = "transports/dns", optional = true }
 tetsy-libp2p-mdns = { version = "0.28.0", path = "protocols/mdns", optional = true }
 tetsy-libp2p-tcp = { version = "0.27.0", path = "transports/tcp", optional = true }
-tetsy-libp2p-websocket = { version = "0.28.0", path = "transports/websocket", optional = true }
+tetsy-libp2p-websocket = { version = "0.28.1", path = "transports/websocket", optional = true }
 
 [dev-dependencies]
 async-std = { version = "1.6.2", features = ["attributes"] }
