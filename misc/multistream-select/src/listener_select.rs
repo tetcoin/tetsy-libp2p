@@ -19,7 +19,7 @@
 // DEALINGS IN THE SOFTWARE.
 
 //! Protocol negotiation strategies for the peer acting as the listener
-//! in a multistream-select protocol negotiation.
+//! in a tetsy-multistream-select protocol negotiation.
 
 use crate::{Negotiated, NegotiationError};
 use crate::protocol::{Protocol, ProtocolError, MessageIO, Message, HeaderLine};
@@ -63,7 +63,7 @@ where
 }
 
 /// The `Future` returned by [`listener_select_proto`] that performs a
-/// multistream-select protocol negotiation on an underlying I/O stream.
+/// tetsy-multistream-select protocol negotiation on an underlying I/O stream.
 #[pin_project::pin_project]
 pub struct ListenerSelectFuture<R, N>
 where

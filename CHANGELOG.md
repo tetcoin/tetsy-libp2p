@@ -19,7 +19,7 @@
 - [`tetsy-libp2p-wasm-ext` CHANGELOG](transports/wasm-ext/CHANGELOG.md)
 - [`tetsy-libp2p-websocket` CHANGELOG](transports/websocket/CHANGELOG.md)
 - [`tetsy-libp2p-remux` CHANGELOG](muxers/remux/CHANGELOG.md)
-- [`multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
+- [`tetsy-multistream-select` CHANGELOG](misc/multistream-select/CHANGELOG.md)
 - [`tetsy-multiaddr` CHANGELOG](misc/multiaddr/CHANGELOG.md)
 - [`tetsy-libp2p-core-derive` CHANGELOG](misc/core-derive/CHANGELOG.md)
 
@@ -60,7 +60,7 @@
 
 # Version 0.31.0 [2020-11-25]
 
-- Update `multistream-select` and all dependent crates.
+- Update `tetsy-multistream-select` and all dependent crates.
 
 # Version 0.30.1 [2020-11-11]
 
@@ -284,7 +284,7 @@ must not be skipped!
   error or connection close.
   [PR 1529](https://github.com/libp2p/rust-libp2p/pull/1529)
 
-- `multistream-select`: Upgrade to stable futures.
+- `tetsy-multistream-select`: Upgrade to stable futures.
   [PR 1484](https://github.com/libp2p/rust-libp2p/pull/1484)
 
 - `multihash`: Removed the crate in favour of the upstream crate.
@@ -355,18 +355,18 @@ must not be skipped!
 
 - Reworked the transport upgrade API. See https://github.com/libp2p/rust-libp2p/pull/1240 for more information.
 - Added a parameter allowing to choose the protocol negotiation protocol when upgrading a connection or a substream. See https://github.com/libp2p/rust-libp2p/pull/1245 for more information.
-- Added an alternative `multistream-select` protocol called `V1Lazy`.
+- Added an alternative `tetsy-multistream-select` protocol called `V1Lazy`.
 - Added `PlainText2Config` that implements the `/plaintext/2.0.0` protocol.
 - Refactored `tetsy-libp2p-identify`. Some items have been renamed.
 - Now accepting `PeerId`s using the `identity` hashing algorithm as valid.
 - Removed `tetsy-libp2p-observed` and `tetsy-libp2p-ratelimit`.
 - Fixed mDNS long peer IDs not being transmitted properly.
 - Added some `Debug` trait implementations.
-- Fixed potential arithmetic overflows in `tetsy-libp2p-kad` and `multistream-select`.
+- Fixed potential arithmetic overflows in `tetsy-libp2p-kad` and `tetsy-multistream-select`.
 
 # Version 0.12.0 (2019-08-15)
 
-- In some situations, `multistream-select` will now assume that protocol negotiation immediately succeeds. If it turns out that it failed, an error is generated when reading or writing from/to the stream.
+- In some situations, `tetsy-multistream-select` will now assume that protocol negotiation immediately succeeds. If it turns out that it failed, an error is generated when reading or writing from/to the stream.
 - Replaced `listen_addr` with `local_addr` in events related to incoming connections. The address no longer has to match a previously-reported address.
 - Listeners now have an identifier and can be stopped.
 - Added `NetworkBehaviour::inject_listener_error` and `NetworkBehaviour::inject_listener_closed`. For diagnostic purposes, listeners can now report errors on incoming connections, such as when calling `accept(2)` fails.

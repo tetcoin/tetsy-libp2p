@@ -40,7 +40,7 @@ use std::{io, iter};
 use unsigned_varint::codec;
 use wasm_timer::Instant;
 
-/// The protocol name used for negotiating with multistream-select.
+/// The protocol name used for negotiating with tetsy-multistream-select.
 pub const DEFAULT_PROTO_NAME: &[u8] = b"/ipfs/kad/1.0.0";
 
 /// The default maximum size for a varint length-delimited packet.

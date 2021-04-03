@@ -41,8 +41,8 @@ use std::{convert::TryFrom as _, iter, mem, pin::Pin, task::{Context, Poll}};
 /// thus an inaccurate size estimate may result in a suboptimal choice.
 ///
 /// Within the scope of this library, a dialer always commits to a specific
-/// multistream-select [`Version`], whereas a listener always supports
-/// all versions supported by this library. Frictionless multistream-select
+/// tetsy-multistream-select [`Version`], whereas a listener always supports
+/// all versions supported by this library. Frictionless tetsy-multistream-select
 /// protocol upgrades may thus proceed by deployments with updated listeners,
 /// eventually followed by deployments of dialers choosing the newer protocol.
 pub fn dialer_select_proto<R, I>(

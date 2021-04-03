@@ -80,7 +80,7 @@
 //!
 //! Once a connection has been established with a remote through a [`Transport`], it can be
 //! *upgraded*. Upgrading a transport is the process of negotiating an additional protocol
-//! with the remote, mediated through a negotiation protocol called [`multistream-select`].
+//! with the remote, mediated through a negotiation protocol called [`tetsy-multistream-select`].
 //!
 //! Example ([`noise`] + [`remux`] Protocol Upgrade):
 //!
@@ -149,7 +149,7 @@
 //! [`Remux`]: remux::Remux
 //!
 //! [tokio]: https://tokio.rs
-//! [`multistream-select`]: https://github.com/multiformats/multistream-select
+//! [`tetsy-multistream-select`]: https://github.com/multiformats/multistream-select
 
 #![doc(html_logo_url = "https://libp2p.io/img/logo_small.png")]
 #![doc(html_favicon_url = "https://libp2p.io/img/favicon.png")]
