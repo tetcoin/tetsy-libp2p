@@ -18,7 +18,7 @@
 // FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-use uint::*;
+use uint_crate::*;
 use tetsy_libp2p_core::{PeerId, multihash::Multihash};
 use sha2::{Digest, Sha256};
 use sha2::digest::generic_array::{GenericArray, typenum::U32};
