@@ -280,8 +280,8 @@ pub fn build_development_transport(keypair: identity::Keypair)
 ///
 /// The implementation supports TCP/IP, WebSockets over TCP/IP, noise as the encryption layer,
 /// and mplex or remux as the multiplexing layer.
-#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))]
-#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))))]
+#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio", feature = "dns-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))]
+#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio", feature = "dns-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux"))))]
 pub fn build_tcp_ws_noise_mplex_remux(keypair: identity::Keypair)
     -> std::io::Result<core::transport::Boxed<(PeerId, core::muxing::StreamMuxerBox)>>
 {
@@ -311,8 +311,8 @@ pub fn build_tcp_ws_noise_mplex_remux(keypair: identity::Keypair)
 ///
 /// The implementation supports TCP/IP, WebSockets over TCP/IP, noise as the encryption layer,
 /// and mplex or remux as the multiplexing layer.
-#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))]
-#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))))]
+#[cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "dns-async-std", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))]
+#[cfg_attr(docsrs, doc(cfg(all(not(any(target_os = "emscripten", target_os = "wasi", target_os = "unknown")), any(feature = "tcp-async-io", feature = "dns-async-std", feature = "tcp-tokio"), feature = "websocket", feature = "noise", feature = "mplex", feature = "remux", feature = "pnet"))))]
 pub fn build_tcp_ws_pnet_noise_mplex_remux(keypair: identity::Keypair, psk: PreSharedKey)
     -> std::io::Result<core::transport::Boxed<(PeerId, core::muxing::StreamMuxerBox)>>
 {
