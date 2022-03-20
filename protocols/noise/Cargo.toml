@@ -27,6 +27,9 @@ snow = { version = "0.7.1", features = ["ring-resolver"], default-features = fal
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 snow = { version = "0.7.1", features = ["default-resolver"], default-features = false }
 
+[patch.crates-io]
+snow = { git = 'https://github.com/tetcoin/snow', branch = 'tet-hotfix-aesni' }
+
 [dev-dependencies]
 async-io = "1.2.0"
 env_logger = "0.8.1"
