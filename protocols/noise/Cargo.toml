@@ -22,10 +22,10 @@ x25519-dalek = "1.1.0"
 zeroize = "1"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-snow = { version = "0.7.1", features = ["ring-resolver"], default-features = false }
+snow = { git = 'https://github.com/tetcoin/snow', branch = 'tet-hotfix-aesni', version = "0.7.1", features = ["ring-resolver"], default-features = false }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-snow = { version = "0.7.1", features = ["default-resolver"], default-features = false }
+snow = { git = 'https://github.com/tetcoin/snow', branch = 'tet-hotfix-aesni', version = "0.7.1", features = ["default-resolver"], default-features = false }
 
 [patch.crates-io]
 snow = { git = 'https://github.com/tetcoin/snow', branch = 'tet-hotfix-aesni' }
